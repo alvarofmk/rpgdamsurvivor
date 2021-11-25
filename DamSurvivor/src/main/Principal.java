@@ -1,13 +1,14 @@
 package main;
 
 import crud.Crudjugador;
+import model.Jugador;
 import utilidad.Leer;
 
 public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		crud.Crudjugador jugador1 = new Crudjugador();
+		Crudjugador crudJugador = new Crudjugador();
 		String nombreJugador;
 		int opcion = 0, puntosPS = 0, puntosATK = 0, puntosDEF = 0;
 		System.out.println("Bienvenido a DAM Survivor");
@@ -22,7 +23,8 @@ public class Principal {
 			puntosATK = Leer.datoInt();
 			System.out.println("Introduzca puntos de defensa");
 			puntosDEF = Leer.datoInt();
-			jugador1.crearJugador(nombreJugador, puntosPS, puntosATK, puntosDEF);
+			Jugador j1 = crudJugador.crearJugador(nombreJugador, puntosPS, puntosATK, puntosDEF);
+			System.out.println(j1.getNombre());
 			
 			
 			
