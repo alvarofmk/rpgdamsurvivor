@@ -5,14 +5,18 @@ public class Jugador {
 	private int puntosSalud;
 	private int puntosAtaque;
 	private int puntosDefensa;
+	private Arma [] armas;
+	private Objeto [] inventario;
 	
 	// Constructor con todos los atributos
 	
-	public Jugador (String nombre, int puntosSalud, int puntosAtaque, int puntosDefensa) {
+	public Jugador (String nombre, int puntosSalud, int puntosAtaque, int puntosDefensa, Arma [] armas, Objeto [] inventario) {
 		this.nombre = nombre;
 		this.puntosSalud = puntosSalud;
 		this.puntosAtaque = puntosAtaque;
 		this.puntosDefensa = puntosDefensa;
+		this.armas = armas;
+		this.inventario = inventario;
 	}
 	// Constructor vacío
 	
