@@ -4,9 +4,10 @@ public class Arma {
 	private String nombre;
 	private int puntosAtaque;
 	private int puntosDefensa;
+	private int puntosDamage;
 	private boolean activo;
 	
-	public Arma (String nombre, int puntosAtaque, int puntosDefensa, boolean activo) {
+	public Arma (String nombre, int puntosAtaque, int puntosDefensa, int puntosDamage, boolean activo) {
 		this.nombre = nombre;
 		this.puntosAtaque = puntosAtaque;
 		this.puntosDefensa = puntosDefensa;

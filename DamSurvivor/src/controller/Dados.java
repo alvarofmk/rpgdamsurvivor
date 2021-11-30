@@ -4,10 +4,10 @@ import java.util.Random;
 
 public class Dados {
 	
-	public int tirarDados () {
+	public double tirarDados () {
 		Random num = new Random (System.nanoTime());
-		int max = 20, min = 1, resultado = 0;
-		resultado = num.nextInt(max - min + 1 + min);
+		double resultado = 0.0;
+		resultado = num.nextDouble();
 		return resultado;
 				
 	}
