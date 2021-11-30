@@ -11,6 +11,7 @@ public class Arma {
 		this.nombre = nombre;
 		this.puntosAtaque = puntosAtaque;
 		this.puntosDefensa = puntosDefensa;
+		this.puntosDamage = puntosDamage;
 		this.activo = activo;
 	}
 

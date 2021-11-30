@@ -12,6 +12,8 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		
+		
 		Crudjugador crudJugador = new Crudjugador();
 		Crudarma crudArma = new Crudarma ();
 		String nombre;
@@ -31,7 +33,7 @@ public class Principal {
 				crudJugador.crearPicaro(nombre, puntosATK, puntosDEF, clase, null, null);
 		}
 		
-		crudJugador.crearJugador(nombre, puntosPS, puntosATK, puntosDEF, null, null);
+		
 		System.out.println(tirada.tirarDados());
 		
 
