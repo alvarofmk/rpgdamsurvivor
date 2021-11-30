@@ -28,7 +28,7 @@ public class Principal {
 		clase = Leer.datoInt();
 		switch (clase) {
 			case 1:
-				crudJugador.crearPicaro(nombre, puntosATK, puntosDEF, clase, null, null)
+				crudJugador.crearPicaro(nombre, puntosATK, puntosDEF, clase, null, null);
 		}
 		
 		crudJugador.crearJugador(nombre, puntosPS, puntosATK, puntosDEF, null, null);
