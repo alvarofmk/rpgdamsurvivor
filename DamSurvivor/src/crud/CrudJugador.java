@@ -39,9 +39,9 @@ public class CrudJugador {
 		return array;
 	}
 	
-	public void pintarJugadores () {
-		for (int i = 0; i < listaJugadores.length; i++) {
-			System.out.println(listaJugadores[i]);	
+	public void pintarJugadores (Jugador [] lista) {
+		for (int i = 0; i < lista.length; i++) {
+			System.out.println(lista[i]);	
 		}
 	
 	}
@@ -50,7 +50,7 @@ public class CrudJugador {
 		j1.setPtsATK(45);
 		j1.setPtsDEF(45);
 		j1.setPtsHP(80);
-		j1.setPtsMaxHP(50);
+		j1.setPtsMaxHP(80);
 		j1.setInventario(null);
 		j1.setArmaActiva(null);
 		j1.setArmas(null);
