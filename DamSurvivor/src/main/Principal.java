@@ -25,10 +25,6 @@ public class Principal {
 		data.pintarJugadores();
 		
 		
-
-		Jugador p1 = new Jugador(playerName, 20, 10, 65, 65, null, null, null);
-		Jugador p2 = new Jugador(playerName, 25, 10, 65, 65, null, null, null);
-		
 		
 
 		
