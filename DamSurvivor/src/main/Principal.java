@@ -1,5 +1,6 @@
 package main;
 
+import crud.CrudArma;
 import crud.CrudObjeto;
 import datos.BaseDatos;
 
@@ -12,6 +13,9 @@ public class Principal {
 		BaseDatos data = new BaseDatos();
 		data.setItems(crudItems.generarObjetos(data));
 
+		CrudArma crudWeapons = new CrudArma ();
+		data.setWeapons(crudWeapons.generarArmas(data));
+		
 	}
 
 }
