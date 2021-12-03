@@ -5,16 +5,16 @@ public class Arma {
 	private String nombre;
 	private int ataque;
 	private int defensa;
-	private int daño;
+	private int danio;
 	private String descripcion;
 	
 	
-	public Arma(String nombre, int ataque, int defensa, int daño, String descripcion) {
+	public Arma(String nombre, int ataque, int defensa, int danio, String descripcion) {
 		super();
 		this.nombre = nombre;
 		this.ataque = ataque;
 		this.defensa = defensa;
-		this.daño = daño;
+		this.danio = danio;
 		this.descripcion = descripcion;
 	}
 
@@ -50,13 +50,13 @@ public class Arma {
 	}
 
 
-	public int getDaño() {
-		return daño;
+	public int getdanio() {
+		return danio;
 	}
 
 
-	public void setDaño(int daño) {
-		this.daño = daño;
+	public void setdanio(int danio) {
+		this.danio = danio;
 	}
 	
 
@@ -72,7 +72,7 @@ public class Arma {
 
 	@Override
 	public String toString() {
-		return "Arma [nombre=" + nombre + ", ataque=" + ataque + ", defensa=" + defensa + ", daño=" + daño + "]";
+		return "Arma [nombre=" + nombre + ", ataque=" + ataque + ", defensa=" + defensa + ", danio=" + danio + "]";
 	}
 	
 	
