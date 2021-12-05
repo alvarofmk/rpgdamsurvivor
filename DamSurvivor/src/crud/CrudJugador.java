@@ -7,15 +7,6 @@ import model.Arma;
 
 public class CrudJugador {
 	
-	// Atributos
-	
-	private Jugador [] listaJugadores;
-	
-	// Constructor
-	
-	public CrudJugador (Jugador [] listaJugadores) {
-		this.listaJugadores = listaJugadores;
-	}
 	
 	// Constructor vacío
 	
@@ -23,25 +14,9 @@ public class CrudJugador {
 		
 	}
 	
-	
-	// Getters & Setters
-
-	public Jugador[] getlistaJugadores() {
-		return listaJugadores;
-	}
-
-	public void setlistaJugadores(Jugador[] listaJugadores) {
-		this.listaJugadores = listaJugadores;
-	}
-	
 	// Métodos
 	
-	public void acotarJugadores (int tam) {
-		
-	}
-	
 	public Jugador [] addJugador (Jugador jugador, Jugador [] array) {
-		//data.listaJugadores [posicion] = jugador;
 		array[0] = jugador;
 		return array;
 	}
