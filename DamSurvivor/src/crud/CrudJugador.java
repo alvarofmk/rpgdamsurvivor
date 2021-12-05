@@ -19,9 +19,10 @@ public class CrudJugador {
 	
 	// Constructor vacío
 	
-	public CrudJugador (int numJ) {
-		listaJugadores = new Jugador [numJ];
+	public CrudJugador () {
+		
 	}
+	
 	
 	// Getters & Setters
 
@@ -31,6 +32,12 @@ public class CrudJugador {
 
 	public void setlistaJugadores(Jugador[] listaJugadores) {
 		this.listaJugadores = listaJugadores;
+	}
+	
+	// Métodos
+	
+	public void acotarJugadores (int tam) {
+		
 	}
 	
 	public Jugador [] addJugador (Jugador jugador, Jugador [] array) {
@@ -73,6 +80,10 @@ public class CrudJugador {
 		j1.setInventario(null);
 		j1.setArmaActiva(null);
 		j1.setArmas(null);
+	}
+	
+	public void consultarStats (Jugador j1) {
+		System.out.println(j1);
 	}
 	
 

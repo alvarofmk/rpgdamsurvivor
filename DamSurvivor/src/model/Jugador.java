@@ -28,6 +28,12 @@ public class Jugador {
 		this.armaActiva = armaActiva;
 		this.armas = armas;
 	}
+	
+	// Constructor de nombre
+	
+	public Jugador (String nombre) {
+		this.nombre = nombre;
+	}
 
 	
 	// Constructor vacío
