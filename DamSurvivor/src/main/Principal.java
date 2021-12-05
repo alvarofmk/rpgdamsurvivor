@@ -1,6 +1,5 @@
 package main;
 
-<<<<<<< HEAD
 import controller.ControllerJugador;
 import controller.Dados;
 import crud.CrudJugador;
@@ -9,11 +8,10 @@ import model.Arma;
 import model.Jugador;
 import model.Objeto;
 import utilidad.Leer;
-=======
 import crud.CrudArma;
 import crud.CrudObjeto;
 import datos.BaseDatos;
->>>>>>> master
+
 
 public class Principal {
 
@@ -24,15 +22,10 @@ public class Principal {
 		BaseDatos data = new BaseDatos();
 		data.setItems(crudItems.generarObjetos(data));
 
-<<<<<<< HEAD
-		
-		
 
-=======
 		CrudArma crudWeapons = new CrudArma ();
 		data.setWeapons(crudWeapons.generarArmas(data));
 		
->>>>>>> master
 	}
 
 }

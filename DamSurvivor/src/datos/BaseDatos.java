@@ -2,7 +2,6 @@ package datos;
 
 import model.Arma;
 import model.Objeto;
-<<<<<<< HEAD
 import model.Jugador;
 import crud.CrudJugador;
 
@@ -11,12 +10,29 @@ public class BaseDatos {
 	// Atributos
 	
 	private Jugador [] listaJugadores = new Jugador [5];
+	private Objeto [] items = new Objeto [5];
+	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
+	private int [] objetoATK = {0,5,2,0,5};
+	private int [] objetoDEF = {0,5,0,3,-2};
+	private int [] objetoHP = {15,0,-10,-10,0};
+	private int [] objetoHpMax = {0,20,0,15,0};
+	private String [] objetoDescripcion = {"Cafelito",
+			"Bendici�n de Don Bosco",
+			"Curso de Udemy",
+			"25.000 boletines de BBDD",
+			"VideoTutorial de POJO"};
+	private Arma [] weapons = new Arma [4];
+	private String [] armaNombre = {"Permanente inexistente", "Silla rígida", "Monitor microscópico", "DAM"};
+	private int [] armaATK = {5,10,20,30};
+	private int [] armaDEF = {5,10,15,20};
+	private int [] armaDAM = {10,20,50,80};
+	private String [] armaDescripcion = {
+			"Arma que nunca está cuando la necesitas",
+			"Tan rígida que puede usarse como arma",
+			"El equipo básico de un alumno de DAM",
+			"Desesperación Aleatoriaramente Miserable (DAM) o desesperación de DAM es una espada a dos manos"
+			+ " que transmite la desesperación de un alumno de DAM en exámenes a sus enemigos "};
 	
-	//Constructor
-	
-	public BaseDatos (Jugador [] listaJugadores) {
-		this.listaJugadores = listaJugadores;
-	}
 	
 	// Constructor vacío
 	
@@ -34,45 +50,6 @@ public class BaseDatos {
 	public void setListaJugadores(Jugador[] listaJugadores) {
 		this.listaJugadores = listaJugadores;
 	}
-	
-	// Métodos
-	
-	public void pintarJugadores () {
-		for (int i = 0; i < listaJugadores.length; i++) {
-			System.out.println(listaJugadores[i]);
-		}
-	}
-	
-=======
-
-public class BaseDatos {
-	
-	private Objeto [] items = new Objeto [5];
-	private String [] objetoNombre = {"Cafelito","Bendici�n de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
-	private int [] objetoATK = {0,5,2,0,5};
-	private int [] objetoDEF = {0,5,0,3,-2};
-	private int [] objetoHP = {15,0,-10,-10,0};
-	private int [] objetoHpMax = {0,20,0,15,0};
-	private String [] objetoDescripcion = {"Cafelito",
-			"Bendici�n de Don Bosco",
-			"Curso de Udemy",
-			"25.000 boletines de BBDD",
-			"VideoTutorial de POJO"};
-	
-	
-	private Arma [] weapons = new Arma [4];
-	private String [] armaNombre = {"Permanente inexistente", "Silla rígida", "Monitor microscópico", "DAM"};
-	private int [] armaATK = {5,10,20,30};
-	private int [] armaDEF = {5,10,15,20};
-	private int [] armaDAM = {10,20,50,80};
-	private String [] armaDescripcion = {
-			"Arma que nunca está cuando la necesitas",
-			"Tan rígida que puede usarse como arma",
-			"El equipo básico de un alumno de DAM",
-			"Desesperación Aleatoriaramente Miserable (DAM) o desesperación de DAM es una espada a dos manos"
-			+ " que transmite la desesperación de un alumno de DAM en exámenes a sus enemigos "};
->>>>>>> master
-
 	
 	public Objeto[] getItems() {
 		return items;
@@ -117,8 +94,6 @@ public class BaseDatos {
 		this.objetoDescripcion = objetoDescripcion;
 	}
 	
-	
-	
 	public Arma[] getWeapons() {
 		return weapons;
 	}
@@ -155,5 +130,7 @@ public class BaseDatos {
 	public void setArmaDescripcion(String[] armaDescripcion) {
 		this.armaDescripcion = armaDescripcion;
 	}
-			
+
 }
+			
+
