@@ -49,16 +49,35 @@ public class Principal {
 		
 		
 		// Prueba de combate
-		
-		puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
-		puntDEF = controlEne.defender(data.getDefEnemigos()[3], dados.tirarDados());
-		System.out.println(puntATK);
-		System.out.println(puntDEF);
-		
-		hit = combate.acertarGolpe(puntATK, puntDEF);
-		System.out.println(hit);
-		
-		
+		do {
+			puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
+			puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
+			System.out.println(puntATK);
+			System.out.println(puntDEF);
+			
+			hit = combate.acertarGolpe(puntATK, puntDEF);
+			System.out.println(hit);
+			if (hit) {
+				crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
+			}
+			crudEnemigo.pintarEnemigos(data.getEnemigos());
+			crudJugador.consultarStats(j1);
+			
+			puntATK = controlEne.atacar(data.getAtkEnemigos() [2], dados.tirarDados());
+			puntDEF = controlJug.defender(j1.getPtsDEF(), data.getArmaDEF() [0], dados.tirarDados());
+			System.out.println(puntATK);
+			System.out.println(puntDEF);
+			
+			hit = combate.acertarGolpe(puntATK, puntDEF);
+			System.out.println(hit);
+			
+			if (hit) {
+				crudJugador.herirJugador(j1, data.getAtkEnemigos() [2]);
+			}
+			crudEnemigo.pintarEnemigos(data.getEnemigos());
+			crudJugador.consultarStats(j1);
+			System.out.println(data.getHpEnemigos() [2]);
+		}while (data.getHpEnemigos() [2] > 0);
 		
 	}
 

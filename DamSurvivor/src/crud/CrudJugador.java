@@ -61,6 +61,12 @@ public class CrudJugador {
 		System.out.println(j1);
 	}
 	
+	public void herirJugador (Jugador j1, int atk) {
+		int hpNueva = 0;
+		hpNueva = j1.getPtsHP() - atk;
+		j1.setPtsHP(hpNueva);
+	}
+	
 
 	
 	

@@ -2,7 +2,7 @@ package controller;
 
 public class ControllerEnemigo {
 	
-	public double atacar (int ptsATK, int coeficiente) {
+	public double atacar (int ptsATK, double coeficiente) {
 		double resultado = 0.0;
 		resultado = ptsATK * coeficiente;
 		return resultado;

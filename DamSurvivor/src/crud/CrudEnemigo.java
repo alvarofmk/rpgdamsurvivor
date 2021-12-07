@@ -19,5 +19,11 @@ public class CrudEnemigo {
 			System.out.println(enemigos[i]);
 		}
 	}
+	
+	public void herirEnemigo (Enemigo e, int atk) {
+		int hpNueva = 0;
+		hpNueva = e.getHp() - atk;
+		e.setHp(hpNueva);
+	}
 
 }
