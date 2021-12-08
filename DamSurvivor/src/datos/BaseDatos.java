@@ -18,7 +18,7 @@ public class BaseDatos {
 	private int [] objetoHP = {15,0,-10,-10,0};
 	private int [] objetoHpMax = {0,20,0,15,0};
 	private String [] objetoDescripcion = {"Cafelito",
-			"Bendici�n de Don Bosco",
+			"Bendición de Don Bosco",
 			"Curso de Udemy",
 			"25.000 boletines de BBDD",
 			"VideoTutorial de POJO"};

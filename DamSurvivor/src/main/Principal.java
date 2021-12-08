@@ -76,8 +76,8 @@ public class Principal {
 			}
 			crudEnemigo.pintarEnemigos(data.getEnemigos());
 			crudJugador.consultarStats(j1);
-			System.out.println(data.getHpEnemigos() [2]);
-		}while ( j1.getPtsHP() > 0);
+			System.out.println((data.getEnemigos() [2]).getHp());
+		}while ((data.getEnemigos() [2]).getHp() > 0);
 		
 	}
 
