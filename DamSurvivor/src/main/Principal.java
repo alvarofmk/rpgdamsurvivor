@@ -16,6 +16,8 @@ public class Principal {
 		CrudArma crudWeapons = new CrudArma ();
 		data.setWeapons(crudWeapons.generarArmas(data));
 		
+		
+		System.out.println(data.getWeapons()[1]);
 	}
 
 }
