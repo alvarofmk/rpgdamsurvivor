@@ -23,6 +23,7 @@ public class Principal {
 		
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0;
+		int menu=0, eleccion = 0;
 		String nombreJ = "Durbán";
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
 		CrudJugador crudJugador = new CrudJugador ();
@@ -51,6 +52,8 @@ public class Principal {
 		// Prueba de combate
 		do {
 			//turno del jugador
+			//menu de combate
+			menu=Leer.datoInt();
 			switch(menu) {
 				case 1:
 					puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
@@ -62,13 +65,26 @@ public class Principal {
 					System.out.println(hit);
 					if (hit) {
 						crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
+						//vista: frase enemigo acertado
+					}else {
+						//vista: frase enemigo fallado
 					}
 					crudEnemigo.pintarEnemigos(data.getEnemigos());
 					crudJugador.consultarStats(j1);
+					break;
 				case 2:
 					//aplicar objeto
+					System.out.println(j1.getInventario());
+					eleccion=Leer.datoInt();
+					crudJugador.aplicarObjeto(j1, eleccion);
+					crudJugador.checkVidaMax(j1);
+					break;
 				case 3:
 					//cambiar arma
+					System.out.println(j1.getArmas());
+					eleccion=Leer.datoInt();
+					crudJugador.cambiarArma(j1, eleccion);
+					break;
 				default:
 					System.out.println("Te has equivocado, el enemigo aprovecha para atacar");
 			}

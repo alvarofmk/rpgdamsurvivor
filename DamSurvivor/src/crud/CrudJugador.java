@@ -33,18 +33,12 @@ public class CrudJugador {
 		j1.setPtsDEF(45);
 		j1.setPtsHP(80);
 		j1.setPtsMaxHP(80);
-		j1.setInventario(null);
-		j1.setArmaActiva(null);
-		j1.setArmas(null);
 	}
 	public void crearAsesino (Jugador j1) {
 		j1.setPtsATK(75);
 		j1.setPtsDEF(25);
 		j1.setPtsHP(50);
 		j1.setPtsMaxHP(50);
-		j1.setInventario(null);
-		j1.setArmaActiva(null);
-		j1.setArmas(null);
 	}
 	
 	public void crearHechicero (Jugador j1) {
@@ -52,9 +46,6 @@ public class CrudJugador {
 		j1.setPtsDEF(20);
 		j1.setPtsHP(40);
 		j1.setPtsMaxHP(40);
-		j1.setInventario(null);
-		j1.setArmaActiva(null);
-		j1.setArmas(null);
 	}
 	
 	public void consultarStats (Jugador j1) {
@@ -67,6 +58,22 @@ public class CrudJugador {
 		j1.setPtsHP(hpNueva);
 	}
 	
+	public void cambiarArma (Jugador j1, int index) {
+		j1.setArmaActiva(j1.getArmas()[index-1]);
+	}
+	
+	public void aplicarObjeto (Jugador j1, int index) {
+		j1.setPtsATK(j1.getPtsATK()+j1.getInventario()[index].getAtk());
+		j1.setPtsDEF(j1.getPtsDEF()+j1.getInventario()[index].getDef());
+		j1.setPtsHP(j1.getPtsHP()+j1.getInventario()[index].getHp());
+		j1.setPtsMaxHP(j1.getPtsMaxHP()+j1.getInventario()[index].getHpMax());
+	}
+	
+	public void checkVidaMax (Jugador j1) {
+		if(j1.getPtsHP()>j1.getPtsMaxHP()) {
+			j1.setPtsHP(j1.getPtsMaxHP());
+		}
+	}
 
 	
 	
