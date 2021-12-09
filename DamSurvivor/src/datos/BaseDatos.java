@@ -1,10 +1,16 @@
 package datos;
 
 import model.Arma;
+import model.Enemigo;
 import model.Objeto;
+import model.Jugador;
+import crud.CrudJugador;
 
 public class BaseDatos {
 	
+	// Atributos
+	
+	private Jugador [] listaJugadores = new Jugador [5];
 	private Objeto [] items = new Objeto [5];
 	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
 	private int [] objetoATK = {0,5,2,0,5};
@@ -16,8 +22,6 @@ public class BaseDatos {
 			"Curso de Udemy",
 			"25.000 boletines de BBDD",
 			"VideoTutorial de POJO"};
-	
-	
 	private Arma [] weapons = new Arma [4];
 	private String [] armaNombre = {"Permanente inexistente", "Silla rígida", "Monitor microscópico", "DAM"};
 	private int [] armaATK = {5,10,20,30};
@@ -29,7 +33,40 @@ public class BaseDatos {
 			"El equipo básico de un alumno de DAM",
 			"Desesperación Aleatoriaramente Miserable (DAM) o desesperación de DAM es una espada a dos manos"
 			+ " que transmite la desesperación de un alumno de DAM en exámenes a sus enemigos "};
+	private Enemigo [] enemigos = new Enemigo [4];
+	private String [] nombreEnemigos = {"Rafa", "Miguel", "Ángel", "Luismi"};
+	private int [] atkEnemigos = {0, 10, 25, 60};
+	private int [] defEnemigos = {0, 15, 35, 90};
+	private int [] hpEnemigos = {25, 45, 70, 120};
+	private int [] hpMaxEnemigos = {25, 45, 70, 120};
+	
+	private int [] eleccionesMapa = new int[9];
+			
+	
+	// Constructor vacío
+	
+	public BaseDatos () {
+		
+	}
+	
+	
+	// Getters & Setters
+	
+	public int[] getEleccionesMapa() {
+		return eleccionesMapa;
+	}
 
+	public void setEleccionesMapa(int[] eleccionesMapa) {
+		this.eleccionesMapa = eleccionesMapa;
+	}
+	
+	public Jugador[] getListaJugadores() {
+		return listaJugadores;
+	}
+
+	public void setListaJugadores(Jugador[] listaJugadores) {
+		this.listaJugadores = listaJugadores;
+	}
 	
 	public Objeto[] getItems() {
 		return items;
@@ -74,8 +111,6 @@ public class BaseDatos {
 		this.objetoDescripcion = objetoDescripcion;
 	}
 	
-	
-	
 	public Arma[] getWeapons() {
 		return weapons;
 	}
@@ -112,5 +147,63 @@ public class BaseDatos {
 	public void setArmaDescripcion(String[] armaDescripcion) {
 		this.armaDescripcion = armaDescripcion;
 	}
-			
+	public Enemigo [] getEnemigos () {
+		return enemigos;
+	}
+	public void setEnemigos (Enemigo [] enemigos) {
+		this.enemigos = enemigos;
+	}
+
+
+	public String[] getNombreEnemigos() {
+		return nombreEnemigos;
+	}
+
+
+	public void setNombreEnemigos(String[] nombreEnemigos) {
+		this.nombreEnemigos = nombreEnemigos;
+	}
+
+
+	public int[] getAtkEnemigos() {
+		return atkEnemigos;
+	}
+
+
+	public void setAtkEnemigos(int[] atkEnemigos) {
+		this.atkEnemigos = atkEnemigos;
+	}
+
+
+	public int[] getDefEnemigos() {
+		return defEnemigos;
+	}
+
+
+	public void setDefEnemigos(int[] defEnemigos) {
+		this.defEnemigos = defEnemigos;
+	}
+
+
+	public int[] getHpEnemigos() {
+		return hpEnemigos;
+	}
+
+
+	public void setHpEnemigos(int[] hpEnemigos) {
+		this.hpEnemigos = hpEnemigos;
+	}
+
+
+	public int[] getHpMaxEnemigos() {
+		return hpMaxEnemigos;
+	}
+
+
+	public void setHpMaxEnemigos(int[] hpMaxEnemigos) {
+		this.hpMaxEnemigos = hpMaxEnemigos;
+	}
+
 }
+			
+

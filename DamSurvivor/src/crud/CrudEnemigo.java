@@ -1,32 +1,31 @@
 package crud;
 
+
+import model.Enemigo;
+
+import datos.BaseDatos;
 import model.Enemigo;
 
 public class CrudEnemigo {
-	//AddEnemy
-	//checkVidaMax
-	//atacar
-	//defender
 	
-	public int rafaAtaque1 (Enemigo Rafa) {
-		int ataqueTotal;
-		ataqueTotal = Rafa.getAtk()+10+5; //el 5 debe cambiarse por el valor del dado
-		return ataqueTotal;
+	public Enemigo [] generarEnemigos (BaseDatos data){
+		Enemigo [] enemigos = new Enemigo [4];
+		for (int i = 0; i < enemigos.length; i++) {
+			enemigos [i] = new Enemigo (data.getNombreEnemigos()[i], data.getAtkEnemigos()[i], 
+					data.getDefEnemigos()[i], data.getHpEnemigos()[i], data.getHpMaxEnemigos()[i]);
+		}
+		return enemigos;
 	}
 	
-	public int rafaAtaque2 (Enemigo Rafa) {
-	 	 int ataqueTotal = Rafa.getAtk()+10+20; //el 20 es equivalente al ataque fuerte con el dado.
-	 	 return ataqueTotal;
+	public void pintarEnemigos (Enemigo [] enemigos) {
+		for (int i = 0; i < enemigos.length; i++) {
+			System.out.println(enemigos[i]);
+		}
 	}
 	
-	public int rafaDefensa (Enemigo Rafa) {
-		int defensa = Rafa.getDef(); 
-		return defensa;
-	}
-	
-	public int rafaCheckVida (Enemigo Rafa) {
-		int checkVida = Rafa.getHp();
-		return checkVida;		
+	public void herirEnemigo (Enemigo e, int atk) {
+		int hpNueva = 0;
+		hpNueva = e.getHp() - atk;
+		e.setHp(hpNueva);
 	}
 }
-
