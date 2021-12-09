@@ -50,18 +50,29 @@ public class Principal {
 		
 		// Prueba de combate
 		do {
-			puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
-			puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
-			System.out.println(puntATK);
-			System.out.println(puntDEF);
-			
-			hit = combate.acertarGolpe(puntATK, puntDEF);
-			System.out.println(hit);
-			if (hit) {
-				crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
+			//turno del jugador
+			switch(menu) {
+				case 1:
+					puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
+					puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
+					System.out.println(puntATK);
+					System.out.println(puntDEF);
+					
+					hit = combate.acertarGolpe(puntATK, puntDEF);
+					System.out.println(hit);
+					if (hit) {
+						crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
+					}
+					crudEnemigo.pintarEnemigos(data.getEnemigos());
+					crudJugador.consultarStats(j1);
+				case 2:
+					//aplicar objeto
+				case 3:
+					//cambiar arma
+				default:
+					System.out.println("Te has equivocado, el enemigo aprovecha para atacar");
 			}
-			crudEnemigo.pintarEnemigos(data.getEnemigos());
-			crudJugador.consultarStats(j1);
+			//turno enemigo
 			
 			puntATK = controlEne.atacar(data.getAtkEnemigos() [2], dados.tirarDados());
 			puntDEF = controlJug.defender(j1.getPtsDEF(), data.getArmaDEF() [0], dados.tirarDados());
@@ -77,7 +88,8 @@ public class Principal {
 			crudEnemigo.pintarEnemigos(data.getEnemigos());
 			crudJugador.consultarStats(j1);
 			System.out.println((data.getEnemigos() [2]).getHp());
-		}while ((data.getEnemigos() [2]).getHp() > 0);
+
+		}while ((data.getEnemigos() [2]).getHp() > 0 && j1.getPtsHP() > 0);
 		
 	}
 
