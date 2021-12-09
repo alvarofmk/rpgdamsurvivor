@@ -6,13 +6,13 @@ import model.Objeto;
 public class BaseDatos {
 	
 	private Objeto [] items = new Objeto [5];
-	private String [] objetoNombre = {"Cafelito","Bendici�n de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
+	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
 	private int [] objetoATK = {0,5,2,0,5};
 	private int [] objetoDEF = {0,5,0,3,-2};
 	private int [] objetoHP = {15,0,-10,-10,0};
 	private int [] objetoHpMax = {0,20,0,15,0};
 	private String [] objetoDescripcion = {"Cafelito",
-			"Bendici�n de Don Bosco",
+			"Bendición de Don Bosco",
 			"Curso de Udemy",
 			"25.000 boletines de BBDD",
 			"VideoTutorial de POJO"};

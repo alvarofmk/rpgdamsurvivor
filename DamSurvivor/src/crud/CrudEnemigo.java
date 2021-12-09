@@ -15,16 +15,18 @@ public class CrudEnemigo {
 	}
 	
 	public int rafaAtaque2 (Enemigo Rafa) {
-		int ataqueTotal = Rafa.getAtk()+10+20; //el 20 es equivalente al ataque fuerte con el dado.
+	 	 int ataqueTotal = Rafa.getAtk()+10+20; //el 20 es equivalente al ataque fuerte con el dado.
+	 	 return ataqueTotal;
 	}
 	
 	public int rafaDefensa (Enemigo Rafa) {
 		int defensa = Rafa.getDef(); 
+		return defensa;
 	}
 	
 	public int rafaCheckVida (Enemigo Rafa) {
-		int checkVida = Rafa.getHp()
-				
+		int checkVida = Rafa.getHp();
+		return checkVida;		
 	}
 }
 
