@@ -38,7 +38,7 @@ public class BaseDatos {
 	private int [] atkEnemigos = {0, 10, 25, 60};
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
-	private int [] hpMaxEnemigos = {25, 45, 70, 120};
+	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 	
 	
 	// Constructor vacío
@@ -185,14 +185,15 @@ public class BaseDatos {
 	}
 
 
-	public int[] getHpMaxEnemigos() {
-		return hpMaxEnemigos;
+	public int[][] getAtaquesEnemigos() {
+		return ataquesEnemigos;
 	}
 
 
-	public void setHpMaxEnemigos(int[] hpMaxEnemigos) {
-		this.hpMaxEnemigos = hpMaxEnemigos;
+	public void setAtaquesEnemigos(int[][] ataquesEnemigos) {
+		this.ataquesEnemigos = ataquesEnemigos;
 	}
+
 
 }
 			

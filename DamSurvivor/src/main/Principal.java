@@ -72,7 +72,7 @@ public class Principal {
 			System.out.println(hit);
 			
 			if (hit) {
-				crudJugador.herirJugador(j1, data.getAtkEnemigos() [2]);
+				crudJugador.herirJugador(j1, data.getAtaquesEnemigos()[2][1]);
 			}
 			crudEnemigo.pintarEnemigos(data.getEnemigos());
 			crudJugador.consultarStats(j1);

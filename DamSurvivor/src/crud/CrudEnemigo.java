@@ -9,7 +9,7 @@ public class CrudEnemigo {
 		Enemigo [] enemigos = new Enemigo [4];
 		for (int i = 0; i < enemigos.length; i++) {
 			enemigos [i] = new Enemigo (data.getNombreEnemigos()[i], data.getAtkEnemigos()[i], 
-					data.getDefEnemigos()[i], data.getHpEnemigos()[i], data.getHpMaxEnemigos()[i]);
+					data.getDefEnemigos()[i], data.getHpEnemigos()[i],data.getAtaquesEnemigos()[i]);
 		}
 		return enemigos;
 	}
@@ -24,6 +24,10 @@ public class CrudEnemigo {
 		int hpNueva = 0;
 		hpNueva = e.getHp() - atk;
 		e.setHp(hpNueva);
+	}
+	
+	public void consultarEnemigo (Enemigo e) {
+		System.out.println(e);
 	}
 
 }
