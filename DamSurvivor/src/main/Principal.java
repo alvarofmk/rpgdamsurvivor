@@ -97,6 +97,8 @@ public class Principal {
 
 		}while ((data.getEnemigos() [2]).getHp() > 0 && j1.getPtsHP() > 0);
 		
+		
+		System.out.println(data.getWeapons()[1]);
 	}
 
 }
