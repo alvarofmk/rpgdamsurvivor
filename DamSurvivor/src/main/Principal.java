@@ -25,15 +25,15 @@ public class Principal {
 		double puntATK = 0.0, puntDEF = 0.0;
 		int menu=0, eleccion = 0;
 		String nombreJ = "Durbán";
+		Jugador j1 = new Jugador();
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
-		CrudJugador crudJugador = new CrudJugador ();
+		CrudJugador crudJugador = new CrudJugador (j1);
 		CrudArma crudWeapons = new CrudArma ();
 		CrudObjeto crudItems = new CrudObjeto ();
 		BaseDatos data = new BaseDatos();
 		ControllerJugador controlJug = new ControllerJugador ();
 		ControllerEnemigo controlEne = new ControllerEnemigo ();
 		Dados dados = new Dados();
-		Jugador j1 = new Jugador();
 		Combate combate = new Combate ();
 		data.setItems(crudItems.generarObjetos(data));	
 		data.setWeapons(crudWeapons.generarArmas(data));
@@ -41,13 +41,10 @@ public class Principal {
 		
 		
 		
-		crudJugador.addJugador(j1, data.getListaJugadores());
-		crudJugador.crearGuerrero(j1);
-		crudJugador.pintarJugadores(data.getListaJugadores());
-		crudJugador.consultarStats(j1);
+		crudJugador.crearGuerrero();
+		crudJugador.consultarStats();
 		crudEnemigo.pintarEnemigos(data.getEnemigos());
 		j1.setNombre(nombreJ);
-		
 		
 		// Prueba de combate
 		do {
@@ -58,8 +55,6 @@ public class Principal {
 				case 1:
 					puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
 					puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
-					System.out.println(puntATK);
-					System.out.println(puntDEF);
 					
 					hit = combate.acertarGolpe(puntATK, puntDEF);
 					System.out.println(hit);
@@ -69,21 +64,18 @@ public class Principal {
 					}else {
 						//vista: frase enemigo fallado
 					}
-					crudEnemigo.pintarEnemigos(data.getEnemigos());
-					crudJugador.consultarStats(j1);
 					break;
 				case 2:
 					//aplicar objeto
 					System.out.println(j1.getInventario());
 					eleccion=Leer.datoInt();
-					crudJugador.aplicarObjeto(j1, eleccion);
-					crudJugador.checkVidaMax(j1);
+					crudJugador.aplicarObjeto(eleccion);
 					break;
 				case 3:
 					//cambiar arma
 					System.out.println(j1.getArmas());
 					eleccion=Leer.datoInt();
-					crudJugador.cambiarArma(j1, eleccion);
+					crudJugador.cambiarArma(eleccion);
 					break;
 				default:
 					System.out.println("Te has equivocado, el enemigo aprovecha para atacar");

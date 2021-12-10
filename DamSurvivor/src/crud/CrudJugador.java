@@ -8,68 +8,66 @@ import model.Arma;
 public class CrudJugador {
 	
 	
-	// Constructor vacío
+	private Jugador j1;
 	
-	public CrudJugador () {
-		
+	// Constructor
+	
+	public CrudJugador (Jugador j1) {
+		this.j1=j1;
 	}
 	
 	// Métodos
 	
-	public Jugador [] addJugador (Jugador jugador, Jugador [] array) {
-		array[0] = jugador;
-		return array;
-	}
-	
-	public void pintarJugadores (Jugador [] lista) {
-		for (int i = 0; i < lista.length; i++) {
-			System.out.println(lista[i]);	
-		}
-	
-	}
-	
-	public void crearGuerrero (Jugador j1) {
+	public void crearGuerrero () {
 		j1.setPtsATK(45);
 		j1.setPtsDEF(45);
 		j1.setPtsHP(80);
 		j1.setPtsMaxHP(80);
 	}
-	public void crearAsesino (Jugador j1) {
+	public void crearAsesino () {
 		j1.setPtsATK(75);
 		j1.setPtsDEF(25);
 		j1.setPtsHP(50);
 		j1.setPtsMaxHP(50);
 	}
 	
-	public void crearHechicero (Jugador j1) {
+	public void crearHechicero () {
 		j1.setPtsATK(60);
 		j1.setPtsDEF(20);
 		j1.setPtsHP(40);
 		j1.setPtsMaxHP(40);
 	}
 	
-	public void consultarStats (Jugador j1) {
+	public void consultarStats () {
 		System.out.println(j1);
 	}
 	
-	public void herirJugador (Jugador j1, int atk) {
+	public void herirJugador (int atk) {
 		int hpNueva = 0;
 		hpNueva = j1.getPtsHP() - atk;
 		j1.setPtsHP(hpNueva);
 	}
 	
-	public void cambiarArma (Jugador j1, int index) {
+	public void cambiarArma (int index) {
 		j1.setArmaActiva(j1.getArmas()[index-1]);
 	}
 	
-	public void aplicarObjeto (Jugador j1, int index) {
-		j1.setPtsATK(j1.getPtsATK()+j1.getInventario()[index].getAtk());
-		j1.setPtsDEF(j1.getPtsDEF()+j1.getInventario()[index].getDef());
-		j1.setPtsHP(j1.getPtsHP()+j1.getInventario()[index].getHp());
-		j1.setPtsMaxHP(j1.getPtsMaxHP()+j1.getInventario()[index].getHpMax());
+	public void eliminarObjeto (int index) {
+		Objeto [] nuevoInventario = j1.getInventario();
+		nuevoInventario[index-1] = null;
+		j1.setInventario(nuevoInventario);
 	}
 	
-	public void checkVidaMax (Jugador j1) {
+	public void aplicarObjeto (int index) {
+		j1.setPtsATK(j1.getPtsATK()+j1.getInventario()[index-1].getAtk());
+		j1.setPtsDEF(j1.getPtsDEF()+j1.getInventario()[index-1].getDef());
+		j1.setPtsHP(j1.getPtsHP()+j1.getInventario()[index-1].getHp());
+		j1.setPtsMaxHP(j1.getPtsMaxHP()+j1.getInventario()[index-1].getHpMax());
+		eliminarObjeto(index-1);
+		checkVidaMax();
+	}
+	
+	public void checkVidaMax () {
 		if(j1.getPtsHP()>j1.getPtsMaxHP()) {
 			j1.setPtsHP(j1.getPtsMaxHP());
 		}
