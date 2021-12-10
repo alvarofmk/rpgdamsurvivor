@@ -12,6 +12,7 @@ public class Combate {
 		return hit;
 	}
 		
+	public boolean ataqueJugador ()
 	
 
 }
