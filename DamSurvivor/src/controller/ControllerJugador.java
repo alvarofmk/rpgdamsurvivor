@@ -1,16 +1,18 @@
 package controller;
 
+import model.Jugador;
+
 public class ControllerJugador {
 	
-	public double atacar (int ptsATK, int ptsATKArma, double coeficiente) {
+	public double atacar (Jugador j1, double coeficiente) {
 		double resultado = 0.0;
-		resultado = (ptsATK + ptsATKArma) * coeficiente;
+		resultado = (j1.getPtsATK() + j1.getArmaActiva().getAtaque()) * coeficiente;
 		return resultado;
 	}
 	
-	public double defender (int ptsDEF, int ptsDEFArma, double coeficiente) {
+	public double defender (Jugador j1, double coeficiente) {
 		double resultado = 0.0;
-		resultado = (ptsDEF + ptsDEFArma) * coeficiente;
+		resultado = (j1.getPtsDEF() + j1.getArmaActiva().getDefensa()) * coeficiente;
 		return resultado;
 	}
 

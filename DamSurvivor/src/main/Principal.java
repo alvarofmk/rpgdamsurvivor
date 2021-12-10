@@ -23,7 +23,7 @@ public class Principal {
 		
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0;
-		int menu=0, eleccion = 0;
+		int menu=0, eleccion = 0, enemigo = 0;
 		String nombreJ = "Durbán";
 		Jugador j1 = new Jugador();
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
@@ -46,20 +46,18 @@ public class Principal {
 		crudEnemigo.pintarEnemigos(data.getEnemigos());
 		j1.setNombre(nombreJ);
 		
-		// Prueba de combate
+		enemigo = 0;
 		do {
 			//turno del jugador
+			System.out.println("Escoge lo que hacer: 1. Atacar, 2. Usar objeto, 3.Cambiar arma");
 			//menu de combate
 			menu=Leer.datoInt();
 			switch(menu) {
 				case 1:
-					puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
-					puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
-					
-					hit = combate.acertarGolpe(puntATK, puntDEF);
-					System.out.println(hit);
+					hit = combate.acertarGolpe(controlJug.atacar(j1, dados.tirarDados()), 
+							controlEne.defender(data.getDefEnemigos()[enemigo], dados.tirarDados()));
 					if (hit) {
-						crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
+						crudEnemigo.herirEnemigo(data.getEnemigos() [enemigo], j1.getArmaActiva().getdanio());
 						//vista: frase enemigo acertado
 					}else {
 						//vista: frase enemigo fallado

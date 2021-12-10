@@ -73,7 +73,37 @@ public class CrudJugador {
 		}
 	}
 
+	public void obtenerArma (int index, BaseDatos data) {
+		Arma[] nuevasArmas = j1.getArmas();
+		int contador = 0;
+		boolean encontrado = false;
+		
+		while(contador < nuevasArmas.length && !encontrado) {
+			if(j1.getArmas()[contador] == null) {
+				nuevasArmas[contador]= data.getWeapons()[index];
+				encontrado=true;
+			}
+			contador++;
+		}
+		
+		j1.setArmas(nuevasArmas);
+	}
 	
+	public void obtenerObjeto (int index, BaseDatos data) {
+		Objeto[] nuevoInventario = j1.getInventario();
+		int contador = 0;
+		boolean encontrado = false;
+		
+		while(contador < nuevoInventario.length && !encontrado) {
+			if(j1.getInventario()[contador] == null) {
+				nuevoInventario[contador]= data.getItems()[index];
+				encontrado=true;
+			}
+			contador++;
+		}
+		
+		j1.setInventario(nuevoInventario);
+	}
 	
 	
 }
