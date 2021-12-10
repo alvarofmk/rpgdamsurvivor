@@ -10,6 +10,7 @@ import model.Arma;
 import model.Jugador;
 import model.Objeto;
 import utilidad.Leer;
+import vista.Escenas;
 import crud.CrudArma;
 import crud.CrudEnemigo;
 import crud.CrudObjeto;
@@ -25,7 +26,7 @@ public class Principal {
 		double puntATK = 0.0, puntDEF = 0.0;
 		int menu=0, eleccion = 0, enemigo = 0;
 		String nombreJ = "Durbán";
-		Jugador j1 = new Jugador();
+		Jugador j1 = new Jugador(nombreJ);
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
 		CrudJugador crudJugador = new CrudJugador (j1);
 		CrudArma crudWeapons = new CrudArma ();
@@ -44,9 +45,12 @@ public class Principal {
 		crudJugador.crearGuerrero();
 		crudJugador.consultarStats();
 		crudEnemigo.pintarEnemigos(data.getEnemigos());
-		j1.setNombre(nombreJ);
 		
 		enemigo = 0;
+		crudJugador.obtenerArma(1, data);
+		Escenas esc = new Escenas();
+		esc.pintarCasita(data.getEscenas()[0]);
+		
 		do {
 			//turno del jugador
 			System.out.println("Escoge lo que hacer: 1. Atacar, 2. Usar objeto, 3.Cambiar arma");
@@ -55,7 +59,7 @@ public class Principal {
 			switch(menu) {
 				case 1:
 					hit = combate.acertarGolpe(controlJug.atacar(j1, dados.tirarDados()), 
-							controlEne.defender(data.getDefEnemigos()[enemigo], dados.tirarDados()));
+							controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 					if (hit) {
 						crudEnemigo.herirEnemigo(data.getEnemigos() [enemigo], j1.getArmaActiva().getdanio());
 						//vista: frase enemigo acertado
@@ -80,8 +84,8 @@ public class Principal {
 			}
 			//turno enemigo
 			
-			puntATK = controlEne.atacar(data.getAtkEnemigos() [2], dados.tirarDados());
-			puntDEF = controlJug.defender(j1.getPtsDEF(), data.getArmaDEF() [0], dados.tirarDados());
+			puntATK = controlEne.atacar(data.getEnemigos() [enemigo], dados.tirarDados());
+			puntDEF = controlJug.defender(j1, dados.tirarDados());
 			System.out.println(puntATK);
 			System.out.println(puntDEF);
 			
@@ -89,10 +93,10 @@ public class Principal {
 			System.out.println(hit);
 			
 			if (hit) {
-				crudJugador.herirJugador(j1, data.getAtaquesEnemigos()[2][1]);
+				crudJugador.herirJugador(data.getAtaquesEnemigos()[enemigo][controlEne.tirarDadosATK()]);
 			}
 			crudEnemigo.pintarEnemigos(data.getEnemigos());
-			crudJugador.consultarStats(j1);
+			crudJugador.consultarStats();
 			System.out.println((data.getEnemigos() [2]).getHp());
 
 		}while ((data.getEnemigos() [2]).getHp() > 0 && j1.getPtsHP() > 0);

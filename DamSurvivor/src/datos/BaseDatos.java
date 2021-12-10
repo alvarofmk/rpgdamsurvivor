@@ -40,6 +40,25 @@ public class BaseDatos {
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 	
+	// Asciis
+	
+	private String [] escenas = {"                           @,.........@#                                        \r\n"
+			+ "                             %       @           *@@#                           \r\n"
+			+ "                           %@        @                 @                        \r\n"
+			+ "                        .@  .#       @              #@   @*                     \r\n"
+			+ "                      @                           @  @     /@                   \r\n"
+			+ "                   @                           @       @      @                 \r\n"
+			+ "                &@                          @.           @      @               \r\n"
+			+ "              @                          @%    @      @    @      @             \r\n"
+			+ "              @                       ,@       @*    %@      @     @            \r\n"
+			+ "                 (.                 @                          @@@#             \r\n"
+			+ "                 (.   *@@@@@@@@     @                          @                \r\n"
+			+ "                 /.   @   @    &    @         @&    ,@         @                \r\n"
+			+ "                 /.   @   @    &   ,/       @      &@  @       @                \r\n"
+			+ "                 #.  &          @  /,      (,      ./   @      @                \r\n"
+			+ "                  @                **      #            @      @                \r\n"
+			+ "                   @@               @      #            @   %@                  "};
+	
 	
 	// Constructor vacío
 	
@@ -192,6 +211,16 @@ public class BaseDatos {
 
 	public void setAtaquesEnemigos(int[][] ataquesEnemigos) {
 		this.ataquesEnemigos = ataquesEnemigos;
+	}
+
+
+	public String[] getEscenas() {
+		return escenas;
+	}
+
+
+	public void setEscenas(String[] escenas) {
+		this.escenas = escenas;
 	}
 
 
