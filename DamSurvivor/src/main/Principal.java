@@ -25,7 +25,7 @@ public class Principal {
 		
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0;
-		int menu=0, eleccion = 0, enemigo = 0, posicion=0;
+		int menu = 0, eleccion = 0, enemigo = 0, posicion=0;
 		String nombreJ = "Durbán";
 		Jugador j1 = new Jugador(nombreJ);
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
@@ -46,6 +46,7 @@ public class Principal {
 		escenas.pintarCasita(data.getAscis() [1]);
 		escenas.pintarCasita(data.getAscis() [2]);
 		menus.menuCombate(data.getMenus() [0]);
+		crudEnemigo.consultarEnemigo(data.getEnemigos()[0]);
 		
 		
 		
@@ -68,7 +69,7 @@ public class Principal {
 						posicion=1;
 						break;
 					case 2:
-						//vista cr�ditos
+						//vista créditos
 					default:
 						//sustituir por vista opcion inválida
 						System.out.println("Opcion inválida");
@@ -95,13 +96,13 @@ public class Principal {
 						crudJugador.obtenerArma(2, data); 
 						break;
 					default:
-						//sustituir por vista opcion inv�lida
+						//sustituir por vista opcion inválida
 						System.out.println("Opcion inválida");
 				}
 			}while(menu>3 || menu <1);
 			
-			//Vista de escena y eleccion
-			//ejemplo de eleccion
+			//Vista de escena y elección
+			//ejemplo de elección
 			do {
 				System.out.println("Blabla elige");
 				menu=Leer.datoInt();
@@ -113,7 +114,7 @@ public class Principal {
 						posicion=3;
 						break;
 					default:
-						//sustituir por vista opcion inv�lida
+						//sustituir por vista opcion inválida
 						System.out.println("Opcion inválida");
 				}
 			}while(menu!=1 || menu!=2);
@@ -121,7 +122,7 @@ public class Principal {
 		
 		if(posicion==2) {
 			crudJugador.obtenerObjeto(0, data);
-			//Vista de escena y eleccion
+			//Vista de escena y elección
 			do {
 				System.out.println("Blabla elige");
 				menu=Leer.datoInt();
@@ -204,7 +205,10 @@ public class Principal {
 					System.out.println(hit);
 					
 					if (hit) {
-						crudJugador.herirJugador(data.getAtkEnemigos() [2]);
+						crudJugador.herirJugador(data.getAtaquesEnemigos() [enemigo] [controlEne.tirarDadosATK()]);
+						// Vista frase el enemigo acertó su ataque
+					}else {
+						// Vista: frase el enemigo falló su ataque
 					}
 			}
 
