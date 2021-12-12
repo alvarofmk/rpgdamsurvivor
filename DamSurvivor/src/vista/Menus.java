@@ -8,8 +8,12 @@ public class Menus {
 	public void menuArmas (Jugador j1) {
 		int elecc= 1;
 		if(j1.getArmas()[2] == null) {
-			
+		
 		};
+	}
+	
+	public void menuCombate (String pepe) {
+		System.out.println(pepe);
 	}
 }
 

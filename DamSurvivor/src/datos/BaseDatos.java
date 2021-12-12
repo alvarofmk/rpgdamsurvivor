@@ -42,7 +42,7 @@ public class BaseDatos {
 	
 	// Asciis
 	
-	private String [] escenas = {"                           @,.........@#                                        \r\n"
+	private String [] ascis = {"                           @,.........@#                                        \r\n"
 			+ "                             %       @           *@@#                           \r\n"
 			+ "                           %@        @                 @                        \r\n"
 			+ "                        .@  .#       @              #@   @*                     \r\n"
@@ -57,7 +57,9 @@ public class BaseDatos {
 			+ "                 /.   @   @    &   ,/       @      &@  @       @                \r\n"
 			+ "                 #.  &          @  /,      (,      ./   @      @                \r\n"
 			+ "                  @                **      #            @      @                \r\n"
-			+ "                   @@               @      #            @   %@                  "};
+			+ "                   @@               @      #            @   %@                  ", "asci", "asci2"};
+	
+	private String [] menus = {"atacar\t\tusar objeto\t\t cambiar arma"};
 	
 	
 	// Constructor vacío
@@ -214,14 +216,27 @@ public class BaseDatos {
 	}
 
 
-	public String[] getEscenas() {
-		return escenas;
+	public String[] getAscis() {
+		return ascis;
 	}
 
 
-	public void setEscenas(String[] escenas) {
-		this.escenas = escenas;
+	public void setAscis(String[] ascis) {
+		this.ascis = ascis;
 	}
+
+
+	public String[] getMenus() {
+		return menus;
+	}
+
+
+	public void setMenus(String[] menus) {
+		this.menus = menus;
+	}
+
+
+
 
 
 }

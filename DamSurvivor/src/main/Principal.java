@@ -11,6 +11,7 @@ import model.Jugador;
 import model.Objeto;
 import utilidad.Leer;
 import vista.Escenas;
+import vista.Menus;
 import crud.CrudArma;
 import crud.CrudEnemigo;
 import crud.CrudObjeto;
@@ -36,9 +37,17 @@ public class Principal {
 		ControllerEnemigo controlEne = new ControllerEnemigo ();
 		Dados dados = new Dados();
 		Combate combate = new Combate ();
+		Escenas escenas = new Escenas();
+		Menus menus = new Menus ();
 		data.setItems(crudItems.generarObjetos(data));	
 		data.setWeapons(crudWeapons.generarArmas(data));
 		data.setEnemigos(crudEnemigo.generarEnemigos(data));
+		escenas.pintarCasita(data.getAscis() [0]);
+		escenas.pintarCasita(data.getAscis() [1]);
+		escenas.pintarCasita(data.getAscis() [2]);
+		menus.menuCombate(data.getMenus() [0]);
+		
+		
 		
 		//pantalla inicio
 		//sustituir por vista pantalla inicio
@@ -50,7 +59,7 @@ public class Principal {
 			//sustituir por vista menu principal
 			System.out.println("RPG DAM SURVIVOR");
 			System.out.println("1. New game");
-			System.out.println("2. Créditos");
+			System.out.println("2. CrÃ©ditos");
 			System.out.println("/n");
 			menu=Leer.datoInt();
 			do {
@@ -59,10 +68,10 @@ public class Principal {
 						posicion=1;
 						break;
 					case 2:
-						//vista créditos
+						//vista crï¿½ditos
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						//sustituir por vista opcion invÃ¡lida
+						System.out.println("Opcion invÃ¡lida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -86,8 +95,8 @@ public class Principal {
 						crudJugador.obtenerArma(2, data); 
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						//sustituir por vista opcion invï¿½lida
+						System.out.println("Opcion invÃ¡lida");
 				}
 			}while(menu>3 || menu <1);
 			
@@ -104,8 +113,8 @@ public class Principal {
 						posicion=3;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						//sustituir por vista opcion invï¿½lida
+						System.out.println("Opcion invÃ¡lida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -124,8 +133,8 @@ public class Principal {
 						posicion=5;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						//sustituir por vista opcion invï¿½lida
+						System.out.println("Opcion invï¿½lida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -144,8 +153,8 @@ public class Principal {
 						posicion=6;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						//sustituir por vista opcion invï¿½lida
+						System.out.println("Opcion invï¿½lida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
