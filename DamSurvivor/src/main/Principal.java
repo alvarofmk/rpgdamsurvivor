@@ -122,6 +122,7 @@ public class Principal {
 		
 		if(posicion==2) {
 			crudJugador.obtenerObjeto(0, data);
+			
 			//Vista de escena y elección
 			do {
 				System.out.println("Blabla elige");
@@ -134,8 +135,8 @@ public class Principal {
 						posicion=5;
 						break;
 					default:
-						//sustituir por vista opcion inv�lida
-						System.out.println("Opcion inv�lida");
+						//sustituir por vista opcion inválida
+						System.out.println("Opcion inválida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -154,8 +155,8 @@ public class Principal {
 						posicion=6;
 						break;
 					default:
-						//sustituir por vista opcion inv�lida
-						System.out.println("Opcion inv�lida");
+						//sustituir por vista opcion inválida
+						System.out.println("Opcion inválida");
 				}
 			}while(menu!=1 || menu!=2);
 		}
