@@ -6,6 +6,7 @@ import controller.ControllerJugador;
 import controller.Dados;
 import crud.CrudJugador;
 import datos.BaseDatos;
+import datos.BaseDatosAscis;
 import model.Arma;
 import model.Jugador;
 import model.Objeto;
@@ -33,22 +34,20 @@ public class Principal {
 		CrudArma crudWeapons = new CrudArma ();
 		CrudObjeto crudItems = new CrudObjeto ();
 		BaseDatos data = new BaseDatos();
+		BaseDatosAscis dataAscis = new BaseDatosAscis ();
 		ControllerJugador controlJug = new ControllerJugador ();
 		ControllerEnemigo controlEne = new ControllerEnemigo ();
 		Dados dados = new Dados();
 		Combate combate = new Combate ();
 		Escenas escenas = new Escenas();
-		Menus menus = new Menus ();
 		data.setItems(crudItems.generarObjetos(data));	
 		data.setWeapons(crudWeapons.generarArmas(data));
 		data.setEnemigos(crudEnemigo.generarEnemigos(data));
-		escenas.pintarCasita(data.getAscis() [0]);
-		escenas.pintarCasita(data.getAscis() [1]);
-		escenas.pintarCasita(data.getAscis() [2]);
-		menus.menuCombate(data.getMenus() [0]);
+		escenas.pintar(dataAscis.getAscis()[0]);
 		crudEnemigo.consultarEnemigo(data.getEnemigos()[0]);
 		
-		
+		escenas.pintar(dataAscis.getAscis()[0]);
+		escenas.pintar(data.getArmaDescripcion()[1]);
 		
 		//pantalla inicio
 		//sustituir por vista pantalla inicio
