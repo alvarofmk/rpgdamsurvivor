@@ -12,9 +12,9 @@ public class Jugador {
 	private int ptsDEF;
 	private int ptsHP;
 	private int ptsMaxHP;
-	private Objeto [] inventario;
+	private Objeto [] inventario = new Objeto [5];
 	private Arma armaActiva;
-	private Arma [] armas;
+	private Arma [] armas = new Arma [4];
 	
 	// Constructor
 	

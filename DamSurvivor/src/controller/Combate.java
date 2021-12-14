@@ -11,7 +11,5 @@ public class Combate {
 		}
 		return hit;
 	}
-		
-	
 
 }

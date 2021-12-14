@@ -10,7 +10,6 @@ public class BaseDatos {
 	
 	// Atributos
 	
-	private Jugador [] listaJugadores = new Jugador [5];
 	private Objeto [] items = new Objeto [5];
 	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
 	private int [] objetoATK = {0,5,2,0,5};
@@ -28,8 +27,65 @@ public class BaseDatos {
 	private int [] armaDEF = {5,10,15,20};
 	private int [] armaDAM = {10,20,50,80};
 	private String [] armaDescripcion = {
-			"Arma que nunca está cuando la necesitas",
-			"Tan rígida que puede usarse como arma",
+			"                                                                         ,  *                    \r\n"
+			+ "                                                                        .    ,,/(*                  \r\n"
+			+ "                                                                       **/(.,,,,,* .                \r\n"
+			+ "                                                                     **/##%##,.....                 \r\n"
+			+ "                                                                  ///,/(%##*#(...                   \r\n"
+			+ "                                                              . *.  .###....,/                      \r\n"
+			+ "                                                             ////##%#%...  .                        \r\n"
+			+ "                                                         . */, ,.%#,.* (.                           \r\n"
+			+ "                                                        /*/ #.%#%...*..                             \r\n"
+			+ "                                                      */. /.%#,.,  .                                \r\n"
+			+ "                                                   /*/ /.#%#..( ..                                  \r\n"
+			+ "                                                 */*#..##*..*#.                                     \r\n"
+			+ "                                               ,/(../%#../ ..                                       \r\n"
+			+ "                                          . */ %%.#%/..((..                                         \r\n"
+			+ "                                            ,#%%%%......                                            \r\n"
+			+ "                                         ...,,%#......                                              \r\n"
+			+ "                                   &#/(&,,,,,......                                                 \r\n"
+			+ "                                (%/(#@@@@@/.....                                                    \r\n"
+			+ "                              &#/(%@@@@@@%#(%.                                                      \r\n"
+			+ "                           .&(((@@@@@@%##(&@                                                        \r\n"
+			+ "                         #&((#@@@@@@@#(%@                                                           \r\n"
+			+ "                      .@@@/@@@@@@@#(#&,                                                             \r\n"
+			+ "                    #@@&(@@@@@@##(%#                                                                \r\n"
+			+ "                  @@@/@@@@@@&#&@@                                                                   \r\n"
+			+ "                 @%(&@@@@@#@@@#                                                                     \r\n"
+			+ "                   @@@@&(@@@                                                                        \r\n"
+			+ "                      @@@                Arma que nunca está cuando la necesitas",
+			"                                                                                                      \r\n"
+			+ "                            %/(((***************/////(/(                                            \r\n"
+			+ "                            (//(/,****************#////(                                            \r\n"
+			+ "                            (/(//*/.              (////(                                            \r\n"
+			+ "                            /(/((/                #//(/(                                            \r\n"
+			+ "                            /,////  ,//(/(//////***////(                                            \r\n"
+			+ "                            ////((///*/****/**/*/**/////                                            \r\n"
+			+ "                            ((////*****/*.         (///(                                            \r\n"
+			+ "                            (///((                 (((/(                                            \r\n"
+			+ "                            */////        ./,/(((((/(/((.                                           \r\n"
+			+ "                             (////*****/////*///(((((((##                                           \r\n"
+			+ "                             /////**/*/*/////((*   (((((#                                           \r\n"
+			+ "                             (//((                 (((((#                                           \r\n"
+			+ "                             (/(((                 /(((/(                                           \r\n"
+			+ "                             (((((/                .(((((                                           \r\n"
+			+ "                             (((((# *//////////////(((/((///////*                                   \r\n"
+			+ "                             ((##(/****************//////*************///*                          \r\n"
+			+ "                             (##((((##/************/(*/********/((/****//                           \r\n"
+			+ "                             (#(##(((((((#(/////(***************/*****///                           \r\n"
+			+ "                             (####% .((((/******************,      /**///                           \r\n"
+			+ "                             (#####     ./**///     #((((          (/////                           \r\n"
+			+ "                             (####*      /****/     #((((,         (/(///                           \r\n"
+			+ "                             (####.      /***//     #((##////////////////                           \r\n"
+			+ "                             (####       /***//**///*(///(*        (/////                           \r\n"
+			+ "                             (####       //**//     (((#%%%(/      #/////                           \r\n"
+			+ "                             (##((       /***//     (##### (%%%%%##(/////                           \r\n"
+			+ "                             (##(#&#     /***//     /%%###       *%#////(                           \r\n"
+			+ "                             (%(((((((&# /***//     (%##((         (////(                           \r\n"
+			+ "                             (####    /((/****/                    #/////                           \r\n"
+			+ "                             (#((&       /****/.                   #/////                           \r\n"
+			+ "                                         /****/                    #(///(                           \r\n"                                                  
+			+ "                               Tan rígida que puede usarse como arma",
 			"El equipo básico de un alumno de DAM",
 			"Desesperación Aleatoriaramente Miserable (DAM) o desesperación de DAM es una espada a dos manos"
 			+ " que transmite la desesperación de un alumno de DAM en exámenes a sus enemigos "};
@@ -38,7 +94,7 @@ public class BaseDatos {
 	private int [] atkEnemigos = {0, 10, 25, 60};
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
-	private int [] hpMaxEnemigos = {25, 45, 70, 120};
+	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 	
 	private int [] eleccionesMapa = new int[9];
 			
@@ -52,21 +108,6 @@ public class BaseDatos {
 	
 	// Getters & Setters
 	
-	public int[] getEleccionesMapa() {
-		return eleccionesMapa;
-	}
-
-	public void setEleccionesMapa(int[] eleccionesMapa) {
-		this.eleccionesMapa = eleccionesMapa;
-	}
-	
-	public Jugador[] getListaJugadores() {
-		return listaJugadores;
-	}
-
-	public void setListaJugadores(Jugador[] listaJugadores) {
-		this.listaJugadores = listaJugadores;
-	}
 	
 	public Objeto[] getItems() {
 		return items;
@@ -195,14 +236,16 @@ public class BaseDatos {
 	}
 
 
-	public int[] getHpMaxEnemigos() {
-		return hpMaxEnemigos;
+	public int[][] getAtaquesEnemigos() {
+		return ataquesEnemigos;
 	}
 
 
-	public void setHpMaxEnemigos(int[] hpMaxEnemigos) {
-		this.hpMaxEnemigos = hpMaxEnemigos;
+	public void setAtaquesEnemigos(int[][] ataquesEnemigos) {
+		this.ataquesEnemigos = ataquesEnemigos;
 	}
+
+
 
 }
 			
