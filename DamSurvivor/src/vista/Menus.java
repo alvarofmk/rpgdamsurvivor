@@ -64,8 +64,8 @@ public class Menus {
 		};
 	}
 	
-	public void menuCombate (String pepe) {
-		System.out.println(pepe);
+	public void menuCombate () {
+		System.out.println("***************");
 	}
 }
 
