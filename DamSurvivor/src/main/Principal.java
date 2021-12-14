@@ -53,10 +53,7 @@ public class Principal {
 		//menu inicio
 		if (posicion==0) {
 			//sustituir por vista menu principal
-			System.out.println("RPG DAM SURVIVOR");
-			System.out.println("1. New game");
-			System.out.println("2. Créditos");
-			System.out.println("/n");
+			menus.menuPrincipal();
 			menu=Leer.datoInt();
 			do {
 				switch(menu) {
@@ -64,10 +61,10 @@ public class Principal {
 						posicion=1;
 						break;
 					case 2:
-						//vista créditos
+						menus.creditos();
+						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						menus.invalid();
 						break;
 				}
 			}while(menu != 1 || menu != 2);
@@ -92,8 +89,8 @@ public class Principal {
 						crudJugador.obtenerArma(2, data); 
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						menus.invalid();
+						break;
 				}
 			}while(menu>3 || menu <1);
 			
@@ -110,8 +107,8 @@ public class Principal {
 						posicion=3;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						menus.invalid();
+						break;
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -131,8 +128,8 @@ public class Principal {
 						posicion=5;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						menus.invalid();
+						break;
 				}
 			}while(menu!=1 || menu!=2);
 		}
@@ -151,8 +148,8 @@ public class Principal {
 						posicion=6;
 						break;
 					default:
-						//sustituir por vista opcion inválida
-						System.out.println("Opcion inválida");
+						menus.invalid();
+						break;
 				}
 			}while(menu!=1 || menu!=2);
 		}
