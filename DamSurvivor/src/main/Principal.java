@@ -36,7 +36,6 @@ public class Principal {
 		data.setWeapons(crudWeapons.generarArmas(data));
 		data.setEnemigos(crudEnemigo.generarEnemigos(data));
 		data.getEleccionesMapa();
-		int mapaX [] = data.getEleccionesMapa();
 		
 		System.out.println("Bienvenido a RPG DAM SURVIVOR!");
 		System.out.println("Cómo deberia llamarte ?");
@@ -61,46 +60,9 @@ public class Principal {
 			break;
 		}
 		
-		
-//		crudJugador.addJugador(j1, data.getListaJugadores());
-//		crudJugador.crearGuerrero(j1);
-//		crudJugador.pintarJugadores(data.getListaJugadores());
+
 		crudJugador.consultarStats(j1);
-//		crudEnemigo.pintarEnemigos(data.getEnemigos());
-//		j1.setNombre(nombreJ);
-		
-		
-		/* Prueba de combate
-		do {
-			puntATK = controlJug.atacar(j1.getPtsATK(), data.getArmaATK()[0], dados.tirarDados());
-			puntDEF = controlEne.defender(data.getDefEnemigos()[2], dados.tirarDados());
-			System.out.println(puntATK);
-			System.out.println(puntDEF);
-			
-			hit = combate.acertarGolpe(puntATK, puntDEF);
-			System.out.println(hit);
-			if (hit) {
-				crudEnemigo.herirEnemigo(data.getEnemigos() [2], j1.getPtsATK());
-			}
-			crudEnemigo.pintarEnemigos(data.getEnemigos());
-			crudJugador.consultarStats(j1);
-			
-			puntATK = controlEne.atacar(data.getAtkEnemigos() [2], dados.tirarDados());
-			puntDEF = controlJug.defender(j1.getPtsDEF(), data.getArmaDEF() [0], dados.tirarDados());
-			System.out.println(puntATK);
-			System.out.println(puntDEF);
-			
-			hit = combate.acertarGolpe(puntATK, puntDEF);
-			System.out.println(hit);
-			
-			if (hit) {
-				crudJugador.herirJugador(j1, data.getAtkEnemigos() [2]);
-			}
-			crudEnemigo.pintarEnemigos(data.getEnemigos());
-			crudJugador.consultarStats(j1);
-			System.out.println((data.getEnemigos() [2]).getHp());
-		}while ((data.getEnemigos() [2]).getHp() > 0); 
-		*/
+
 		
 	}
 

@@ -52,14 +52,6 @@ public class BaseDatos {
 	
 	// Getters & Setters
 	
-	public int[] getEleccionesMapa() {
-		return eleccionesMapa;
-	}
-
-	public void setEleccionesMapa(int[] eleccionesMapa) {
-		this.eleccionesMapa = eleccionesMapa;
-	}
-	
 	public Jugador[] getListaJugadores() {
 		return listaJugadores;
 	}
@@ -202,6 +194,14 @@ public class BaseDatos {
 
 	public void setHpMaxEnemigos(int[] hpMaxEnemigos) {
 		this.hpMaxEnemigos = hpMaxEnemigos;
+	}
+	
+	public int[] getEleccionesMapa() {
+		return eleccionesMapa;
+	}
+
+	public void setEleccionesMapa(int[] eleccionesMapa) {
+		this.eleccionesMapa = eleccionesMapa;
 	}
 
 }
