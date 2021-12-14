@@ -1,6 +1,7 @@
 package main;
 
 import controller.Combate;
+import controller.ControllerArma;
 import controller.ControllerEnemigo;
 import controller.ControllerJugador;
 import controller.Dados;
@@ -35,6 +36,7 @@ public class Principal {
 		BaseDatos data = new BaseDatos();
 		ControllerJugador controlJug = new ControllerJugador ();
 		ControllerEnemigo controlEne = new ControllerEnemigo ();
+		ControllerArma controlArma = new ControllerArma ();
 		Dados dados = new Dados();
 		Combate combate = new Combate ();
 		Escenas escenas = new Escenas();
@@ -73,8 +75,9 @@ public class Principal {
 					default:
 						//sustituir por vista opcion inválida
 						System.out.println("Opcion inválida");
+						break;
 				}
-			}while(menu!=1 || menu!=2);
+			}while(menu != 1 || menu != 2);
 		}
 		
 		if(posicion==1) {
@@ -174,7 +177,7 @@ public class Principal {
 						hit = combate.acertarGolpe(controlJug.atacar(j1, dados.tirarDados()), 
 								controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 						if (hit) {
-							crudEnemigo.herirEnemigo(data.getEnemigos() [enemigo], j1.getArmaActiva().getdanio());
+							crudEnemigo.herirEnemigo(data.getEnemigos() [enemigo], controlArma.damageRandomizado(j1.getArmaActiva()));
 							//vista: frase enemigo acertado
 						}else {
 							//vista: frase enemigo fallado
@@ -213,7 +216,7 @@ public class Principal {
 					}
 			}
 
-		}while ((data.getEnemigos() [2]).getHp() > 0 && j1.getPtsHP() > 0);
+		}while ((data.getEnemigos() [enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 			
 			if(j1.getPtsHP()<=0) {
 				//cambiar por vista game over
