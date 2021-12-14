@@ -24,12 +24,16 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
+
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion=0;
 		String nombreJ;
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
+
+		int claseJugador;
+
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
 		CrudArma crudWeapons = new CrudArma ();
 		CrudObjeto crudItems = new CrudObjeto ();
@@ -43,6 +47,7 @@ public class Principal {
 		Menus menus = new Menus ();
 		data.setItems(crudItems.generarObjetos(data));	
 		data.setWeapons(crudWeapons.generarArmas(data));
+
 		
 		//pantalla inicio
 		menus.pantallaInicio();
@@ -223,7 +228,5 @@ public class Principal {
 			}
 			
 		}while(posicion!=99);
-		
 	}
-
 }

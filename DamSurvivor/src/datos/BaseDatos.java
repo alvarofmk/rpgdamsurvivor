@@ -97,6 +97,8 @@ public class BaseDatos {
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 	
+	private int [] eleccionesMapa = new int[9];
+			
 	
 	// Constructor vacío
 	
@@ -249,6 +251,14 @@ public class BaseDatos {
 
 	public void setAtaquesEnemigos(int[][] ataquesEnemigos) {
 		this.ataquesEnemigos = ataquesEnemigos;
+	}
+	
+	public int[] getEleccionesMapa() {
+		return eleccionesMapa;
+	}
+
+	public void setEleccionesMapa(int[] eleccionesMapa) {
+		this.eleccionesMapa = eleccionesMapa;
 	}
 
 
