@@ -23,10 +23,7 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		
-=======
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
+
 
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
@@ -34,18 +31,13 @@ public class Principal {
 		String nombreJ;
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
-<<<<<<< HEAD
+
 
 		int claseJugador;
 
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
 		CrudArma crudWeapons = new CrudArma ();
 		CrudObjeto crudItems = new CrudObjeto ();
-=======
-		CrudEnemigo crudEnemigo = new CrudEnemigo();
-		CrudArma crudWeapons = new CrudArma();
-		CrudObjeto crudItems = new CrudObjeto();
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
 		BaseDatos data = new BaseDatos();
 		BaseDatosAscis dataAscis = new BaseDatosAscis();
 		ControllerJugador controlJug = new ControllerJugador();
@@ -58,12 +50,12 @@ public class Principal {
 		data.setItems(crudItems.generarObjetos(data));
 		data.setWeapons(crudWeapons.generarArmas(data));
 
-<<<<<<< HEAD
+
 		
 		//pantalla inicio
-=======
+
 		// pantalla inicio
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
+
 		menus.pantallaInicio();
 		Leer.dato();
 
