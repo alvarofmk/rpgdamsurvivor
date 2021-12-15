@@ -178,8 +178,8 @@ public class Principal {
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
 								//durban tiene que implementar el daño aleatorio aqui, cambiar menu por el daño en este metodo
-								menus.ataqueAcertado(menu, data.getEnemigos()[enemigo]);
-								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], j1.getArmaActiva().getdanio());
+								menus.ataqueAcertado(controlArma.damageRandomizado(j1.getArmaActiva()), data.getEnemigos()[enemigo]);
+								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], controlArma.damageRandomizado(j1.getArmaActiva()));
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
@@ -202,10 +202,12 @@ public class Principal {
 							// sustituir por vista
 							System.out.println("Te has equivocado, el enemigo aprovecha para atacar");
 					}
+					
 					//menus.imprimirString(data.getFraseAtaqueEnemigo()[enemigo][ataque]);
 					//menus imprimir frase preparate para defenderte
 					// turno enemigo
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
+						
 						puntATK = controlEne.atacar(data.getEnemigos()[2], dados.tirarDados());
 						puntDEF = controlJug.defender(j1, dados.tirarDados());
 						System.out.println(puntATK);
