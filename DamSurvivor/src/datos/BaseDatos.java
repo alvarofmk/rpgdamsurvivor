@@ -10,7 +10,6 @@ public class BaseDatos {
 	
 	// Atributos
 	
-	private Jugador [] listaJugadores = new Jugador [5];
 	private Objeto [] items = new Objeto [5];
 	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco","Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
 	private int [] objetoATK = {0,5,2,0,5};
@@ -106,14 +105,6 @@ public class BaseDatos {
 	
 	
 	// Getters & Setters
-	
-	public Jugador[] getListaJugadores() {
-		return listaJugadores;
-	}
-
-	public void setListaJugadores(Jugador[] listaJugadores) {
-		this.listaJugadores = listaJugadores;
-	}
 	
 	public Objeto[] getItems() {
 		return items;
