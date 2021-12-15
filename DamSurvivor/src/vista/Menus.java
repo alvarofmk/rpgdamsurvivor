@@ -1,6 +1,9 @@
 package vista;
 
+import model.Arma;
+import model.Enemigo;
 import model.Jugador;
+import model.Objeto;
 
 public class Menus {
 	
@@ -54,7 +57,114 @@ public class Menus {
 	}
 	
 	public void invalid () {
-		System.out.println("\t\tElige bien.");
+		System.out.println("\t\t\t  -  Elige bien");
+	}
+	
+	public void dado (double tirada) {
+		System.out.println("                                                            \r\n"
+				+ "                           .:-+#%#. .#=++=-:                        \r\n"
+				+ "                       :=##+%@@##+  -#=-+@+#%*-                     \r\n"
+				+ "                  :::-:..:.:-:::--:=-**=. =@=#@#*-                  \r\n"
+				+ "               :==-:::..        .. .=.:--==-:-+#**#+.               \r\n"
+				+ "               +-     =**:         ..   -***+**#**=*%#:             \r\n"
+				+ "              +. =  -@%%@@%%:    .+:     :#++=-=+++=+*#+            \r\n"
+				+ "              *   = +@@@#*@@:  .==.       -+-:**+*@*===+#           \r\n"
+				+ "             -:   :: .*@@%+.  :*-          -++%@@@#@%%%*#           \r\n"
+				+ "             +.=-  :.        =#####=    .   *+=%@*@@#=--#           \r\n"
+				+ "             **%@=  =      -#=:++%@@ .+@@@#. #=+%%++*==%+           \r\n"
+				+ "            .##@@:   -   .*#. :*@@@= %@+ =@+ :#****===#%%=.         \r\n"
+				+ "            -=@#+@:  .: :+=  *@@@%+-.@@*+%@:  =%***:+#+@@@@%+.      \r\n"
+				+ "            =  :@-    ..*-::::----=+.=%@@#.    *==-+*++@@@@@@@#:    \r\n"
+				+ "            *  --   :::=      ::----::..:.  :::#.=+**%@@@@@@@@@@*   \r\n"
+				+ "            * .:       +                       :-+#+*@@@@@@@@@@@@   \r\n"
+				+ "            --       ..::      -=              +%*%=*#@@@@@@@@@%.   \r\n"
+				+ "             .=:  :: =* =.   ++@@+=-. ++     =#=#*%#*%@@@@@@@@+     \r\n"
+				+ "               .==:%#@%%.+.  +@@+@@@-+@+   =**%%**#@*@@@@@@@%:      \r\n"
+				+ "                .#@*+*#@- +  -@@@#-  @@  :##%@@@##+%#@@@@@@+        \r\n"
+				+ "                  .=%#-   :=  --.   .+::**#*@@%%**#@@@@@@@-         \r\n"
+				+ "                     .=*+. :-        :**#**#%%%@@@@@%#*=:           \r\n"
+				+ "                         -=-:      :*##+%%%#*+=-:.                  \r\n"
+				+ "                            ::::.-+==-:.                            \r\n"
+				+ "                                                            ");
+		if(tirada <= 0.05) {
+			System.out.println("\t\t\t  -  Has sacado un 1 \n");
+		}else if(tirada <= 0.10) {
+			System.out.println("\t\t\t  -  Has sacado un 2 \n");
+		}else if(tirada <= 0.15) {
+			System.out.println("\t\t\t  -  Has sacado un 3 \n");
+		}else if(tirada <= 0.20) {
+			System.out.println("\t\t\t  -  Has sacado un 4 \n");
+		}else if(tirada <= 0.25) {
+			System.out.println("\t\t\t  -  Has sacado un 5 \n");
+		}else if(tirada <= 0.30) {
+			System.out.println("\t\t\t  -  Has sacado un 6 \n");
+		}else if(tirada <= 0.35) {
+			System.out.println("\t\t\t  -  Has sacado un 7 \n");
+		}else if(tirada <= 0.40) {
+			System.out.println("\t\t\t  -  Has sacado un 8 \n");
+		}else if(tirada <= 0.45) {
+			System.out.println("\t\t\t  -  Has sacado un 9 \n");
+		}else if(tirada <= 0.50) {
+			System.out.println("\t\t\t  -  Has sacado un 10 \n");
+		}else if(tirada <= 0.55) {
+			System.out.println("\t\t\t  -  Has sacado un 11 \n");
+		}else if(tirada <= 0.60) {
+			System.out.println("\t\t\t  -  Has sacado un 12 \n");
+		}else if(tirada <= 0.65) {
+			System.out.println("\t\t\t  -  Has sacado un 13 \n");
+		}else if(tirada <= 0.70) {
+			System.out.println("\t\t\t  -  Has sacado un 14 \n");
+		}else if(tirada <= 0.75) {
+			System.out.println("\t\t\t  -  Has sacado un 15 \n");
+		}else if(tirada <= 0.80) {
+			System.out.println("\t\t\t  -  Has sacado un 16 \n");
+		}else if(tirada <= 0.85) {
+			System.out.println("\t\t\t  -  Has sacado un 17 \n");
+		}else if(tirada <= 0.90) {
+			System.out.println("\t\t\t  -  Has sacado un 18 \n");
+		}else if(tirada <= 0.95) {
+			System.out.println("\t\t\t  -  Has sacado un 19 \n");
+		}else if(tirada <= 1) {
+			System.out.println("\t\t\t  -  Has sacado un 20 \n");
+		}
+	}
+	
+	public void lanzaDados () {
+		System.out.println("\t\t\t  -  Lanza el dado\n");
+	}
+	
+	public void ataqueAcertado (int dmg, Enemigo boss) {
+		System.out.println("\t\t\t  -  Tu ataque acierta");
+		System.out.println("\t\t\t  -  "+boss.getNombre()+" recibe "+dmg+" de daño\n");
+	}
+	
+	public void imprimirString (String frase) {
+		System.out.println("\t\t\t  -  " +frase+ " \n");
+	}
+	
+	public void cambiarArma (Arma armaEquipada) {
+		System.out.println("\t\t\t  -  Ahora estas equipado con " +armaEquipada.getNombre());
+	}
+	
+	public void objetoUsado (Objeto item) {
+		System.out.println("\t\t\t  -  Has usado " +item.getNombre());
+	}
+	
+	public void turnoPerdido () {
+		System.out.println("\t\t\t  -  Te equivocas al programar y pierdes tu turno");
+	}
+	
+	public void gameOver () {
+		System.out.println("              _______  _______  _______  _______    _______           _______  _______ \r\n"
+				+ "             (  ____ \\(  ___  )(       )(  ____ \\  (  ___  )|\\     /|(  ____ \\(  ____ )\r\n"
+				+ "             | (    \\/| (   ) || () () || (    \\/  | (   ) || )   ( || (    \\/| (    )|\r\n"
+				+ "             | |      | (___) || || || || (__      | |   | || |   | || (__    | (____)|\r\n"
+				+ "             | | ____ |  ___  || |(_)| ||  __)     | |   | |( (   ) )|  __)   |     __)\r\n"
+				+ "             | | \\_  )| (   ) || |   | || (        | |   | | \\ \\_/ / | (      | (\\ (   \r\n"
+				+ "             | (___) || )   ( || )   ( || (____/\\  | (___) |  \\   /  | (____/\\| ) \\ \\__\r\n"
+				+ "             (_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\r\n"
+				+ "\r\n"
+				+ "                         -  Pulsa intro para volver al menú principal  -");
 	}
 	
 	public void menuArmas (Jugador j1) {
@@ -64,8 +174,8 @@ public class Menus {
 		};
 	}
 	
-	public void menuCombate (String pepe) {
-		System.out.println(pepe);
+	public void menuCombate () {
+		System.out.println("***************");
 	}
 }
 
