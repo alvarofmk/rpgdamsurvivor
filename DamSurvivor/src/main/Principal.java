@@ -23,29 +23,19 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-<<<<<<< HEAD
-		
-=======
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
 
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
-		String nombreJ;
+		String nombreJ = "";
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
-<<<<<<< HEAD
 
 		int claseJugador;
 
 		CrudEnemigo crudEnemigo = new CrudEnemigo ();
 		CrudArma crudWeapons = new CrudArma ();
 		CrudObjeto crudItems = new CrudObjeto ();
-=======
-		CrudEnemigo crudEnemigo = new CrudEnemigo();
-		CrudArma crudWeapons = new CrudArma();
-		CrudObjeto crudItems = new CrudObjeto();
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
 		BaseDatos data = new BaseDatos();
 		BaseDatosAscis dataAscis = new BaseDatosAscis();
 		ControllerJugador controlJug = new ControllerJugador();
@@ -57,13 +47,11 @@ public class Principal {
 		Menus menus = new Menus();
 		data.setItems(crudItems.generarObjetos(data));
 		data.setWeapons(crudWeapons.generarArmas(data));
-
-<<<<<<< HEAD
 		
 		//pantalla inicio
-=======
+
 		// pantalla inicio
->>>>>>> 84a3579416e8e0fdfabcc28a120157a3b100b03f
+
 		menus.pantallaInicio();
 		Leer.dato();
 
@@ -99,13 +87,14 @@ public class Principal {
 			if (posicion == 1) {
 				do {
 					// sustituir por vista escena 1
-					System.out.println("Escoge tu destino");
+					menus.pintarMenu0(nombreJ);
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
 							crudJugador.crearAsesino();
 							crudJugador.obtenerArma(0, data);
 							j1.setArmaActiva(j1.getArmas()[0]);
+							
 							break;
 						case 2:
 							crudJugador.crearGuerrero();
@@ -125,7 +114,8 @@ public class Principal {
 				// Vista de escena y elección
 				// ejemplo de elección
 				do {
-					System.out.println("Blabla elige");
+				//Historia para posicion 2 o 3
+					menus.pintarMenuClases(menu);
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
