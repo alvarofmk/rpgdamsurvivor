@@ -257,6 +257,57 @@ public class Menus {
 		System.out.println("2.- Explicárselo tú a Ángel");
 	}
 	
+	public void pintarMenu10() {
+		System.out.println("El video tutorial es un tostón y pasas de él. Te pones música para pasar el rato pero te pillan y te sacan fuera.\r\n"
+				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lluviendo. Esto \r\n"
+				+ "     hará que se te corte el cuerpo y pierdas vida por ello.");
+	}
+	
+	public void pintarMenu11() {
+		System.out.println("Pelea con Ángel, suerte. Si vences Bendición de Don Bosco.");
+		System.out.println("Y ahora que has vencido a Ángel, que harías ?");
+		System.out.println("Atajo a tu destino ");
+		System.out.println("Camino largo y sacrificado");
+	}
+	public void pintarMenu12() {
+		System.out.println("Este videotutorial era la polla, salía el Ángel vestido de mátrix explicandonos la orientación a objetos con Java.\r\n"
+				+ "     Así si que te está quedando todo claro. Con esto apruebas fijo.");
+		System.out.println("De aquí a la casilla random");
+	}
+	public void pintarMenu13() {
+		System.out.println("A quién se le ocurre salir a fumar cuando está lluviendo ? Así es normal que te resfries. Pierdes vida por ello.");
+	}
+	public void pintarMenu14() {
+		System.out.println("Casilla Random");
+	}
+	public void pintarMenu15() {
+		System.out.println("No sabes ni cómo pero aquí estás, has pasado por muchas cosas para llegar a este punto, parece que fue ayer\r\n"
+				+ "cuando te acostabas a las tantas y te despertabas sin tarea, pero de repente te dá por mirar el móvil para ver la hora\r\n"
+				+ "y.... te encuentras con 25000 Boletines de BBDD para mañana.. Crees que es una putada, pero puedes con ello, gracias a \r\n"
+				+ "todo lo que hiciste anteriormente...");
+		System.out.println("..");
+		System.out.println("..");
+		System.out.println("Pasa la noche y al dia siguiente te das cuenta de que eres un Titán de BBDD, ya no tienes miedo de enfrentarte a Luismi.\r\n"
+				+ "Suben tus stats por la sabiduría adquiria en BBDD. Ahora como te sientes ? Preparado ?");
+		System.out.println("Si crees que puedes aumentar tus stats un poco más, te saltas primera para ir directo al examen con \r\n"
+				+ "	todo estudiado al 100%");
+		System.out.println("Si crees que eres tan titán como piensas vas directo a clase.");
+	}
+	public void pintarMenu16() {
+		System.out.println("NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el examen final.");
+		System.out.println("YOU... SHALL.. NOT PASS!!!! // MUERES.");
+	}
+	public void pintarMenu17() {
+		System.out.println("ero que se han dejado en la pizarra ??? No puede ser te fijas bien y ves..\r\n"
+				+ "Los patrones de plantilla de formato para fecha y hora!\r\n"
+				+ "Además de algunos ejemplos de cuando y como usar el JOIN\r\n"
+				+ "Esta si que sera un arma definitiva.... bla bla bla");
+	}
+	public void pintarMenu18() {
+		System.out.println("Peleas con el TITÁN");
+
+	}
+	
 }
 
 
