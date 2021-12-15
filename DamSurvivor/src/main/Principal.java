@@ -26,7 +26,7 @@ public class Principal {
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
-		String nombreJ;
+		String nombreJ = "";
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
 		CrudEnemigo crudEnemigo = new CrudEnemigo();
@@ -45,6 +45,7 @@ public class Principal {
 		data.setWeapons(crudWeapons.generarArmas(data));
 
 		// pantalla inicio
+
 		menus.pantallaInicio();
 		Leer.dato();
 
@@ -80,13 +81,14 @@ public class Principal {
 			if (posicion == 1) {
 				do {
 					// sustituir por vista escena 1
-					System.out.println("Escoge tu destino");
+					menus.pintarMenu0(nombreJ);
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
 							crudJugador.crearAsesino();
 							crudJugador.obtenerArma(0, data);
 							j1.setArmaActiva(j1.getArmas()[0]);
+							
 							break;
 						case 2:
 							crudJugador.crearGuerrero();
@@ -106,7 +108,8 @@ public class Principal {
 				// Vista de escena y elección
 				// ejemplo de elección
 				do {
-					System.out.println("Blabla elige");
+				//Historia para posicion 2 o 3
+					menus.pintarMenuClases(menu);
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -247,5 +250,5 @@ public class Principal {
 		} while (posicion != 99);
 
 	}
-
 }
+	

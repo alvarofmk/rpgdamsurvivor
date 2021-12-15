@@ -1,5 +1,8 @@
 package crud;
 
+
+import model.Enemigo;
+
 import datos.BaseDatos;
 import model.Enemigo;
 
