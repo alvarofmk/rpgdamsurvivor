@@ -23,7 +23,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
@@ -189,18 +188,26 @@ public class Principal {
 							// aplicar objeto
 							System.out.println(j1.getInventario());
 							eleccion = Leer.datoInt();
-							crudJugador.aplicarObjeto(eleccion);
+							if(crudJugador.comprobarObjeto(eleccion)) {
+								menus.objetoUsado(j1.getInventario()[eleccion-1]);
+								crudJugador.aplicarObjeto(eleccion);
+							}else {
+								menus.turnoPerdido();
+							}
 							break;
 						case 3:
 							// cambiar arma
 							System.out.println(j1.getArmas());
 							eleccion = Leer.datoInt();
-							crudJugador.cambiarArma(eleccion);
-							menus.cambiarArma(j1.getArmaActiva());
+							if(crudJugador.comprobarArma(eleccion)) {
+								crudJugador.cambiarArma(eleccion);
+								menus.cambiarArma(j1.getArmaActiva());
+							}else {
+								menus.turnoPerdido();
+							}
 							break;
 						default:
-							// sustituir por vista
-							System.out.println("Te has equivocado, el enemigo aprovecha para atacar");
+							menus.turnoPerdido();
 					}
 					
 					//menus.imprimirString(data.getFraseAtaqueEnemigo()[enemigo][ataque]);
@@ -227,8 +234,8 @@ public class Principal {
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
 				if (j1.getPtsHP() <= 0) {
-					// cambiar por vista game over
-					System.out.println("Game over");
+					menus.gameOver();
+					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					// vista enemigo derrotado
