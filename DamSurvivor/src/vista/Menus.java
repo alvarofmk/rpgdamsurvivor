@@ -3,6 +3,7 @@ package vista;
 import model.Arma;
 import model.Enemigo;
 import model.Jugador;
+import model.Objeto;
 
 public class Menus {
 	
@@ -157,6 +158,27 @@ public class Menus {
 	
 	public void cambiarArma (Arma armaEquipada) {
 		System.out.println("\t\t\t  -  Ahora estas equipado con " +armaEquipada.getNombre());
+	}
+	
+	public void objetoUsado (Objeto item) {
+		System.out.println("\t\t\t  -  Has usado " +item.getNombre());
+	}
+	
+	public void turnoPerdido () {
+		System.out.println("\t\t\t  -  Te equivocas al programar y pierdes tu turno");
+	}
+	
+	public void gameOver () {
+		System.out.println("       _______  _______  _______  _______    _______           _______  _______ \r\n"
+				+ "      (  ____ \\(  ___  )(       )(  ____ \\  (  ___  )|\\     /|(  ____ \\(  ____ )\r\n"
+				+ "      | (    \\/| (   ) || () () || (    \\/  | (   ) || )   ( || (    \\/| (    )|\r\n"
+				+ "      | |      | (___) || || || || (__      | |   | || |   | || (__    | (____)|\r\n"
+				+ "      | | ____ |  ___  || |(_)| ||  __)     | |   | |( (   ) )|  __)   |     __)\r\n"
+				+ "      | | \\_  )| (   ) || |   | || (        | |   | | \\ \\_/ / | (      | (\\ (   \r\n"
+				+ "      | (___) || )   ( || )   ( || (____/\\  | (___) |  \\   /  | (____/\\| ) \\ \\__\r\n"
+				+ "      (_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\r\n"
+				+ "\r\n"
+				+ "                  -  Pulsa intro para volver al menú principal  -");
 	}
 	
 	public void menuArmas (Jugador j1) {
