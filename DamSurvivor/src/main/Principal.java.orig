@@ -229,6 +229,10 @@ public class Principal {
 			}
 			
 		}while(posicion!=99);
+<<<<<<< HEAD
+=======
+	
+>>>>>>> ad7d1cf570c07dc8e6f02a59532d7fdcce1defae
 	}
 }
 	
