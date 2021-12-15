@@ -95,8 +95,7 @@ public class BaseDatos {
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
-<<<<<<< HEAD
-=======
+
 	private String [] [] fraseAtaqueEnemigo = {{"Rafa se pone a explicar CSS"
 		, "Rafa está dando los buenos días"
 		, "Rafa ha mandado a un compañero a corregir tu boletín"}
@@ -113,7 +112,7 @@ public class BaseDatos {
 			,"Angel le ha echado un vistazo al código de este juego y ahora le duele la cabeza"
 			,"P̸̟͚͉͓͋̽̋̂R̴̺̘͈̀̾̋͜Ȅ̸̝̩̠̖̇̓͘P̸̢͕̞̞̃̊̄Ã̴̙̳̲̳͗̆̕R̵̞̋͆E̸̖͛ ̸̺̬̗͓͋͘v̷̼͍͗̎̎̅e̸͍̬̽̈́͠n̴̡̰̺͚͒̀͠g̶̘̈́́͝͝ė̸͚ạ̶̝͗́̒̄͜n̸͔̲̮͛̒c̷͉̥͈̈́̍͜e̷̩͑ ̶͉̲̽̈́̈́̏T̴̽͜͠Ó̶̡͓̙̃W̴̢͚̅͊͘Å̷̰͛̊͑R̵̘̣̒͆̂D̸̙͕͑̌͐S̶̡̮͔͖̚ ̶̝͙̱̐̍̋͝j̴̮̠͆ͅư̷͖̱̲̫̓̀g̴̦̥͊å̵̺̘̾̆d̸̘̪͛͑́̈ǫ̷͈̾̑̈́r̸̩̺̪̯̅̍̐̚"
 	};
->>>>>>> f39e8bfff4aaf6914934fd7516fd6811359e796d
+
 	
 	private int [] eleccionesMapa = new int[9];
 			
@@ -127,10 +126,7 @@ public class BaseDatos {
 	
 	// Getters & Setters
 	
-<<<<<<< HEAD
-	
-=======
->>>>>>> f39e8bfff4aaf6914934fd7516fd6811359e796d
+
 	public Objeto[] getItems() {
 		return items;
 	}
