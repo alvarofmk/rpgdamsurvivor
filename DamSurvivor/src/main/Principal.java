@@ -202,6 +202,8 @@ public class Principal {
 							// sustituir por vista
 							System.out.println("Te has equivocado, el enemigo aprovecha para atacar");
 					}
+					//menus.imprimirString(data.getFraseAtaqueEnemigo()[enemigo][ataque]);
+					//menus imprimir frase preparate para defenderte
 					// turno enemigo
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
 						puntATK = controlEne.atacar(data.getEnemigos()[2], dados.tirarDados());

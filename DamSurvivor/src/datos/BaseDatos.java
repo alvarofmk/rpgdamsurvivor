@@ -95,6 +95,12 @@ public class BaseDatos {
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
+	private String [] [] fraseAtaqueEnemigo = {{"Rafa se pone a explicar CSS"
+		, "Rafa está dando los buenos días"
+		, "Rafa ha mandado a un compañero a corregir tu boletín"}
+		, {"", "", ""}
+		, {"", "", ""}
+		, {"", "", ""}};
 	private String [] fraseAtaqueFallido = {"Rafa bloquea tu ataque con una etiqueta div que ocupa toda la página."
 			,"Miguel cambia de tema de conversación y tu ataque le da a un compañero."
 			,"Angel te dice que es el peor día de su vida, te sientes mal y no le pegas."
@@ -283,6 +289,15 @@ public class BaseDatos {
 	public void setFraseAtaqueAcertado(String[] fraseAtaqueAcertado) {
 		this.fraseAtaqueAcertado = fraseAtaqueAcertado;
 	}
+
+	public String[][] getFraseAtaqueEnemigo() {
+		return fraseAtaqueEnemigo;
+	}
+	
+	public void setFraseAtaqueEnemigo(String[][] fraseAtaqueEnemigo) {
+		this.fraseAtaqueEnemigo = fraseAtaqueEnemigo;
+	}
+	
 	
 }
 			
