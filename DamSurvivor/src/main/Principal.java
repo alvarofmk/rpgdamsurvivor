@@ -23,7 +23,6 @@ public class Principal {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
