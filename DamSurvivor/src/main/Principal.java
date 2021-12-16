@@ -25,7 +25,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
-		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
+		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0;
 		String nombreJ = "";
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
@@ -185,9 +185,9 @@ public class Principal {
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								//durban tiene que implementar el daño aleatorio aqui, cambiar menu por el daño en este metodo
-								menus.ataqueAcertado(controlArma.damageRandomizado(j1.getArmaActiva()), data.getEnemigos()[enemigo]);
-								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], controlArma.damageRandomizado(j1.getArmaActiva()));
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
+								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
