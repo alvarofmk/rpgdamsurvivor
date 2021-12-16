@@ -7,6 +7,7 @@ public class Jugador {
 	// Atributos
 	
 	private String nombre;
+	private String claseJugador;
 	private int ptsATK;
 	private int ptsDEF;
 	private int ptsHP;
@@ -18,7 +19,7 @@ public class Jugador {
 	// Constructor
 	
 	public Jugador (String nombre, int ptsATK, int ptsDEF, int ptsHP, int ptsMaxHP, 
-			Objeto [] inventario, Arma armaActiva, Arma [] armas) {
+			Objeto [] inventario, Arma armaActiva, Arma [] armas, String claseJugador) {
 		this.nombre = nombre;
 		this.ptsATK = ptsATK;
 		this.ptsDEF = ptsDEF;
@@ -27,6 +28,7 @@ public class Jugador {
 		this.inventario = inventario;
 		this.armaActiva = armaActiva;
 		this.armas = armas;
+		this.claseJugador = claseJugador;
 	}
 	
 	// Constructor de nombre
@@ -46,6 +48,14 @@ public class Jugador {
 
 	public String getNombre() {
 		return nombre;
+	}
+
+	public String getClaseJugador() {
+		return claseJugador;
+	}
+
+	public void setClaseJugador(String claseJugador) {
+		this.claseJugador = claseJugador;
 	}
 
 	public void setNombre(String nombre) {
@@ -109,13 +119,13 @@ public class Jugador {
 	}
 
 
-
+ 
 	
 	//toString
 	
 	@Override
 	public String toString() {
-		return "Jugador [nombre=" + nombre + ", ptsATK=" + ptsATK + ", ptsDEF=" + ptsDEF + ", ptsHP=" + ptsHP
+		return "Jugador [nombre=" + nombre + " clase= " + claseJugador + ", ptsATK=" + ptsATK + ", ptsDEF=" + ptsDEF + ", ptsHP=" + ptsHP
 				+ ", ptsMaxHP=" + ptsMaxHP + ", inventario=" + Arrays.toString(inventario) + ", armaActiva="
 				+ armaActiva + ", armas=" + Arrays.toString(armas) + "]";
 	}
