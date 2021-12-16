@@ -58,8 +58,7 @@ public class Principal {
 					switch (menu) {
 						case 1:
 							posicion = 1;
-							// sustituir por vista
-							System.out.println("Introduce tu nombre");
+							menus.pintarMenuNombre();
 							// reiniciando valores
 							nombreJ = Leer.dato();
 							j1 = new Jugador(nombreJ);
@@ -80,7 +79,6 @@ public class Principal {
 
 			if (posicion == 1) {
 				do {
-					// sustituir por vista escena 1
 					menus.pintarMenu0(nombreJ);
 					menu = Leer.datoInt();
 					switch (menu) {
@@ -105,11 +103,11 @@ public class Principal {
 					}
 				} while (menu > 3 || menu < 1);
 
-				// Vista de escena y elección
 				// ejemplo de elección
 				do {
 				//Historia para posicion 2 o 3
 					menus.pintarMenuClases(menu);
+					menus.pintarMenu1();
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -126,9 +124,12 @@ public class Principal {
 
 			if (posicion == 2) {
 				crudJugador.obtenerObjeto(0, data);
+				menus.pintarMenu2();
+				escenas.pintar(dataAscis.getAscisEscenas()[2]);
+				menus.obtencionObjeto(data.getItems()[0]);
+				menus.pintarMenuDecision2();
 				// Vista de escena y elección
 				do {
-					System.out.println("Blabla elige");
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -147,7 +148,6 @@ public class Principal {
 				crudJugador.obtenerArma(3, data);
 				// Vista de escena y eleccion
 				do {
-					System.out.println("Blabla elige");
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -160,6 +160,12 @@ public class Principal {
 							menus.invalid();
 					}
 				} while (menu != 1 && menu != 2);
+			}
+			
+			if (posicion == 4) {
+				escenas.pintar(dataAscis.getAscisEscenas()[18]);
+				menus.pintarMenu4();
+				posicion = 7; // Hay que seguir haciendo principal
 			}
 
 			if (posicion == 5) {

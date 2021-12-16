@@ -177,6 +177,12 @@ public class Menus {
 	public void menuCombate () {
 		System.out.println("***************");
 	}
+	
+	public void pintarMenuNombre () {
+		System.out.println("*********************************\n*\t\t\t\t*\n*\tIntroduce tu nombre"
+				+ "\t*\n*\t\t\t\t*\n*********************************");
+	}
+	
 	public void pintarMenu0(String s) {
 		System.out.println("Buenas " + s + "! Cuéntame un poco más sobre ti..");
 		System.out.println("Si estuvieses llegando tarde a clases... Qué harías ?");
@@ -187,11 +193,13 @@ public class Menus {
 	
 	public void pintarMenuClases (int num) {
 		if (num == 1) {
-			System.out.println("Asesino");
+			System.out.println("Enhorabuena! Eres un Asesino. Seguro que pusheas en git y los demás ni se enteran.\n\n");
 		} else if (num == 2){
-			System.out.println("Guerrero");
+			System.out.println("Enhorabuena! Eres un Guerrero, una bestia parda, "
+					+ "haces subconsultas con una calculadora casio, un auténtico animal.\n\n");
 		}else if (num == 3) {
-			System.out.println("Hechicero");
+			System.out.println("Enhorabuena! Eres un Hechicero, usas tu intelecto para hacer proezas como domotizar"
+					+ "tu casa con unas placas arduino.\n\n");
 		}else {
 			
 		}
@@ -210,8 +218,11 @@ public class Menus {
 	public void pintarMenu2() {
 		System.out.println("Está bien no pasa nada, a veces ocurren accidentes que no podemos controlar (como el atasco de la mañana)\r\n"
 				+ "asi que te diriges tranquilamente a la cafetería del Carlos. Llegas te pides un café calentito y mientras te \r\n"
-				+ "pone la estufa y te estas tomando el café piensas respecto al horario..\r\n"
-				+ "Ahora que no entraste a los buenos dias, vas a la segunda clase ? o no ? Es con el mismo profesor que primera hora, \r\n"
+				+ "pone la estufa y te estas tomando el café piensas respecto al horario..\r\n");
+	}
+	
+	public void pintarMenuDecision2 () {
+		System.out.println("Ahora que no entraste a los buenos dias, vas a la segunda clase ? o no ? Es con el mismo profesor que primera hora, \r\n"
 				+ "sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
 		System.out.println("1.- Así que.. decides saltarte las clases ? Vaya golfo.");
 		System.out.println("2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
@@ -315,6 +326,11 @@ public class Menus {
 		System.out.println("Peleas con el TITÁN");
 
 	}
+	
+	public void obtencionObjeto (Objeto o) {
+		System.out.printf("\n\tEnhorabuena!\n\tHas obtenido %s!\n\n", o.getNombre());
+	}
+	
 	
 }
 
