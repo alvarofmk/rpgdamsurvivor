@@ -172,9 +172,7 @@ public class Principal {
 				enemigo = 0;
 				do {
 					// turno del jugador
-					// sustituir por vista menu combate
-					System.out.println("Escoge lo que hacer: 1. Atacar, 2. Usar objeto, 3.Cambiar arma");
-					// menu de combate
+					menus.menuCombate(j1);
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -182,20 +180,23 @@ public class Principal {
 							Leer.dato();
 							roll = dados.tirarDados();
 							menus.dado(roll);
+							Leer.dato();
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
 								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
 								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
-								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
+								if(data.getEnemigos()[enemigo].getHp()>0) {
+									menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
+								}
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 							}
 							break;
 						case 2:
 							// aplicar objeto
-							System.out.println(j1.getInventario());
+							menus.menuObjetos(j1);
 							eleccion = Leer.datoInt();
 							if(crudJugador.comprobarObjeto(eleccion)) {
 								menus.objetoUsado(j1.getInventario()[eleccion-1]);
@@ -206,7 +207,7 @@ public class Principal {
 							break;
 						case 3:
 							// cambiar arma
-							System.out.println(j1.getArmas());
+							menus.menuArmas(j1);
 							eleccion = Leer.datoInt();
 							if(crudJugador.comprobarArma(eleccion)) {
 								crudJugador.cambiarArma(eleccion);
@@ -247,7 +248,7 @@ public class Principal {
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-					// vista enemigo derrotado
+					//falta vista enemigo derrotado, loot?
 					posicion = 7;
 				}
 
