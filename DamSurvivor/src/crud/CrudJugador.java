@@ -63,7 +63,7 @@ public class CrudJugador {
 		j1.setPtsDEF(j1.getPtsDEF()+j1.getInventario()[index-1].getDef());
 		j1.setPtsHP(j1.getPtsHP()+j1.getInventario()[index-1].getHp());
 		j1.setPtsMaxHP(j1.getPtsMaxHP()+j1.getInventario()[index-1].getHpMax());
-		eliminarObjeto(index-1);
+		eliminarObjeto(index);
 		checkVidaMax();
 	}
 	
@@ -105,5 +105,33 @@ public class CrudJugador {
 		j1.setInventario(nuevoInventario);
 	}
 	
+	public boolean comprobarArma (int index) {
+		boolean armaActiva;
+		if(index>j1.getArmas().length || index<0) {
+			armaActiva = false;
+		}else {
+			if(j1.getArmas()[index-1] == null) {
+				armaActiva = false;
+			}else {
+				armaActiva = true;
+			}
+		}
+		
+		return armaActiva;
+	}
+	
+	public boolean comprobarObjeto (int index) {
+		boolean objetoActivo;
+		if(index>j1.getInventario().length || index<=0) {
+			objetoActivo = false;
+		}else {
+			if(j1.getInventario()[index-1] == null) {
+				objetoActivo = false;
+			}else {
+				objetoActivo = true;
+			}
+		}
+		return objetoActivo;
+	}
 	
 }

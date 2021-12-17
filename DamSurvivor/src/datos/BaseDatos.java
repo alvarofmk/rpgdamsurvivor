@@ -95,12 +95,17 @@ public class BaseDatos {
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
+
 	private String [] [] fraseAtaqueEnemigo = {{"Rafa se pone a explicar CSS"
 		, "Rafa está dando los buenos días"
 		, "Rafa ha mandado a un compañero a corregir tu boletín"}
-		, {"", "", ""}
-		, {"", "", ""}
-		, {"", "", ""}};
+		, {"Miguel pega una carrerita dejándose caer de la tarima", 
+			"Miguel llama tu atención con la palabra 'Señores!'", 
+			"Miguel te pide dinero para una campaña de salvar a las iguanas"}
+		, {"Ángel ", "Ángel descubre que estás copiando código y te manda deberes", "Ángel ejerce la violencia física contra ti"}
+		, {"Luismi ha puesto tareita de entornos de desarrollo para mañana", 
+			"Luismi se acuerda de Úbeda y se pone a divagar sobre carreteras de Jaén", 
+			"Luismi empieza a programar en Java y no entiendes nada"}};
 	private String [] fraseAtaqueFallido = {"Rafa bloquea tu ataque con una etiqueta div que ocupa toda la página."
 			,"Miguel cambia de tema de conversación y tu ataque le da a un compañero."
 			,"Angel te dice que es el peor día de su vida, te sientes mal y no le pegas."
@@ -111,6 +116,7 @@ public class BaseDatos {
 			,"Angel le ha echado un vistazo al código de este juego y ahora le duele la cabeza"
 			,"P̸̟͚͉͓͋̽̋̂R̴̺̘͈̀̾̋͜Ȅ̸̝̩̠̖̇̓͘P̸̢͕̞̞̃̊̄Ã̴̙̳̲̳͗̆̕R̵̞̋͆E̸̖͛ ̸̺̬̗͓͋͘v̷̼͍͗̎̎̅e̸͍̬̽̈́͠n̴̡̰̺͚͒̀͠g̶̘̈́́͝͝ė̸͚ạ̶̝͗́̒̄͜n̸͔̲̮͛̒c̷͉̥͈̈́̍͜e̷̩͑ ̶͉̲̽̈́̈́̏T̴̽͜͠Ó̶̡͓̙̃W̴̢͚̅͊͘Å̷̰͛̊͑R̵̘̣̒͆̂D̸̙͕͑̌͐S̶̡̮͔͖̚ ̶̝͙̱̐̍̋͝j̴̮̠͆ͅư̷͖̱̲̫̓̀g̴̦̥͊å̵̺̘̾̆d̸̘̪͛͑́̈ǫ̷͈̾̑̈́r̸̩̺̪̯̅̍̐̚"
 	};
+
 	
 	private int [] eleccionesMapa = new int[9];
 			
