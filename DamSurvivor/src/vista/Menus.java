@@ -1,5 +1,6 @@
 package vista;
 
+import datos.BaseDatos;
 import model.Arma;
 import model.Enemigo;
 import model.Jugador;
@@ -129,6 +130,21 @@ public class Menus {
 		}
 	}
 	
+	public void enemigoAtaca (int num, String [] s) {
+		switch (num) {
+			case 1:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+			case 2:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+			case 3:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+		}
+		
+	}
+	
 	public void lanzaDados () {
 		System.out.println("\t\t\t  -  Lanza el dado\n");
 	}
@@ -136,6 +152,17 @@ public class Menus {
 	public void ataqueAcertado (int dmg, Enemigo boss) {
 		System.out.println("\t\t\t  -  Tu ataque acierta");
 		System.out.println("\t\t\t  -  "+boss.getNombre()+" recibe "+dmg+" de daño\n");
+		System.out.println("\t\t\t  -  A " + boss.getNombre() + " le quedan " + boss.getHp() + " puntos de vida\n\n");
+	}
+	
+	public void ataqueEnemigoAcertado (int dmg, Jugador j1, Enemigo boss) {
+		System.out.println("\t\t\t  -  " + boss.getNombre() + " acierta su ataque!\n");
+		System.out.println("\t\t\t  -  " + "Recibes " + dmg + " de daño\n");
+		System.out.println("\t\t\t  -  " + "Te quedan " + j1.getPtsHP() + " de vida\n\n");
+	}
+	
+	public void ataqueEnemigoFallado (Enemigo boss) {
+		System.out.println("\t\t\t  -  " + boss.getNombre() + " falla su ataque!");
 	}
 	
 	public void imprimirString (String frase) {

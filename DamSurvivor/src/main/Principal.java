@@ -25,7 +25,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
-		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0;
+		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0, rollEnemigo = 0;
 		String nombreJ = "";
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
@@ -186,8 +186,8 @@ public class Principal {
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
 								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
-								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
+								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
@@ -223,21 +223,22 @@ public class Principal {
 					//menus imprimir frase preparate para defenderte
 					// turno enemigo
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
-						
-						puntATK = controlEne.atacar(data.getEnemigos()[2], dados.tirarDados());
-						puntDEF = controlJug.defender(j1, dados.tirarDados());
-						System.out.println(puntATK);
-						System.out.println(puntDEF);
-
-						hit = combate.acertarGolpe(puntATK, puntDEF);
-						System.out.println(hit);
-
+						roll = dados.tirarDados();
+						rollEnemigo = controlEne.tirarDadosATK();
+						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
+						menus.lanzaDados();
+						Leer.dato();
+						menus.dado(roll);
+						Leer.dato();
+						hit = combate.acertarGolpe(controlEne.atacar(data.getEnemigos() [enemigo], dados.tirarDados()),
+								controlJug.defender(j1, roll));
 						if (hit) {
-							crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo],
-									controlArma.damageRandomizado(j1.getArmaActiva()));
-							// vista: frase enemigo acertado
+							crudJugador.herirJugador(data.getEnemigos()[enemigo].getAtaques()[rollEnemigo - 1]);
+							menus.ataqueEnemigoAcertado(data.getEnemigos() [enemigo].getAtaques() [rollEnemigo - 1], j1, data.getEnemigos() [enemigo]);
+							
+							
 						} else {
-							// Vista: frase el enemigo falló su ataque
+							menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]);
 						}
 					}
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
