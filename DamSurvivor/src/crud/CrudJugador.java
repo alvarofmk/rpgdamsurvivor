@@ -63,7 +63,7 @@ public class CrudJugador {
 		j1.setPtsDEF(j1.getPtsDEF()+j1.getInventario()[index-1].getDef());
 		j1.setPtsHP(j1.getPtsHP()+j1.getInventario()[index-1].getHp());
 		j1.setPtsMaxHP(j1.getPtsMaxHP()+j1.getInventario()[index-1].getHpMax());
-		eliminarObjeto(index-1);
+		eliminarObjeto(index);
 		checkVidaMax();
 	}
 	
@@ -122,7 +122,7 @@ public class CrudJugador {
 	
 	public boolean comprobarObjeto (int index) {
 		boolean objetoActivo;
-		if(index>j1.getInventario().length || index<0) {
+		if(index>j1.getInventario().length || index<=0) {
 			objetoActivo = false;
 		}else {
 			if(j1.getInventario()[index-1] == null) {
