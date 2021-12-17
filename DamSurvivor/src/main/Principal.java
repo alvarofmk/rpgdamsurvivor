@@ -25,7 +25,7 @@ public class Principal {
 		// TODO Auto-generated method stub
 		boolean hit;
 		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
-		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0;
+		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0;
 		String nombreJ = "";
 		Jugador j1 = null;
 		CrudJugador crudJugador = null;
@@ -58,8 +58,7 @@ public class Principal {
 					switch (menu) {
 						case 1:
 							posicion = 1;
-							// sustituir por vista
-							System.out.println("Introduce tu nombre");
+							menus.pintarMenuNombre();
 							// reiniciando valores
 							nombreJ = Leer.dato();
 							j1 = new Jugador(nombreJ);
@@ -80,7 +79,6 @@ public class Principal {
 
 			if (posicion == 1) {
 				do {
-					// sustituir por vista escena 1
 					menus.pintarMenu0(nombreJ);
 					menu = Leer.datoInt();
 					switch (menu) {
@@ -105,11 +103,11 @@ public class Principal {
 					}
 				} while (menu > 3 || menu < 1);
 
-				// Vista de escena y elección
 				// ejemplo de elección
 				do {
 				//Historia para posicion 2 o 3
 					menus.pintarMenuClases(menu);
+					menus.pintarMenu1();
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -126,9 +124,12 @@ public class Principal {
 
 			if (posicion == 2) {
 				crudJugador.obtenerObjeto(0, data);
+				menus.pintarMenu2();
+				escenas.pintar(dataAscis.getAscisEscenas()[2]);
+				menus.obtencionObjeto(data.getItems()[0]);
+				menus.pintarMenuDecision2();
 				// Vista de escena y elección
 				do {
-					System.out.println("Blabla elige");
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -147,7 +148,6 @@ public class Principal {
 				crudJugador.obtenerArma(3, data);
 				// Vista de escena y eleccion
 				do {
-					System.out.println("Blabla elige");
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
@@ -160,6 +160,12 @@ public class Principal {
 							menus.invalid();
 					}
 				} while (menu != 1 && menu != 2);
+			}
+			
+			if (posicion == 4) {
+				escenas.pintar(dataAscis.getAscisEscenas()[18]);
+				menus.pintarMenu4();
+				posicion = 7; // Hay que seguir haciendo principal
 			}
 
 			if (posicion == 5) {
@@ -179,9 +185,9 @@ public class Principal {
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								//durban tiene que implementar el daño aleatorio aqui, cambiar menu por el daño en este metodo
-								menus.ataqueAcertado(controlArma.damageRandomizado(j1.getArmaActiva()), data.getEnemigos()[enemigo]);
-								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], controlArma.damageRandomizado(j1.getArmaActiva()));
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
+								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
