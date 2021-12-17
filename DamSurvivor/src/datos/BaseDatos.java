@@ -158,7 +158,7 @@ public class BaseDatos {
 	
 	private Enemigo [] enemigos = new Enemigo [4];
 	private String [] nombreEnemigos = {"Rafa", "Miguel", "Ángel", "Luismi"};
-	private int [] atkEnemigos = {0, 10, 25, 60};
+	private int [] atkEnemigos = {10, 10, 25, 60};
 	private int [] defEnemigos = {0, 15, 35, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
@@ -169,7 +169,7 @@ public class BaseDatos {
 		, {"Miguel pega una carrerita dejándose caer de la tarima", 
 			"Miguel llama tu atención con la palabra 'Señores!'", 
 			"Miguel te pide dinero para una campaña de salvar a las iguanas"}
-		, {"Ángel ", "Ángel descubre que estás copiando código y te manda deberes", "Ángel ejerce la violencia física contra ti"}
+		, {"Ángel te va a dar con la cuchara que no existe", "Ángel descubre que estás copiando código y te manda deberes", "Ángel ejerce la violencia física contra ti"}
 		, {"Luismi ha puesto tareita de entornos de desarrollo para mañana", 
 			"Luismi se acuerda de Úbeda y se pone a divagar sobre carreteras de Jaén", 
 			"Luismi empieza a programar en Java y no entiendes nada"}};
