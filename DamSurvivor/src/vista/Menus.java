@@ -1,5 +1,6 @@
 package vista;
 
+import datos.BaseDatos;
 import model.Arma;
 import model.Enemigo;
 import model.Jugador;
@@ -58,6 +59,96 @@ public class Menus {
 	
 	public void invalid () {
 		System.out.println("\t\t\t  -  Elige bien");
+	}
+	
+	public void menuCombate (Jugador j1) {
+		System.out.println("     _____________________________________________________________________\r\n"
+						+ "\t\r\n"
+						+ "           -*%@@%*-      \t\r\n"
+						+ "          *@@@@@@@@#     \t1. Atacar\r\n"
+						+ "         :@@@@@@@@@@:    \t2. Usar objeto\r\n"
+						+ "          %@@@@@@@@%     \t3. Cambiar arma\r\n"
+						+ "           +@@@@@@*.     \t\r\n"
+						+ "             :--:        \t\r\n"
+						+ "         =#@@@@@@@@#=    \t\r\n"
+						+ "       -@@@@@@@@@@@@@@=  \t\r\n"
+						+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
+						+ "      __________________ \t\r\n"
+						+ "                    \t\r\n"
+						+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
+						+ "     ______________________________________________________________________");
+	}
+	
+	public void menuArmas (Jugador j1) {
+		System.out.println("     _____________________________________________________________________\r\n"
+				+ "\t\r\n"
+				+ "           -*%@@%*-      \t");
+		if(j1.getArmas()[0]!=null) {
+			System.out.println("          *@@@@@@@@#     \t1. "+j1.getArmas()[0].getNombre());
+		}else {
+			System.out.println("          *@@@@@@@@#     \t1. -");
+		}
+		if(j1.getArmas()[1]!=null) {
+			System.out.println("         :@@@@@@@@@@:    \t2. "+j1.getArmas()[1].getNombre());
+		}else {
+			System.out.println("         :@@@@@@@@@@:    \t2. -");
+		}
+		if(j1.getArmas()[2]!=null) {
+			System.out.println("          %@@@@@@@@%     \t3. "+j1.getArmas()[2].getNombre());
+		}else {
+			System.out.println("          %@@@@@@@@%     \t3. -");
+		}
+		if(j1.getArmas()[3]!=null) {
+			System.out.println("           +@@@@@@*.     \t4. "+j1.getArmas()[3].getNombre());
+		}else {
+			System.out.println("           +@@@@@@*.     \t4. -");
+		}
+		System.out.println("             :--:        \t\r\n"
+				+ "         =#@@@@@@@@#=    \t\r\n"
+				+ "       -@@@@@@@@@@@@@@=  \t\r\n"
+				+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
+				+ "      __________________ \t\r\n"
+				+ "                    \t\r\n"
+				+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
+				+ "     ______________________________________________________________________");
+	}
+	
+	public void menuObjetos (Jugador j1) {
+		System.out.println("     _____________________________________________________________________\r\n"
+				+ "\t\r\n"
+				+ "           -*%@@%*-      \t");
+		if(j1.getInventario()[0]!=null) {
+			System.out.println("          *@@@@@@@@#     \t1. "+j1.getInventario()[0].getNombre());
+		}else {
+			System.out.println("          *@@@@@@@@#     \t1. -");
+		}
+		if(j1.getInventario()[1]!=null) {
+			System.out.println("         :@@@@@@@@@@:    \t2. "+j1.getInventario()[1].getNombre());
+		}else {
+			System.out.println("         :@@@@@@@@@@:    \t2. -");
+		}
+		if(j1.getInventario()[2]!=null) {
+			System.out.println("          %@@@@@@@@%     \t3. "+j1.getInventario()[2].getNombre());
+		}else {
+			System.out.println("          %@@@@@@@@%     \t3. -");
+		}
+		if(j1.getInventario()[3]!=null) {
+			System.out.println("           +@@@@@@*.     \t4. "+j1.getInventario()[3].getNombre());
+		}else {
+			System.out.println("           +@@@@@@*.     \t4. -");
+		}
+		if(j1.getInventario()[4]!=null) {
+			System.out.println("             :--:        \t5. "+j1.getInventario()[4].getNombre());
+		}else {
+			System.out.println("             :--:        \t5. -");
+		}
+		System.out.println("         =#@@@@@@@@#=    \t\r\n"
+				+ "       -@@@@@@@@@@@@@@=  \t\r\n"
+				+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
+				+ "      __________________ \t\r\n"
+				+ "                    \t\r\n"
+				+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
+				+ "     ______________________________________________________________________");
 	}
 	
 	public void dado (double tirada) {
@@ -129,6 +220,21 @@ public class Menus {
 		}
 	}
 	
+	public void enemigoAtaca (int num, String [] s) {
+		switch (num) {
+			case 1:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+			case 2:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+			case 3:
+				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
+				break;
+		}
+		
+	}
+	
 	public void lanzaDados () {
 		System.out.println("\t\t\t  -  Lanza el dado\n");
 	}
@@ -136,6 +242,17 @@ public class Menus {
 	public void ataqueAcertado (int dmg, Enemigo boss) {
 		System.out.println("\t\t\t  -  Tu ataque acierta");
 		System.out.println("\t\t\t  -  "+boss.getNombre()+" recibe "+dmg+" de daño\n");
+		System.out.println("\t\t\t  -  A " + boss.getNombre() + " le quedan " + boss.getHp() + " puntos de vida\n\n");
+	}
+	
+	public void ataqueEnemigoAcertado (int dmg, Jugador j1, Enemigo boss) {
+		System.out.println("\t\t\t  -  " + boss.getNombre() + " acierta su ataque!\n");
+		System.out.println("\t\t\t  -  " + "Recibes " + dmg + " de daño\n");
+		System.out.println("\t\t\t  -  " + "Te quedan " + j1.getPtsHP() + " de vida\n\n");
+	}
+	
+	public void ataqueEnemigoFallado (Enemigo boss) {
+		System.out.println("\t\t\t  -  " + boss.getNombre() + " falla su ataque!");
 	}
 	
 	public void imprimirString (String frase) {
@@ -165,17 +282,6 @@ public class Menus {
 				+ "             (_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\r\n"
 				+ "\r\n"
 				+ "                         -  Pulsa intro para volver al menú principal  -");
-	}
-	
-	public void menuArmas (Jugador j1) {
-		int elecc= 1;
-		if(j1.getArmas()[2] == null) {
-		
-		}; 
-	}
-	
-	public void menuCombate () {
-		System.out.println("***************");
 	}
 	
 	public void pintarMenuNombre () {
