@@ -146,7 +146,9 @@ public class Principal {
 
 			if (posicion == 3) {
 				crudJugador.obtenerArma(3, data);
-				// Vista de escena y eleccion
+				escenas.pintar(dataAscis.getAscisEscenas()[3]);
+				menus.pintarMenu3();
+				menus.pintarMenuDecisiones3();// Vista de escena y eleccion
 				do {
 					menu = Leer.datoInt();
 					switch (menu) {
@@ -154,6 +156,7 @@ public class Principal {
 							posicion = 5;
 							break;
 						case 2:
+							// Esta posicion no funciona. Algo está mal.
 							posicion = 6;
 							break;
 						default:
@@ -248,9 +251,355 @@ public class Principal {
 					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
 					posicion = 7;
 				}
-
 			}
+			if (posicion == 6) {
+				menus.pintarMenu6();
+				menus.pintarMenuDecisiones6();
+				posicion = 7; // 
+			}
+			if (posicion == 7) {
+					enemigo = 1;
+					do {
+						// turno del jugador
+						menus.menuCombate(j1);
+						menu = Leer.datoInt();
+						switch (menu) {
+							case 1:
+								menus.lanzaDados();
+								Leer.dato();
+								roll = dados.tirarDados();
+								menus.dado(roll);
+								Leer.dato();
+								hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
+										controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
+								if (hit) {
+									dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+									crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
+									menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
+									menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
+									menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
+								} else {
+									menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
+								}
+								break;
+							case 2:
+								// aplicar objeto
+								menus.menuObjetos(j1);
+								eleccion = Leer.datoInt();
+								if(crudJugador.comprobarObjeto(eleccion)) {
+									menus.objetoUsado(j1.getInventario()[eleccion-1]);
+									crudJugador.aplicarObjeto(eleccion);
+								}else {
+									menus.turnoPerdido();
+								}
+								break;
+							case 3:
+								// cambiar arma
+								menus.menuArmas(j1);
+								eleccion = Leer.datoInt();
+								if(crudJugador.comprobarArma(eleccion)) {
+									crudJugador.cambiarArma(eleccion);
+									menus.cambiarArma(j1.getArmaActiva());
+								}else {
+									menus.turnoPerdido();
+								}
+								break;
+							default:
+								menus.turnoPerdido();
+						}
+						// turno enemigo
+						if (data.getEnemigos()[enemigo].getHp() > 0) {
+							roll = dados.tirarDados();
+							rollEnemigo = controlEne.tirarDadosATK();
+							menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
+							menus.lanzaDados();
+							Leer.dato();
+							menus.dado(roll);
+							Leer.dato();
+							hit = combate.acertarGolpe(controlEne.atacar(data.getEnemigos() [enemigo], dados.tirarDados()),
+									controlJug.defender(j1, roll));
+							if (hit) {
+								crudJugador.herirJugador(data.getEnemigos()[enemigo].getAtaques()[rollEnemigo - 1]);
+								menus.ataqueEnemigoAcertado(data.getEnemigos() [enemigo].getAtaques() [rollEnemigo - 1], j1, data.getEnemigos() [enemigo]);
+								
+								
+							} else {
+								menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]);
+							}
+						}
+					} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
+					if (j1.getPtsHP() <= 0) {
+						menus.gameOver();
+						Leer.dato();
+						posicion = 0;
+					}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
+						menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+						menus.pintarMenu7();
+						menus.pintarMenuDecisiones7();
+						menu=Leer.datoInt();
+						switch (menu) {
+						case 1:
+							posicion = 8;
+							break;
+						case 2:
+							posicion = 9;
+							break;
+						default:
+							menus.invalid();
+							break;
+						}
+					}
+			}
+			if (posicion == 8) {
+				menus.pintarMenu8();
+				menus.pintarMenuDecisiones8();
+				menu=Leer.datoInt();
+				switch (menu) {
+				case 1:
+					posicion = 10;
+					break;
+				case 2:
+					posicion = 11;
+					break;
+				default:
+					menus.invalid();
+					break;
+				}
+			}
+			if (posicion == 9) {
+				menus.pintarMenu9();
+				menus.pintarMenuDecisiones9();
+				menu=Leer.datoInt();
+				switch (menu) {
+				case 1:
+					posicion = 11;
+					break;
+				case 2:
+					posicion = 12;
+					break;
+				default:
+					menus.invalid();
+					break;
+				}
+			}
+			if (posicion == 10) {
+				menus.pintarMenu10();
+				posicion = 13;
+			}
+			if (posicion == 11) {
+				menus.pintarMenu11();
+				enemigo = 2;
+				do {
+					// turno del jugador
+					menus.menuCombate(j1);
+					menu = Leer.datoInt();
+					switch (menu) {
+						case 1:
+							menus.lanzaDados();
+							Leer.dato();
+							roll = dados.tirarDados();
+							menus.dado(roll);
+							Leer.dato();
+							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
+									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
+							if (hit) {
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
+								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
+								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
+								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
+							} else {
+								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
+							}
+							break;
+						case 2:
+							// aplicar objeto
+							menus.menuObjetos(j1);
+							eleccion = Leer.datoInt();
+							if(crudJugador.comprobarObjeto(eleccion)) {
+								menus.objetoUsado(j1.getInventario()[eleccion-1]);
+								crudJugador.aplicarObjeto(eleccion);
+							}else {
+								menus.turnoPerdido();
+							}
+							break;
+						case 3:
+							// cambiar arma
+							menus.menuArmas(j1);
+							eleccion = Leer.datoInt();
+							if(crudJugador.comprobarArma(eleccion)) {
+								crudJugador.cambiarArma(eleccion);
+								menus.cambiarArma(j1.getArmaActiva());
+							}else {
+								menus.turnoPerdido();
+							}
+							break;
+						default:
+							menus.turnoPerdido();
+					}
+					// turno enemigo
+					if (data.getEnemigos()[enemigo].getHp() > 0) {
+						roll = dados.tirarDados();
+						rollEnemigo = controlEne.tirarDadosATK();
+						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
+						menus.lanzaDados();
+						Leer.dato();
+						menus.dado(roll);
+						Leer.dato();
+						hit = combate.acertarGolpe(controlEne.atacar(data.getEnemigos() [enemigo], dados.tirarDados()),
+								controlJug.defender(j1, roll));
+						if (hit) {
+							crudJugador.herirJugador(data.getEnemigos()[enemigo].getAtaques()[rollEnemigo - 1]);
+							menus.ataqueEnemigoAcertado(data.getEnemigos() [enemigo].getAtaques() [rollEnemigo - 1], j1, data.getEnemigos() [enemigo]);
+							
+							
+						} else {
+							menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]);
+						}
+					}
+				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
+
+				if (j1.getPtsHP() <= 0) {
+					menus.gameOver();
+					Leer.dato();
+					posicion = 0;
+				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
+					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+					menus.pintarMenuDecisiones11();
+					menu=Leer.datoInt();
+					switch (menu) {
+					case 1:
+						posicion = 13;
+						break;
+					case 2:
+						posicion = 14;
+						break;
+					default:
+						menus.invalid();
+						break;
+					}
+				}
+		}
+			if (posicion == 12) {
+				menus.pintarMenu12();
+				posicion = 14;
+			}	
+			if (posicion == 13) {
+				menus.pintarMenu13();
+				posicion = 15;
+			}
+			if (posicion == 14) {
+				menus.pintarMenu14B();
+				posicion = 15;
+			}
+			if (posicion == 15) {
+				menus.pintarMenu15();
+				menus.pintarMenuDecisiones15();
+				menu=Leer.datoInt();
+				switch (menu) {
+				case 1:
+					posicion = 16;
+					break;
+				case 2:
+					posicion = 17;
+					break;
+				default:
+					menus.invalid();
+					break;
+				}
+			}
+			if (posicion == 16) {
+				menus.pintarMenu16();
+				// Mostrar un game over y algun asci de muerte o algo asi.
+				posicion = 0;
+			}
+			if (posicion == 17) {
+				menus.pintarMenu17();
+				posicion = 18;
+			}
+			if (posicion == 18) {
+				enemigo = 2;
+				do {
+					// turno del jugador
+					menus.menuCombate(j1);
+					menu = Leer.datoInt();
+					switch (menu) {
+						case 1:
+							menus.lanzaDados();
+							Leer.dato();
+							roll = dados.tirarDados();
+							menus.dado(roll);
+							Leer.dato();
+							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
+									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
+							if (hit) {
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
+								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
+								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
+								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
+							} else {
+								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
+							}
+							break;
+						case 2:
+							// aplicar objeto
+							menus.menuObjetos(j1);
+							eleccion = Leer.datoInt();
+							if(crudJugador.comprobarObjeto(eleccion)) {
+								menus.objetoUsado(j1.getInventario()[eleccion-1]);
+								crudJugador.aplicarObjeto(eleccion);
+							}else {
+								menus.turnoPerdido();
+							}
+							break;
+						case 3:
+							// cambiar arma
+							menus.menuArmas(j1);
+							eleccion = Leer.datoInt();
+							if(crudJugador.comprobarArma(eleccion)) {
+								crudJugador.cambiarArma(eleccion);
+								menus.cambiarArma(j1.getArmaActiva());
+							}else {
+								menus.turnoPerdido();
+							}
+							break;
+						default:
+							menus.turnoPerdido();
+					}
+					// turno enemigo
+					if (data.getEnemigos()[enemigo].getHp() > 0) {
+						roll = dados.tirarDados();
+						rollEnemigo = controlEne.tirarDadosATK();
+						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
+						menus.lanzaDados();
+						Leer.dato();
+						menus.dado(roll);
+						Leer.dato();
+						hit = combate.acertarGolpe(controlEne.atacar(data.getEnemigos() [enemigo], dados.tirarDados()),
+								controlJug.defender(j1, roll));
+						if (hit) {
+							crudJugador.herirJugador(data.getEnemigos()[enemigo].getAtaques()[rollEnemigo - 1]);
+							menus.ataqueEnemigoAcertado(data.getEnemigos() [enemigo].getAtaques() [rollEnemigo - 1], j1, data.getEnemigos() [enemigo]);
+							
+							
+						} else {
+							menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]);
+						}
+					}
+				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
+
+				if (j1.getPtsHP() <= 0) {
+					menus.gameOver();
+					Leer.dato();
+					posicion = 0;
+				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
+					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+				}
+				System.out.println("THE END");
+				menus.creditos();
+		}				
 		} while (posicion != 99);
 
 	}
