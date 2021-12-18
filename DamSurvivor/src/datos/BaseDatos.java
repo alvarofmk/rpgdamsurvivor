@@ -183,9 +183,10 @@ public class BaseDatos {
 			,"Angel le ha echado un vistazo al código de este juego y ahora le duele la cabeza"
 			,"P̸̟͚͉͓͋̽̋̂R̴̺̘͈̀̾̋͜Ȅ̸̝̩̠̖̇̓͘P̸̢͕̞̞̃̊̄Ã̴̙̳̲̳͗̆̕R̵̞̋͆E̸̖͛ ̸̺̬̗͓͋͘v̷̼͍͗̎̎̅e̸͍̬̽̈́͠n̴̡̰̺͚͒̀͠g̶̘̈́́͝͝ė̸͚ạ̶̝͗́̒̄͜n̸͔̲̮͛̒c̷͉̥͈̈́̍͜e̷̩͑ ̶͉̲̽̈́̈́̏T̴̽͜͠Ó̶̡͓̙̃W̴̢͚̅͊͘Å̷̰͛̊͑R̵̘̣̒͆̂D̸̙͕͑̌͐S̶̡̮͔͖̚ ̶̝͙̱̐̍̋͝j̴̮̠͆ͅư̷͖̱̲̫̓̀g̴̦̥͊å̵̺̘̾̆d̸̘̪͛͑́̈ǫ̷͈̾̑̈́r̸̩̺̪̯̅̍̐̚"
 	};
-
 	
-	private int [] eleccionesMapa = new int[9];
+	private String [] fraseEnemigoDerrotado = {"Frase de Rafa derrotado", "Frase de Miguel derrotado",
+			"Frase de Ángel derrotado", "Me has vencido, pero que sepas que saltará una tareita a las 14:30"
+	};
 			
 	
 	// Constructor vacío
@@ -371,6 +372,16 @@ public class BaseDatos {
 	
 	public void setFraseAtaqueEnemigo(String[][] fraseAtaqueEnemigo) {
 		this.fraseAtaqueEnemigo = fraseAtaqueEnemigo;
+	}
+
+
+	public String[] getFraseEnemigoDerrotado() {
+		return fraseEnemigoDerrotado;
+	}
+
+
+	public void setFraseEnemigoDerrotado(String[] fraseEnemigoDerrotado) {
+		this.fraseEnemigoDerrotado = fraseEnemigoDerrotado;
 	}
 	
 	

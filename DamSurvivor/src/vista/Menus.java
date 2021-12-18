@@ -151,6 +151,22 @@ public class Menus {
 				+ "     ______________________________________________________________________");
 	}
 	
+	public void menuEnemigo (Enemigo boss, int enemigo, String [] s) {
+		if (enemigo == 0) {
+			System.out.println(s [5]);
+			System.out.println("\t\t\t  -  HP: " + boss.getHp());
+		}else if (enemigo == 1) {
+			System.out.println(s [7]);
+			System.out.println("t\t\t  -  HP: " + boss.getHp());
+		}else if (enemigo == 2) {
+			System.out.println(s [10]);
+			System.out.println("\t\t\t  -  HP: " + boss.getHp());
+		}else if (enemigo == 3) {
+			System.out.println(s [17]);
+			System.out.println("\t\t\t  -  HP: " + boss.getHp());
+		}
+	}
+	
 	public void dado (double tirada) {
 		System.out.println("                                                            \r\n"
 				+ "                           .:-+#%#. .#=++=-:                        \r\n"
@@ -242,7 +258,6 @@ public class Menus {
 	public void ataqueAcertado (int dmg, Enemigo boss) {
 		System.out.println("\t\t\t  -  Tu ataque acierta");
 		System.out.println("\t\t\t  -  "+boss.getNombre()+" recibe "+dmg+" de daño\n");
-		System.out.println("\t\t\t  -  A " + boss.getNombre() + " le quedan " + boss.getHp() + " puntos de vida\n\n");
 	}
 	
 	public void ataqueEnemigoAcertado (int dmg, Jugador j1, Enemigo boss) {
@@ -411,7 +426,7 @@ public class Menus {
 	}
 
 	public void pintarMenu11() {
-		System.out.println("Pelea con Ángel, suerte. Si vences Bendición de Don Bosco.");
+		System.out.println("Pelea con Ángel, suerte.");
 	}
 	
 	public void pintarMenuDecisiones11() {
@@ -469,6 +484,10 @@ public class Menus {
 	
 	public void obtencionObjeto (Objeto o) {
 		System.out.printf("\n\tEnhorabuena!\n\tHas obtenido %s!\n\n", o.getNombre());
+	}
+	
+	public void enemigoDerrotado (int num, String [] s) {
+		System.out.println("\t\t  -  " + s [num -1]);
 	}
 	
 	

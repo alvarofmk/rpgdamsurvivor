@@ -188,9 +188,7 @@ public class Principal {
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-								if(data.getEnemigos()[enemigo].getHp()>0) {
-									menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-								}
+								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -220,9 +218,6 @@ public class Principal {
 						default:
 							menus.turnoPerdido();
 					}
-					
-					//menus.imprimirString(data.getFraseAtaqueEnemigo()[enemigo][ataque]);
-					//menus imprimir frase preparate para defenderte
 					// turno enemigo
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
 						roll = dados.tirarDados();
@@ -250,7 +245,7 @@ public class Principal {
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-					//falta vista enemigo derrotado, loot?
+					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
 					posicion = 7;
 				}
 
