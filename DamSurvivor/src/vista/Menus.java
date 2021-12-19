@@ -52,7 +52,7 @@ public class Menus {
 		System.out.println("\t\tLead Game Designer \t-\t Luis Miguel serón");
 		System.out.println("\t\tGameplay Programming \t-\t Álvaro Franco Martínez");
 		System.out.println("\t\tVisual Effects Design \t-\t Nadie");
-		System.out.println("\t\tAnimation \t\t-\t Nadie tambien");
+		System.out.println("\t\tAnimation \t\t-\t Nadie también");
 		System.out.println("\t\tCharacter Modeling \t-\t No hay presupuesto");
 		System.out.println();
 	}
@@ -263,7 +263,6 @@ public class Menus {
 	public void ataqueEnemigoAcertado (int dmg, Jugador j1, Enemigo boss) {
 		System.out.println("\t\t\t  -  " + boss.getNombre() + " acierta su ataque!\n");
 		System.out.println("\t\t\t  -  " + "Recibes " + dmg + " de daño\n");
-		System.out.println("\t\t\t  -  " + "Te quedan " + j1.getPtsHP() + " de vida\n\n");
 	}
 	
 	public void ataqueEnemigoFallado (Enemigo boss) {
@@ -275,7 +274,7 @@ public class Menus {
 	}
 	
 	public void cambiarArma (Arma armaEquipada) {
-		System.out.println("\t\t\t  -  Ahora estas equipado con " +armaEquipada.getNombre());
+		System.out.println("\t\t\t  -  Ahora estás equipado con " +armaEquipada.getNombre());
 	}
 	
 	public void objetoUsado (Objeto item) {
@@ -314,12 +313,12 @@ public class Menus {
 	
 	public void pintarMenuClases (int num) {
 		if (num == 1) {
-			System.out.println("Enhorabuena! Eres un Asesino. Seguro que pusheas en git y los demás ni se enteran.\n\n");
+			System.out.println("Enhorabuena! Eres un/a Asesino/a. Seguro que pusheas en git y los demás ni se enteran.\n\n");
 		} else if (num == 2){
-			System.out.println("Enhorabuena! Eres un Guerrero, una bestia parda, "
-					+ "haces subconsultas con una calculadora casio, un auténtico animal.\n\n");
+			System.out.println("Enhorabuena! Eres un/a Guerrero/a, una bestia parda, "
+					+ "haces subconsultas con una calculadora casio, un/a auténtico/a animal.\n\n");
 		}else if (num == 3) {
-			System.out.println("Enhorabuena! Eres un Hechicero, usas tu intelecto para hacer proezas como domotizar"
+			System.out.println("Enhorabuena! Eres un/a Hechicero/a, usas tu intelecto para hacer proezas como domotizar"
 					+ " tu casa con unas placas arduino.\n\n");
 		}else {
 			
@@ -329,23 +328,23 @@ public class Menus {
 	public void pintarMenu1 () {
 		System.out.println("Te levantas.. es jodidamente temprano, hace frío y pones rumbo a la escuela. Te montas\r\n"
 				+ "en tu medio de transporte y te das cuenta que el atasco de hoy es mayor de lo normal. De ahí\r\n"
-				+ "piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio ves la hora \r\n"
+				+ "piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio miras la hora \r\n"
 				+ "y tienes que tomar una decision importante... estás llegando tarde. Que harás ?");
 		System.out.println("1.- Te vas a tomarte un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
 				+ "	otras veces. ");
-		System.out.println("2.- No te importan las normas, ni la hora, eres un ninja y te cuelas por la iglesia ");
+		System.out.println("2.- No te importan las normas, ni la hora, eres muy ninja y te cuelas por la iglesia ");
 	}
 	
 	public void pintarMenu2() {
 		System.out.println("Está bien no pasa nada, a veces ocurren accidentes que no podemos controlar (como el atasco de la mañana)\r\n"
-				+ "asi que te diriges tranquilamente a la cafetería del Carlos. Llegas te pides un café calentito y mientras te \r\n"
+				+ "asi que te diriges tranquilamente a la cafetería de Carlos. Llegas te pides un café calentito y mientras te \r\n"
 				+ "pone la estufa y te estas tomando el café piensas respecto al horario..\r\n");
 	}
 	
 	public void pintarMenuDecision2 () {
 		System.out.println("Ahora que no entraste a los buenos dias, vas a la segunda clase ? o no ? Es con el mismo profesor que primera hora, \r\n"
 				+ "sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
-		System.out.println("1.- Así que.. decides saltarte las clases ? Vaya golfo.");
+		System.out.println("1.- Así que.. decides saltarte las clases ? Vaya golfo/a.");
 		System.out.println("2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
 	}
 	
@@ -358,7 +357,7 @@ public class Menus {
 	public void pintarMenuDecisiones3() {
 		System.out.println("Qué opción tomarías ?");
 		System.out.println("1.- Vas directo a clase y le dices que fuiste al servicio antes");
-		System.out.println("2.- Decides buscar a un sacerdote y ofrecer tu Ayuda solidaria.");
+		System.out.println("2.- Decides buscar a un sacerdote y ofrecer tu ayuda solidaria.");
 	}
 	
 	public void pintarMenu4() {
@@ -469,7 +468,7 @@ public class Menus {
 	}
 	public void pintarMenu16() {
 		System.out.println("NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el examen final.");
-		System.out.println("YOU... SHALL.. NOT PASS!!!! // MUERES.");
+		System.out.println("YOU... SHALL.. NOT PASS!!!!");
 	}
 	public void pintarMenu17() {
 		System.out.println("Pero que se han dejado en la pizarra !!??? No puede ser te fijas bien y ves..\r\n"
@@ -483,11 +482,15 @@ public class Menus {
 	}
 	
 	public void obtencionObjeto (Objeto o) {
-		System.out.printf("\n\tEnhorabuena!\n\tHas obtenido %s!\n\n", o.getNombre());
+		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", o.getNombre());
+	}
+	
+	public void obtencionArma (Arma a) {
+		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", a.getNombre());
 	}
 	
 	public void enemigoDerrotado (int num, String [] s) {
-		System.out.println("\t\t  -  " + s [num -1]);
+		System.out.println("\t\t\t  -  " + s [num]);
 	}
 	
 	

@@ -140,4 +140,10 @@ public class CrudJugador {
 		j1.setPtsATK(atk);
 	}
 	
+	public void bajarHP (Jugador j1) {
+		int hp = 0, bajada = 10;
+		hp = j1.getPtsHP() - bajada;
+		j1.setPtsHP(hp);
+	}
+	
 }

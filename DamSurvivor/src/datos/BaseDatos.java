@@ -29,68 +29,68 @@ public class BaseDatos {
 	private int [] armaDEF = {5,10,15,20};
 	private int [] armaDAM = {10,20,50,80};
 	private String [] armaDescripcion = {
-			"                                                        "
-			+ "                                          .-*##%+.\r\n"
-			+ "                                        ::.-:=##*=\r\n"
-			+ "                                       ===+=-..=*.\r\n"
-			+ "                                    =+==+=+- .    \r\n"
-			+ "                                 .==-:++::.       \r\n"
-			+ "                                ==:-++-....       \r\n"
-			+ "                             .-=-:==--.:..        \r\n"
-			+ "                           .=*-:==-----           \r\n"
-			+ "                         .=+-=#+-----.            \r\n"
-			+ "                       .=+-.----:--.              \r\n"
-			+ "                      --:.*+----=.                \r\n"
-			+ "                    :+::==---==.                  \r\n"
-			+ "                  =*::=+----=.                    \r\n"
-			+ "                =+-:==---==.                      \r\n"
-			+ "              =-++=+-...=.                        \r\n"
-			+ "           ..=+*+-:..                             \r\n"
-			+ "         .=**+-=:..                               \r\n"
-			+ "        =**#%%%+.                                 \r\n"
-			+ "       -**#%%###*             .                   \r\n"
-			+ "      .*#%###**:        .:-=+***.                 \r\n"
-			+ "     =*###+=:.    :-=+******####*                 \r\n"
-			+ "    *%#*-         ****####%%%%##*-                \r\n"
-			+ "   -=:            .#%%%###****+=-.                \r\n"
-			+ "                   :#*+*+=-:.                    \r\n"
-			+ "                                                  \r\n"
-			+ "Arma que nunca está cuando la necesitas"
+			"\t\t                             "
+			+ "\t\t.-*##%+.\r\n"
+			+ "\t\t                                     ::.-:=##*=\r\n"
+			+ "\t\t                                    ===+=-..=*.\r\n"
+			+ "\t\t                                 =+==+=+- .    \r\n"
+			+ "\t\t                              .==-:++::.       \r\n"
+			+ "\t\t                             ==:-++-....       \r\n"
+			+ "\t\t                          .-=-:==--.:..        \r\n"
+			+ "\t\t                        .=*-:==-----           \r\n"
+			+ "\t\t                      .=+-=#+-----.            \r\n"
+			+ "\t\t                    .=+-.----:--.              \r\n"
+			+ "\t\t                   --:.*+----=.                \r\n"
+			+ "\t\t                 :+::==---==.                  \r\n"
+			+ "\t\t               =*::=+----=.                    \r\n"
+			+ "\t\t             =+-:==---==.                      \r\n"
+			+ "\t\t           =-++=+-...=.                        \r\n"
+			+ "\t\t        ..=+*+-:..                             \r\n"
+			+ "\t\t      .=**+-=:..                               \r\n"
+			+ "\t\t     =**#%%%+.                                 \r\n"
+			+ "\t\t    -**#%%###*             .                   \r\n"
+			+ "\t\t   .*#%###**:        .:-=+***.                 \r\n"
+			+ "\t\t  =*###+=:.    :-=+******####*                 \r\n"
+			+ "\t\t *%#*-         ****####%%%%##*-                \r\n"
+			+ "\t\t-=:            .#%%%###****+=-.                \r\n"
+			+ "\t\t                :#*+*+=-:.                    \r\n"
+			+ "\t\t                                               \r\n"
+			+ "\t\tArma que nunca está cuando la necesitas"
 			
 			
 	
-	         ,"                               =.    =@#  .-*#%%%%%%#+:   +#\r\n"
-			+ "                               =.    @@@::%*-.      :=#@+   \r\n"
-			+ "                         -#%*:    .-+@=@%-:            .#@- \r\n"
-			+ "                        .@#.%%   %@@%= :#@@@: :+#%%#*:   +@-\r\n"
-			+ "                         -#%*:    :-*@=@%=:. #@=.  .=@#   %%\r\n"
-			+ "                        =-      +#   @@@-   +@:      .@*  *@\r\n"
-			+ "                        -:    -+%@++ =@%    *@-      :@+  @#\r\n"
-			+ "                              .-%@-:  @#    *@@+:..:+@#  #@.\r\n"
-			+ "                                -+    @#    *@-=*##*+#@+@#. \r\n"
-			+ "                                    :+@+    *@.    += ++:   \r\n"
-			+ "                              .-+*%%#+:     %@    +@@-  :   \r\n"
-			+ "                             -@#=:      .+#@*.    %%@% :+.  \r\n"
-			+ "                             %%   -+#@+  -.   -#%@#:-#@%*:  \r\n"
-			+ "                            #@. *@*-.         :*#@%-=%%#+:  \r\n"
-			+ "                          :%%. #@.      +#%*.     %@@#      \r\n"
-			+ "                        .*@+ .*@=      =@+:@*     =@@:      \r\n"
-			+ "                        %*..+@*.        =##+.      -:       \r\n"
-			+ "                    .++  .+@*.        .+:                   \r\n"
-			+ "                  .+@*..+@*.           -.                   \r\n"
-			+ "                .+@*..+@*.                                  \r\n"
-			+ "              .+@*..+@*.                                    \r\n"
-			+ "             +@*..+@*.                                      \r\n"
-			+ "           +@#..+@*.                                        \r\n"
-			+ "         +@#: +@*.                                          \r\n"
-			+ "       +@#: +@*.                                            \r\n"
-			+ "     +@#: +@#:                                              \r\n"
-			+ "   +@#: +@#:                                                \r\n"
-			+ " +@#: +@#:                                                  \r\n"
-			+ "%@: +@#:                          "
-			+ "=%%%*."
-			+"Bastón caído de los cielos. Se dice que proviene de un antiguo santo"
-			+ "que defendía a las almas jóvenes"
+	         ,"\t\t                               =.    =@#  .-*#%%%%%%#+:   +#\r\n"
+			+ "\t\t                               =.    @@@::%*-.      :=#@+   \r\n"
+			+ "\t\t                         -#%*:    .-+@=@%-:            .#@- \r\n"
+			+ "\t\t                        .@#.%%   %@@%= :#@@@: :+#%%#*:   +@-\r\n"
+			+ "\t\t                         -#%*:    :-*@=@%=:. #@=.  .=@#   %%\r\n"
+			+ "\t\t                        =-      +#   @@@-   +@:      .@*  *@\r\n"
+			+ "\t\t                        -:    -+%@++ =@%    *@-      :@+  @#\r\n"
+			+ "\t\t                              .-%@-:  @#    *@@+:..:+@#  #@.\r\n"
+			+ "\t\t                                -+    @#    *@-=*##*+#@+@#. \r\n"
+			+ "\t\t                                    :+@+    *@.    += ++:   \r\n"
+			+ "\t\t                              .-+*%%#+:     %@    +@@-  :   \r\n"
+			+ "\t\t                             -@#=:      .+#@*.    %%@% :+.  \r\n"
+			+ "\t\t                             %%   -+#@+  -.   -#%@#:-#@%*:  \r\n"
+			+ "\t\t                            #@. *@*-.         :*#@%-=%%#+:  \r\n"
+			+ "\t\t                          :%%. #@.      +#%*.     %@@#      \r\n"
+			+ "\t\t                        .*@+ .*@=      =@+:@*     =@@:      \r\n"
+			+ "\t\t                        %*..+@*.        =##+.      -:       \r\n"
+			+ "\t\t                    .++  .+@*.        .+:                   \r\n"
+			+ "\t\t                  .+@*..+@*.           -.                   \r\n"
+			+ "\t\t                .+@*..+@*.                                  \r\n"
+			+ "\t\t              .+@*..+@*.                                    \r\n"
+			+ "\t\t             +@*..+@*.                                      \r\n"
+			+ "\t\t           +@#..+@*.                                        \r\n"
+			+ "\t\t         +@#: +@*.                                          \r\n"
+			+ "\t\t       +@#: +@*.                                            \r\n"
+			+ "\t\t     +@#: +@#:                                              \r\n"
+			+ "\t\t   +@#: +@#:                                                \r\n"
+			+ "\t\t +@#: +@#:                                                  \r\n"
+			+ "\t\t%@: +@#:                          \r\n"
+			+ "\t\t=%%%*.\r\n"
+			+"\t\tBastón caído de los cielos. Se dice que proviene de un antiguo santo\r\n"
+			+ "\t\tque defendía a las almas jóvenes"
 	
 			
 	         ,"                       ....                       \r\n"
@@ -158,21 +158,23 @@ public class BaseDatos {
 	
 	private Enemigo [] enemigos = new Enemigo [4];
 	private String [] nombreEnemigos = {"Rafa", "Miguel", "Ángel", "Luismi"};
-	private int [] atkEnemigos = {10, 10, 25, 60};
-	private int [] defEnemigos = {0, 15, 35, 90};
+	private int [] atkEnemigos = {25, 35, 45, 60};
+	private int [] defEnemigos = {20, 35, 50, 90};
 	private int [] hpEnemigos = {25, 45, 70, 120};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 
-	private String [] [] fraseAtaqueEnemigo = {{"Rafa se pone a explicar CSS"
-		, "Rafa está dando los buenos días"
-		, "Rafa ha mandado a un compañero a corregir tu boletín"}
-		, {"Miguel pega una carrerita dejándose caer de la tarima", 
-			"Miguel llama tu atención con la palabra 'Señores!'", 
-			"Miguel te pide dinero para una campaña de salvar a las iguanas"}
-		, {"Ángel te va a dar con la cuchara que no existe", "Ángel descubre que estás copiando código y te manda deberes", "Ángel ejerce la violencia física contra ti"}
-		, {"Luismi ha puesto tareita de entornos de desarrollo para mañana", 
-			"Luismi se acuerda de Úbeda y se pone a divagar sobre carreteras de Jaén", 
-			"Luismi empieza a programar en Java y no entiendes nada"}};
+	private String [] [] fraseAtaqueEnemigo = {{"Rafa se va a poner a explicar CSS"
+		, "Rafa va a dar los buenos días"
+		, "Rafa va a mandar a un compañero a corregir tu boletín"}
+		, {"Miguel va a pegarse una carrerita dejándose caer de la tarima", 
+			"Miguel va a llamar tu atención con la palabra 'Señores!'", 
+			"Miguel te va a pedir dinero para una campaña de salvar a las iguanas"}
+		, {"Ángel te va a dar con la cuchara que no existe", 
+			"Ángel ha descubierto que estás copiando código y te va a mandar deberes", 
+			"Ángel va a ejercer la violencia física contra ti"}
+		, {"Luismi ha visto que estabas ocioso y va a mandar tarea de entornos de desarrollo para mañana", 
+			"Luismi se acaba de acordar de Úbeda y se va a poner a divagar sobre carreteras de Jaén", 
+			"Luismi va a empezar a programar en Java y no vas a entender nada"}};
 	private String [] fraseAtaqueFallido = {"Rafa bloquea tu ataque con una etiqueta div que ocupa toda la página."
 			,"Miguel cambia de tema de conversación y tu ataque le da a un compañero."
 			,"Angel te dice que es el peor día de su vida, te sientes mal y no le pegas."
@@ -184,8 +186,10 @@ public class BaseDatos {
 			,"P̸̟͚͉͓͋̽̋̂R̴̺̘͈̀̾̋͜Ȅ̸̝̩̠̖̇̓͘P̸̢͕̞̞̃̊̄Ã̴̙̳̲̳͗̆̕R̵̞̋͆E̸̖͛ ̸̺̬̗͓͋͘v̷̼͍͗̎̎̅e̸͍̬̽̈́͠n̴̡̰̺͚͒̀͠g̶̘̈́́͝͝ė̸͚ạ̶̝͗́̒̄͜n̸͔̲̮͛̒c̷͉̥͈̈́̍͜e̷̩͑ ̶͉̲̽̈́̈́̏T̴̽͜͠Ó̶̡͓̙̃W̴̢͚̅͊͘Å̷̰͛̊͑R̵̘̣̒͆̂D̸̙͕͑̌͐S̶̡̮͔͖̚ ̶̝͙̱̐̍̋͝j̴̮̠͆ͅư̷͖̱̲̫̓̀g̴̦̥͊å̵̺̘̾̆d̸̘̪͛͑́̈ǫ̷͈̾̑̈́r̸̩̺̪̯̅̍̐̚"
 	};
 	
-	private String [] fraseEnemigoDerrotado = {"Frase de Rafa derrotado", "Frase de Miguel derrotado",
-			"Frase de Ángel derrotado", "Me has vencido, pero que sepas que saltará una tareita a las 14:30"
+	private String [] fraseEnemigoDerrotado = {"Me has vencido, pero jamás sabrás hacer en condiciones una web de Dragon Ball", 
+			"Me has vencido, pero si hubiera usado una máquina de Turing...",
+			"Me has vencido, te has ganado copiar código hasta en los métodos", 
+			"Me has vencido, pero que sepas que saltará una tareita a las 14:30 para mañana"
 	};
 			
 	

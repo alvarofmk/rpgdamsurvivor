@@ -45,7 +45,6 @@ public class Principal {
 		data.setWeapons(crudWeapons.generarArmas(data));
 
 		// pantalla inicio
-
 		menus.pantallaInicio();
 		Leer.dato();
 
@@ -147,6 +146,7 @@ public class Principal {
 			if (posicion == 3) {
 				crudJugador.obtenerArma(1, data);
 				escenas.pintar(dataAscis.getAscisEscenas()[3]);
+				menus.obtencionArma(data.getWeapons()[1]);
 				menus.pintarMenu3();
 				menus.pintarMenuDecisiones3();// Vista de escena y eleccion
 				do {
@@ -168,11 +168,14 @@ public class Principal {
 			if (posicion == 4) {
 				escenas.pintar(dataAscis.getAscisEscenas()[18]);
 				menus.pintarMenu4();
+				crudJugador.bajarHP(j1);
+				menus.pintarMenuDecisiones4();
 				posicion = 7; // Hay que seguir haciendo principal
 			}
 
 			if (posicion == 5) {
 				enemigo = 0;
+				menus.pintarMenu5();
 				do {
 					// turno del jugador
 					menus.menuCombate(j1);
@@ -248,7 +251,8 @@ public class Principal {
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+					escenas.pintar(dataAscis.getAscisEscenas() [5]);
+					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
 					posicion = 7;
 				}
 			}
@@ -257,10 +261,12 @@ public class Principal {
 				crudJugador.subirAtaque(j1);
 				escenas.pintar(dataAscis.getAscisEscenas()[12]);
 				menus.pintarMenuDecisiones6();
+				Leer.dato();
 				posicion = 7; // 
 			}
 			if (posicion == 7) {
-					enemigo = 1;
+				menus.pintarMenuDecisiones5();	
+				enemigo = 1;
 					do {
 						// turno del jugador
 						menus.menuCombate(j1);
@@ -336,7 +342,8 @@ public class Principal {
 						Leer.dato();
 						posicion = 0;
 					}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-						menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+						escenas.pintar(dataAscis.getAscisEscenas() [7]);
+						menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
 						menus.pintarMenu7();
 						menus.pintarMenuDecisiones7();
 						menu=Leer.datoInt();
@@ -467,7 +474,8 @@ public class Principal {
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+					escenas.pintar(dataAscis.getAscisEscenas() [10]);
+					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
 					menus.pintarMenuDecisiones11();
 					menu=Leer.datoInt();
 					switch (menu) {
@@ -513,7 +521,7 @@ public class Principal {
 			}
 			if (posicion == 16) {
 				menus.pintarMenu16();
-				// Mostrar un game over y algun asci de muerte o algo asi.
+				escenas.pintar(dataAscis.getAscisEscenas() [14]);
 				posicion = 0;
 			}
 			if (posicion == 17) {
@@ -597,10 +605,12 @@ public class Principal {
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
-					menus.enemigoAtaca(enemigo, data.getFraseEnemigoDerrotado());
+					escenas.pintar(dataAscis.getAscisEscenas() [17]);
+					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
+					System.out.println("THE END");
+					menus.creditos();
 				}
-				System.out.println("THE END");
-				menus.creditos();
+				
 		}				
 		} while (posicion != 99);
 
