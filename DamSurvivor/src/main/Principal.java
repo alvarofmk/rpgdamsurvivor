@@ -24,7 +24,7 @@ public class Principal {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		boolean hit;
-		double puntATK = 0.0, puntDEF = 0.0, roll = 0.0;
+		double roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0, rollEnemigo = 0;
 		String nombreJ = "";
 		Jugador j1 = null;
@@ -145,7 +145,7 @@ public class Principal {
 			}
 
 			if (posicion == 3) {
-				crudJugador.obtenerArma(3, data);
+				crudJugador.obtenerArma(1, data);
 				escenas.pintar(dataAscis.getAscisEscenas()[3]);
 				menus.pintarMenu3();
 				menus.pintarMenuDecisiones3();// Vista de escena y eleccion
@@ -191,7 +191,6 @@ public class Principal {
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -225,6 +224,7 @@ public class Principal {
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
+						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
 						menus.lanzaDados();
 						Leer.dato();
@@ -254,6 +254,8 @@ public class Principal {
 			}
 			if (posicion == 6) {
 				menus.pintarMenu6();
+				crudJugador.subirAtaque(j1);
+				escenas.pintar(dataAscis.getAscisEscenas()[12]);
 				menus.pintarMenuDecisiones6();
 				posicion = 7; // 
 			}
@@ -277,7 +279,6 @@ public class Principal {
 									crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 									menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 									menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-									menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 								} else {
 									menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 								}
@@ -311,6 +312,7 @@ public class Principal {
 						if (data.getEnemigos()[enemigo].getHp() > 0) {
 							roll = dados.tirarDados();
 							rollEnemigo = controlEne.tirarDadosATK();
+							menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 							menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
 							menus.lanzaDados();
 							Leer.dato();
@@ -408,7 +410,6 @@ public class Principal {
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -442,6 +443,7 @@ public class Principal {
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
+						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
 						menus.lanzaDados();
 						Leer.dato();
@@ -519,7 +521,7 @@ public class Principal {
 				posicion = 18;
 			}
 			if (posicion == 18) {
-				enemigo = 2;
+				enemigo = 3;
 				do {
 					// turno del jugador
 					menus.menuCombate(j1);
@@ -538,7 +540,6 @@ public class Principal {
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
 								menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]);
 								menus.imprimirString(data.getFraseAtaqueAcertado()[enemigo]);
-								menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 							} else {
 								menus.imprimirString(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -572,6 +573,7 @@ public class Principal {
 					if (data.getEnemigos()[enemigo].getHp() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
+						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
 						menus.enemigoAtaca(rollEnemigo, data.getFraseAtaqueEnemigo()[enemigo]);
 						menus.lanzaDados();
 						Leer.dato();

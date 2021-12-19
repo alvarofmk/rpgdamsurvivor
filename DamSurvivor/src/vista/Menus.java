@@ -157,7 +157,7 @@ public class Menus {
 			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}else if (enemigo == 1) {
 			System.out.println(s [7]);
-			System.out.println("t\t\t  -  HP: " + boss.getHp());
+			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}else if (enemigo == 2) {
 			System.out.println(s [10]);
 			System.out.println("\t\t\t  -  HP: " + boss.getHp());
@@ -320,7 +320,7 @@ public class Menus {
 					+ "haces subconsultas con una calculadora casio, un auténtico animal.\n\n");
 		}else if (num == 3) {
 			System.out.println("Enhorabuena! Eres un Hechicero, usas tu intelecto para hacer proezas como domotizar"
-					+ "tu casa con unas placas arduino.\n\n");
+					+ " tu casa con unas placas arduino.\n\n");
 		}else {
 			
 		}

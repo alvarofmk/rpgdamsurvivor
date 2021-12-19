@@ -134,4 +134,10 @@ public class CrudJugador {
 		return objetoActivo;
 	}
 	
+	public void subirAtaque (Jugador j1){
+		int atk = 0, subida = 5;
+		atk = j1.getPtsATK() + subida;
+		j1.setPtsATK(atk);
+	}
+	
 }
