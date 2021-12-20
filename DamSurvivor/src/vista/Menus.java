@@ -27,7 +27,8 @@ public class Menus {
 				+ "              /\\____) || (___) || ) \\ \\__  \\   /  ___) (___  \\   /  | (___) || ) \\ \\__\r\n"
 				+ "              \\_______)(_______)|/   \\__/   \\_/   \\_______/   \\_/   (_______)|/   \\__/\r\n"
 				+ "                                                                                      \r\n"
-				+ "                                    Pulsa intro para continuar.\n");
+				+ "                                    Pulsa intro para continuar. \n");
+		
 	}
 	
 	public void menuPrincipal () {

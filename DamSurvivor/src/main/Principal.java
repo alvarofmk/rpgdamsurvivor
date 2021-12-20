@@ -503,7 +503,7 @@ public class Principal {
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
-				//ascii de vida
+				escenas.pintar(dataAscis.getAscisEscenas() [18]);
 				crudJugador.bajarHP(j1);
 				posicion = 15;
 			}
