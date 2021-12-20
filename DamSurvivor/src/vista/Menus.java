@@ -395,7 +395,7 @@ public class Menus {
 	
 	public void pintarMenuDecisiones7() {
 		System.out.println("1.- Soy un tio sociable, me voy con la gente a ver cual es el topic del dia");
-		System.out.println("2.- Nah yo paso, en la biblioteca se está calentito y puedo aumentar mis recursos. el curso Udemy");
+		System.out.println("2.- Nah yo paso, en la biblioteca se está calentito y puedo aumentar mis recursos.");
 	}
 	
 	public void pintarMenu8() {
@@ -490,7 +490,7 @@ public class Menus {
 	}
 	
 	public void enemigoDerrotado (int num, String [] s) {
-		System.out.println("\t\t\t  -  " + s [num]);
+		System.out.println("\t\t  -  " + s [num]);
 	}
 	
 	

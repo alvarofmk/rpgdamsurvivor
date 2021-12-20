@@ -264,8 +264,7 @@ public class Principal {
 				Leer.dato();
 				posicion = 7; // 
 			}
-			if (posicion == 7) {
-				menus.pintarMenuDecisiones5();	
+			if (posicion == 7) {	
 				enemigo = 1;
 					do {
 						// turno del jugador
@@ -362,6 +361,9 @@ public class Principal {
 			}
 			if (posicion == 8) {
 				menus.pintarMenu8();
+				crudJugador.obtenerObjeto(0, data);
+				escenas.pintar(dataAscis.getAscisEscenas() [2]);
+				menus.obtencionObjeto(data.getItems() [0]);
 				menus.pintarMenuDecisiones8();
 				menu=Leer.datoInt();
 				switch (menu) {
@@ -378,6 +380,9 @@ public class Principal {
 			}
 			if (posicion == 9) {
 				menus.pintarMenu9();
+				crudJugador.obtenerObjeto(2, data);
+				escenas.pintar(dataAscis.getAscisEscenas() [9]);
+				menus.obtencionObjeto(data.getItems() [2]);
 				menus.pintarMenuDecisiones9();
 				menu=Leer.datoInt();
 				switch (menu) {
