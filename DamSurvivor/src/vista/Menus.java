@@ -483,6 +483,7 @@ public class Menus {
 	
 	public void obtencionObjeto (Objeto o) {
 		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", o.getNombre());
+		System.out.printf("\t\t%s\n\n", o.getDescripcion());
 	}
 	
 	public void obtencionArma (Arma a) {

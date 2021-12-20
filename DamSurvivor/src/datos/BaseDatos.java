@@ -13,15 +13,19 @@ public class BaseDatos {
 	private Objeto [] items = new Objeto [5];
 	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco",
 			"Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
-	private int [] objetoATK = {0,5,2,0,5};
-	private int [] objetoDEF = {0,5,0,3,-2};
-	private int [] objetoHP = {15,0,-10,-10,0};
-	private int [] objetoHpMax = {0,20,0,15,0};
-	private String [] objetoDescripcion = {"Cafelito",
-			"Bendición de Don Bosco",
-			"Curso de Udemy",
-			"25.000 boletines de BBDD",
-			"VideoTutorial de POJO"};
+	private int [] objetoATK = {0,15,10,-5,5};
+	private int [] objetoDEF = {0,15,0,5,5};
+	private int [] objetoHP = {25,0,-10,0,-5};
+	private int [] objetoHpMax = {0,20,0,0,0};
+	private String [] objetoDescripcion = {"Aumenta en 25 tus puntos de salud",
+			"Aumenta en 15 tus puntos de ataque y defensa.\r\n"
+			+ "\t\tAumenta en 20 puntos tu salud máxima",
+			"Aumenta en 10 tus puntos de ataque y defensa.\r\n"
+			+ "\t\tDisminuye en 10 tus puntos de salud",
+			"Aumenta en 5 tus puntos de defensa.\r\n"
+			+ "\t\tDisminuye en 5 tus puntos de ataque",
+			"Aumenta en 5 tus puntos de ataque y defensa.\r\n"
+			+ "\t\tDisminuye en 5 tus puntos de salud"};
 	private Arma [] weapons = new Arma [4];
 	private String [] armaNombre = {"Bolígrafo permanente inexistente", 
 			"Bastón de Don Bosco", "Monitor microscópico", "Silla rígida"};

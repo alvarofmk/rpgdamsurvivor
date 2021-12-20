@@ -391,10 +391,10 @@ public class Principal {
 				menu=Leer.datoInt();
 				switch (menu) {
 				case 1:
-					posicion = 11;
+					posicion = 12;
 					break;
 				case 2:
-					posicion = 12;
+					posicion = 11;
 					break;
 				default:
 					menus.invalid();
@@ -402,6 +402,7 @@ public class Principal {
 				}
 			}
 			if (posicion == 10) {
+				//Videotutorial POJO
 				menus.pintarMenu10();
 				posicion = 13;
 			}
@@ -508,6 +509,8 @@ public class Principal {
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
+				//ascii de vida
+				crudJugador.bajarHP(j1);
 				posicion = 15;
 			}
 			if (posicion == 14) {
@@ -541,6 +544,7 @@ public class Principal {
 			}
 			if (posicion == 18) {
 				enemigo = 3;
+				menus.pintarMenu18();
 				do {
 					// turno del jugador
 					menus.menuCombate(j1);
