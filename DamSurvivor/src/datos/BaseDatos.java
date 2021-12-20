@@ -191,6 +191,7 @@ public class BaseDatos {
 			"Me has vencido, te has ganado copiar código hasta en los métodos", 
 			"Me has vencido, pero que sepas que saltará una tareita a las 14:30 para mañana"
 	};
+	private String [] fraseAuxiliar = {"Tu ataque acierta","Prepárate para defenderte"};
 			
 	
 	// Constructor vacío
@@ -386,6 +387,16 @@ public class BaseDatos {
 
 	public void setFraseEnemigoDerrotado(String[] fraseEnemigoDerrotado) {
 		this.fraseEnemigoDerrotado = fraseEnemigoDerrotado;
+	}
+
+
+	public String[] getFraseAuxiliar() {
+		return fraseAuxiliar;
+	}
+
+
+	public void setFraseAuxiliar(String[] fraseAuxiliar) {
+		this.fraseAuxiliar = fraseAuxiliar;
 	}
 	
 	
