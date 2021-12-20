@@ -42,6 +42,24 @@ public class CrudJugador {
 		System.out.println(j1);
 	}
 	
+	public void derrotarJefe (int atributo) {
+		switch(atributo) {
+			case 1:
+				j1.setPtsATK(j1.getPtsATK()+2);
+				break;
+			case 2:
+				j1.setPtsDEF(j1.getPtsDEF()+2);
+				break;
+			case 3:
+				j1.setPtsMaxHP(j1.getPtsMaxHP()+5);
+				break;
+			case 4:
+				j1.setPtsHP(j1.getPtsHP()+10);
+				break;
+		}
+		checkVidaMax();
+	}
+	
 	public void herirJugador (int atk) {
 		int hpNueva = 0;
 		hpNueva = j1.getPtsHP() - atk;

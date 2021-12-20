@@ -253,6 +253,8 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [5]);
 					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
+					eleccion=Leer.datoInt();
+					crudJugador.derrotarJefe(eleccion);
 					posicion = 7;
 				}
 			}
@@ -344,6 +346,8 @@ public class Principal {
 					}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 						escenas.pintar(dataAscis.getAscisEscenas() [7]);
 						menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
+						eleccion=Leer.datoInt();
+						crudJugador.derrotarJefe(eleccion);
 						menus.pintarMenu7();
 						menus.pintarMenuDecisiones7();
 						menu=Leer.datoInt();
@@ -476,6 +480,8 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [10]);
 					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
+					eleccion=Leer.datoInt();
+					crudJugador.derrotarJefe(eleccion);
 					menus.pintarMenuDecisiones11();
 					menu=Leer.datoInt();
 					switch (menu) {
@@ -607,6 +613,7 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [17]);
 					menus.enemigoDerrotado(enemigo, data.getFraseEnemigoDerrotado());
+					//cambiar por vista
 					System.out.println("THE END");
 					menus.creditos();
 				}
