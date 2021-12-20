@@ -368,7 +368,7 @@ public class Menus {
 		System.out.println("Te levantas.. es jodidamente temprano, hace frío y pones rumbo a la escuela. Te montas\r\n"
 				+ "en tu medio de transporte y te das cuenta que el atasco de hoy es mayor de lo normal. De ahí\r\n"
 				+ "piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio miras la hora \r\n"
-				+ "y tienes que tomar una decision importante... estás llegando tarde. Que harás ?");
+				+ "y tienes que tomar una decision importante... estás llegando tarde. ¿ Qué harás ?");
 		System.out.println("1.- Te vas a tomarte un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
 				+ "	otras veces. ");
 		System.out.println("2.- No te importan las normas, ni la hora, eres muy ninja y te cuelas por la iglesia ");
@@ -381,9 +381,9 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecision2 () {
-		System.out.println("Ahora que no entraste a los buenos dias, vas a la segunda clase ? o no ? Es con el mismo profesor que primera hora, \r\n"
+		System.out.println("Ahora que no entraste a los buenos dias, ¿ Vas a la segunda clase ? ¿ O no ? Es con el mismo profesor que primera hora, \r\n"
 				+ "sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
-		System.out.println("1.- Así que.. decides saltarte las clases ? Vaya golfo/a.");
+		System.out.println("1.- Así que.. ¿  decides saltarte las clases ? Vaya golfo/a.");
 		System.out.println("2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
 	}
 	
@@ -394,7 +394,7 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones3() {
-		System.out.println("Qué opción tomarías ?");
+		System.out.println("¿ Qué opción tomarías ?");
 		System.out.println("1.- Vas directo a clase y le dices que fuiste al servicio antes");
 		System.out.println("2.- Decides buscar a un sacerdote y ofrecer tu ayuda solidaria.");
 	}
@@ -407,7 +407,7 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones4() {
-		System.out.println("- Atento ahora si o sí te enfrentarás a Miguel");
+		System.out.println("- Atento, ahora sí o sí te enfrentarás a Miguel");
 	}
 	
 	public void pintarMenu5() {
@@ -429,7 +429,7 @@ public class Menus {
 	}
 	
 	public void pintarMenu7() {
-		System.out.println("Después de la pelea hay recreo. Te vas a la cafeteria con tus compañeros ? o te vas a la biblioteca a estudiar ?");
+		System.out.println("Después de la pelea hay recreo. ¿ Te vas a la cafetería con tus compañeros ? ¿ o te vas a la biblioteca a estudiar ?");
 	}
 	
 	public void pintarMenuDecisiones7() {
@@ -438,11 +438,11 @@ public class Menus {
 	}
 	
 	public void pintarMenu8() {
-		System.out.println("La cafeteria está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comertela.");
+		System.out.println("La cafetería está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comertela.");
 	}
 	
 	public void pintarMenuDecisiones8() {
-		System.out.println("Que decides ?");
+		System.out.println("¿ Qué decides ?");
 		System.out.println("1.- Te vas a la biblioteca porque ya sabes lo que van a dar y quieres avanzar con un videotutorial que envió Angel.");
 		System.out.println("2.- Decides ir a clase porque tienes muchas faltas acumuladas");
 	}
@@ -452,14 +452,14 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones9() {
-		System.out.println("Qué deberías hacer ahora ?");
+		System.out.println("¿ Qué deberías hacer ahora ?");
 		System.out.println("1.- Estudiar en la biblioteca lo que Ángel tiene que explicar");
 		System.out.println("2.- Explicárselo tú a Ángel");
 	}
 	
 	public void pintarMenu10() {
 		System.out.println("El video tutorial es un tostón y pasas de él. Te pones música para pasar el rato pero te pillan y te sacan fuera.\r\n"
-				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lluviendo. Esto \r\n"
+				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lloviendo. Esto \r\n"
 				+ "     hará que se te corte el cuerpo y pierdas vida por ello.");
 	}
 
@@ -468,24 +468,23 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones11() {
-		System.out.println("Y ahora que has vencido a Ángel, que harías ?");
-		System.out.println("1.-Te sales a fuera para relajarte a fumarte un cigarrito ? ");
-		System.out.println("2.-Te vas a la iglesia a meditar y prepararte para el siguiente exámen.");
+		System.out.println("Y ahora que has vencido a Ángel, ¿ Qué harías ?");
+		System.out.println("1.-¿ Te sales a fuera para relajarte a fumarte un cigarrito ? ");
+		System.out.println("2.-¿ Te vas a la iglesia a meditar y prepararte para el siguiente exámen.");
 	}
 	public void pintarMenu12() {
-		System.out.println("Este videotutorial era la polla, salía el Ángel vestido de mátrix explicandonos la orientación a objetos con Java.\r\n"
+		System.out.println("Este videotutorial era la polla, salía el Ángel vestido de mátrix explicándonos la orientación a objetos con Java.\r\n"
 				+ "     Así si que te está quedando todo claro. Con esto apruebas fijo.");
-		System.out.println("De aquí a la casilla random");
 	}
 	public void pintarMenu13() {
-		System.out.println("A quién se le ocurre salir a fumar cuando está lluviendo ? Así es normal que te resfries. Pierdes vida por ello.");
+		System.out.println("¿ A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
 	}
 	public void pintarMenu14A() {
 		System.out.println("Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
 	}
 	
 	public void pintarMenu14B() {
-		System.out.println("Qué esperabas encontrar aquí ?");
+		System.out.println("¿ Qué esperabas encontrar aquí ?");
 		System.out.println("No hay nada para ti. Continúa tu camino");
 	}
 	public void pintarMenu15() {
@@ -496,17 +495,17 @@ public class Menus {
 		System.out.println("..");
 		System.out.println("..");
 		System.out.println("Pasa la noche y al dia siguiente te das cuenta de que eres un Titán de BBDD, ya no tienes miedo de enfrentarte a Luismi.\r\n"
-				+ "Suben tus stats por la sabiduría adquiria en BBDD.");
+				+ "Suben tus stats por la sabiduría adquirida en BBDD.");
 	}
 	
 	public void pintarMenuDecisiones15() {
-		System.out.println("Ahora como te sientes ? Preparado ?");
+		System.out.println("¿ Ahora como te sientes ? Preparado ?");
 		System.out.println("1.-Si crees que puedes aumentar tus stats un poco más, te saltas primera para ir directo al examen con \r\n"
 				+ "	todo estudiado al 100%");
 		System.out.println("2.-Si crees que eres tan titán como piensas vas directo a clase.");
 	}
 	public void pintarMenu16() {
-		System.out.println("NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el examen final.");
+		System.out.println("NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el exámen final.");
 		System.out.println("YOU... SHALL.. NOT PASS!!!!");
 	}
 	public void pintarMenu17() {
