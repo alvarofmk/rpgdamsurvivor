@@ -490,12 +490,16 @@ public class Menus {
 	}
 	
 	public void enemigoDerrotado (int num, String [] s) {
+<<<<<<< HEAD
 		System.out.println("\t\t-  " + s [num] +"\n");
 		System.out.println("\t\tEnhorabuena, has vencido, escoge tu recompensa:");
 		System.out.println("\t\t - 1. Aumentar ataque");
 		System.out.println("\t\t - 2. Aumentar defensa");
 		System.out.println("\t\t - 3. Aumentar HP máxima");
 		System.out.println("\t\t - 4. Cura");
+=======
+		System.out.println("\t\t  -  " + s [num]);
+>>>>>>> master
 	}
 	
 	

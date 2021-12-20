@@ -169,7 +169,7 @@ public class BaseDatos {
 		, {"Miguel va a pegarse una carrerita dejándose caer de la tarima", 
 			"Miguel va a llamar tu atención con la palabra 'Señores!'", 
 			"Miguel te va a pedir dinero para una campaña de salvar a las iguanas"}
-		, {"Ángel te va a dar con la cuchara que no existe", 
+		, {"Ángel va a comenzar a acariciar a su gato", 
 			"Ángel ha descubierto que estás copiando código y te va a mandar deberes", 
 			"Ángel va a ejercer la violencia física contra ti"}
 		, {"Luismi ha visto que estabas ocioso y va a mandar tarea de entornos de desarrollo para mañana", 
