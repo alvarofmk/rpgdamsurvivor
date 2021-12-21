@@ -50,7 +50,7 @@ public class Menus {
 		System.out.println();
 		System.out.println("\t\tDirector \t\t-\t Carlos Jesús Durbán Viloca");
 		System.out.println("\t\tProducer \t\t-\t Nicolás Fernández de la Fuente Bursón");
-		System.out.println("\t\tLead Game Designer \t-\t Luis Miguel serón");
+		System.out.println("\t\tLead Game Designer \t-\t Luis Miguel Serón Delgado");
 		System.out.println("\t\tGameplay Programming \t-\t Álvaro Franco Martínez");
 		System.out.println("\t\tVisual Effects Design \t-\t Nadie");
 		System.out.println("\t\tAnimation \t\t-\t Nadie también");
@@ -264,21 +264,6 @@ public class Menus {
 		}else if(tirada <= 1) {
 			System.out.println("\t\t\t  -  Has sacado un 20");
 		}
-	}
-	
-	public void enemigoAtaca (int num, String [] s) {
-		switch (num) {
-			case 1:
-				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
-				break;
-			case 2:
-				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
-				break;
-			case 3:
-				System.out.printf("\t\t\t  -  Cuidado! %s\n\n\t\t\t  -  Prepárate para defenderte\n\n", s [num - 1]);
-				break;
-		}
-		
 	}
 	
 	public void lanzaDados () {
