@@ -105,6 +105,8 @@ public class Principal {
 				// ejemplo de elección
 				do {
 				//Historia para posicion 2 o 3
+					escenas.pintar(data.getArmaDescripcion() [0]);
+					menus.obtencionArma(data.getWeapons() [0]);
 					menus.pintarMenuClases(menu);
 					menus.pintarMenu1();
 					menu = Leer.datoInt();
@@ -417,7 +419,9 @@ public class Principal {
 				}
 			}
 			if (posicion == 10) {
-				//Videotutorial POJO
+				crudJugador.obtenerObjeto(4, data);
+				escenas.pintar(dataAscis.getAscisEscenas() [20]);
+				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu10();
 				posicion = 13;
 			}
@@ -525,12 +529,15 @@ public class Principal {
 				}
 		}
 			if (posicion == 12) {
+				crudJugador.obtenerObjeto(4, data);
+				escenas.pintar(dataAscis.getAscisEscenas() [20]);
+				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu12();
 				posicion = 142;
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
-				escenas.pintar(dataAscis.getAscisEscenas() [18]);
+				escenas.pintar(dataAscis.getAscisEscenas() [21]);
 				crudJugador.bajarHP(j1);
 				posicion = 15;
 			}
