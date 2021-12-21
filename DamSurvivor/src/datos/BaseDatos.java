@@ -198,7 +198,8 @@ public class BaseDatos {
 			"Me has vencido, te has ganado copiar código hasta en los métodos", 
 			"Me has vencido, pero que sepas que saltará una tareita a las\r\n\t 14:30 para mañana"
 	};
-	private String [] fraseAuxiliar = {"Tu ataque acierta","Prepárate para defenderte", "Introduce tu nombre"};
+	private String [] fraseAuxiliar = {"Tu ataque acierta","Prepárate para defenderte", "Introduce tu nombre",
+			"Vaya, parece que esa última tarea de Luismi te baja 10 puntos de vida"};
 			
 	
 	// Constructor vacío

@@ -328,7 +328,8 @@ public class Menus {
 		System.out.println("\t\t  -  Te equivocas al programar y pierdes tu turno\n");
 	}
 	
-	public void gameOver () {
+	public void gameOver (String s) {
+		System.out.println(s);
 		System.out.println("              _______  _______  _______  _______    _______           _______  _______ \r\n"
 				+ "             (  ____ \\(  ___  )(       )(  ____ \\  (  ___  )|\\     /|(  ____ \\(  ____ )\r\n"
 				+ "             | (    \\/| (   ) || () () || (    \\/  | (   ) || )   ( || (    \\/| (    )|\r\n"
@@ -399,7 +400,7 @@ public class Menus {
 		System.out.println("     Ahora que no entraste a los buenos dias, ¿ Vas a la segunda clase ? ¿ O no ? Es con el mismo profesor que primera hora, \r\n"
 				+ "     sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
 		System.out.println("     1.- Así que.. ¿  decides saltarte las clases ? Vaya golfo/a.");
-		System.out.println("     2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
+		System.out.println("     2.- Vas a intentar ir a clase de Rafa y que te deje hacer el examen.");
 	}
 	
 	public void pintarMenu3() {
@@ -420,32 +421,33 @@ public class Menus {
 				+ "     Tu disimulas como puedes pero aunque creas que saliste victorioso tu conciencia no te deja en paz y eso te drena\r\n"
 				+ "     algo de vida.");
 		System.out.println("");
-		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida");
+		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida.");
 		System.out.println("");
-		System.out.println("     Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria");
+		System.out.println("     Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria.");
 	}
 	
 	public void pintarMenuDecisiones4() {
-		System.out.println("     - Atento, ahora sí o sí te enfrentarás a Miguel");
+		System.out.println("     O eso creías, Miguel no va a dejar que te lleves ese monitor tan facilmente. Enfréntate a él.");
 	}
 	
 	public void pintarMenu5() {
 		System.out.println("     Rafa está explicando cómo hacer una página web de Dragon Ball, pero le interrumpes\r\n"
-				+ "     al entrar en clase y te quiere mandar boletines extra como castigo. Prepárate para pelear");
+				+ "     al entrar en clase y te quiere mandar boletines extra como castigo. Prepárate para pelear.");
 	}
 	
 	public void pintarMenuDecisiones5() {
-		System.out.println("     Y sin descanso ahora viene la segunda parte, pelea con Miguel");
+		System.out.println("     En DAM no hay descanso, Miguel viene a hablar contigo de la reunión de padres online. \r\n"
+				+ "     Se te ha olvidado avisarles... prepárate para luchar.");
 	}
 	
 	public void pintarMenu6() {
 		System.out.println("     Con el fin de espabilarte y no dar la primera hora.. puesto que eres delegado de solidaridad ofreces tu ayuda y\r\n"
 				+ "     te pasas toda la hora cargando juguetes, comida para donar, repartiendo panfletos por las clases...Gracias a que ayudaste a \r\n"
-				+ "     cargar todos los regalos de reyes y la comida, te sube el ataque (un poco)");
+				+ "     cargar todos los regalos de reyes y la comida, te sube el ataque (un poco).");
 	}
 	
 	public void pintarMenuDecisiones6() {
-		System.out.println("     1.- Te vendrá bien esa ayuda extra para enfrentarte con Miguel");
+		System.out.println("     Miguel aprecia tu ayuda, pero sabe que te has saltado clases y viene a pedirte un justificante. Enfréntate a él.");
 	}
 	
 	public void pintarMenu7() {
@@ -453,17 +455,17 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones7() {
-		System.out.println("     1.- Soy un tio sociable, me voy con la gente a ver cual es el topic del dia");
+		System.out.println("     1.- Soy un tio sociable, me voy con la gente a ver cuál es el topic del dia.");
 		System.out.println("     2.- Nah yo paso, en la biblioteca se está calentito y puedo aumentar mis recursos.");
 	}
 	
 	public void pintarMenu8() {
-		System.out.println("     La cafetería está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comertela.");
+		System.out.println("     La cafetería está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comértela.");
 	}
 	
 	public void pintarMenuDecisiones8() {
 		System.out.println("     ¿ Qué decides ?");
-		System.out.println("     1.- Te vas a la biblioteca porque ya sabes lo que van a dar y quieres avanzar con un videotutorial que envió Angel.");
+		System.out.println("     1.- Te vas a la biblioteca porque ya sabes lo que van a dar y quieres avanzar con un videotutorial que envió Ángel.");
 		System.out.println("     2.- Decides ir a clase porque tienes muchas faltas acumuladas");
 	}
 	
@@ -490,7 +492,7 @@ public class Menus {
 	public void pintarMenuDecisiones11() {
 		System.out.println("     Y ahora que has vencido a Ángel, ¿ Qué harías ?");
 		System.out.println("     1.-¿ Te sales a fuera para relajarte a fumarte un cigarrito ? ");
-		System.out.println("     2.-¿ Te vas a la iglesia a meditar y prepararte para el siguiente exámen.");
+		System.out.println("     2.-¿ Te vas a la iglesia a meditar y prepararte para el siguiente examen.");
 	}
 	public void pintarMenu12() {
 		System.out.println("     Este videotutorial era la polla, salía el Ángel vestido de mátrix explicándonos la orientación a objetos con Java.\r\n"
@@ -503,10 +505,6 @@ public class Menus {
 		System.out.println("     Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
 	}
 	
-	public void pintarMenu142() {
-		System.out.println("     ¿ Qué esperabas encontrar aquí ?");
-		System.out.println("     No hay nada para ti. Continúa tu camino");
-	}
 	public void pintarMenu15() {
 		System.out.println("     No sabes ni cómo pero aquí estás, has pasado por muchas cosas para llegar a este punto, parece que fue ayer\r\n"
 				+ "     cuando te acostabas a las tantas y te despertabas sin tarea, pero de repente te dá por mirar el móvil para ver la hora\r\n"
@@ -518,21 +516,23 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones15() {
-		System.out.println("     ¿ Ahora como te sientes ? Preparado ?");
-		System.out.println("     1.-Si crees que puedes aumentar tus stats un poco más, te saltas primera para ir directo al examen con \r\n"
+		System.out.println("     ¿ Ahora cómo te sientes ? ¿ Preparado ?");
+		System.out.println("     1.-Si crees que puedes aumentar tus stats un poco más, te saltas la primera hora para ir directo al examen con \r\n"
 				+ "     todo estudiado al 100%");
 		System.out.println("     2.-Si crees que eres tan titán como piensas vas directo a clase.");
 	}
 	public void pintarMenu16() {
-		System.out.println("     NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el exámen final.");
-		System.out.println("     YOU... SHALL.. NOT PASS!!!!");
+		System.out.println("     ¡¡NOOOOOooooooo!! ¿¡Cómo se te ocurre saltarte más clases!? Los profesores te han visto entrar tarde y ahora no te dejan hacer el examen final.");
+		System.out.println("     YOU... SHALL... NOT PASS!!!!");
 	}
 	public void pintarMenu17() {
-		System.out.println("     Acordándote de todo lo aprendido en Base de datos, todos los join, las subconsultas escalares\r\n"
-				+ "     y las claves primarias, coges una silla de clase para ir más preparado para el examen");
+		System.out.println("     A pesar de todo lo aprendido en Base de datos: todos los join, las subconsultas escalares\r\n"
+				+ "     y las claves primarias, coges una silla de clase por si acaso, para ir más preparado para el examen");
 	}
 	public void pintarMenu18() {
-		System.out.println("     Peleas con el TITÁN");
+		System.out.println("     Ha llegado la hora. Las decisiones que has ido tomando durante la aventura\r\n"
+				+ "     te han llevado hasta aquí. Demuéstrale a Luismi si finalmente eres digno de DAM. Enfréntate a tu destino.\r\n"
+				+ "     Que Don Bosco te acompañe.");
 
 	}
 	

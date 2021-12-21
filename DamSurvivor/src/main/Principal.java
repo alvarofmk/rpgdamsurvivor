@@ -102,9 +102,7 @@ public class Principal {
 					}
 				} while (menu > 3 || menu < 1);
 
-				// ejemplo de elección
 				do {
-				//Historia para posicion 2 o 3
 					escenas.pintar(data.getArmaDescripcion() [0]);
 					menus.obtencionArma(data.getWeapons() [0]);
 					menus.pintarMenuClases(menu);
@@ -171,7 +169,7 @@ public class Principal {
 				menus.pintarMenu4();
 				crudJugador.bajarHP(j1);
 				if (j1.getPtsHP() <= 0) {
-					menus.gameOver();
+					menus.gameOver(dataAscis.getAscisEscenas() [13]);
 					Leer.dato();
 					posicion = 0;
 				}else {
@@ -179,6 +177,7 @@ public class Principal {
 					menus.obtencionArma(data.getWeapons() [2]);
 					crudJugador.obtenerArma(2, data);
 					menus.pintarMenuDecisiones4();
+					Leer.dato();
 					posicion = 7;
 				}
 			}
@@ -262,7 +261,7 @@ public class Principal {
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
 				if (j1.getPtsHP() <= 0) {
-					menus.gameOver();
+					menus.gameOver(dataAscis.getAscisEscenas() [13]);
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
@@ -361,7 +360,7 @@ public class Principal {
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
 					if (j1.getPtsHP() <= 0) {
-						menus.gameOver();
+						menus.gameOver(dataAscis.getAscisEscenas() [13]);
 						Leer.dato();
 						posicion = 0;
 					}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
@@ -510,7 +509,7 @@ public class Principal {
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
 				if (j1.getPtsHP() <= 0) {
-					menus.gameOver();
+					menus.gameOver(dataAscis.getAscisEscenas() [13]);
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
@@ -539,14 +538,14 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu12();
-				posicion = 142;
+				posicion = 15;
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
 				escenas.pintar(dataAscis.getAscisEscenas() [21]);
 				crudJugador.bajarHP(j1);
 				if (j1.getPtsHP() <= 0) {
-					menus.gameOver();
+					menus.gameOver(dataAscis.getAscisEscenas() [13]);
 					Leer.dato();
 					posicion = 0;
 				}else {
@@ -558,10 +557,6 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas()[6]);
 				crudJugador.obtenerObjeto(1, data);
 				menus.obtencionObjeto(data.getItems() [1]);
-				posicion = 15;
-			}
-			if (posicion == 142) {
-				menus.pintarMenu142();
 				posicion = 15;
 			}
 			if (posicion == 15) {
@@ -585,8 +580,7 @@ public class Principal {
 			}
 			if (posicion == 16) {
 				menus.pintarMenu16();
-				escenas.pintar(dataAscis.getAscisEscenas() [13]);
-				menus.gameOver();
+				menus.gameOver(dataAscis.getAscisEscenas() [13]);
 				Leer.dato();
 				posicion = 0;
 			}
@@ -678,15 +672,16 @@ public class Principal {
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
 
 				if (j1.getPtsHP() <= 0) {
-					menus.gameOver();
+					menus.gameOver(dataAscis.getAscisEscenas() [13]);
 					Leer.dato();
 					posicion = 0;
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [17]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
 					crudJugador.bajarHP(j1);
+					menus.box1(data.getFraseAuxiliar() [3]);
 					if (j1.getPtsHP() <= 0) {
-						menus.gameOver();
+						menus.gameOver(dataAscis.getAscisEscenas() [13]);
 						Leer.dato();
 						posicion = 0;
 					}else {
