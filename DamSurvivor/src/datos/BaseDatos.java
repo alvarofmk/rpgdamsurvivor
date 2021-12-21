@@ -60,7 +60,7 @@ public class BaseDatos {
 			+ "\t\t                :#*+*+=-:.                    \r\n"
 			+ "\t\t                                               \r\n"
 			+ "\t\tLas viejas lenguas hablan que este rotulador antaño\r\n"
-			+ "poseía tinta en su interior"
+			+ "\t\tposeía tinta en su interior"
 			
 			
 	
@@ -123,7 +123,7 @@ public class BaseDatos {
 			+ " -@-                 =******+.                :@= \r\n"
 			+ "  =@*++++++++++++++++++++++++++++++++++++++++*@+  \r\n"
 			+ " Equipo mítico de los alumnos de DAM, aumenta la visión\r\n"
-			+ "ya que te hace forzarla!  "
+			+ " ya que te hace forzarla!  "
 			
 			, "                                                                                                      \r\n"
 			+ "     %/(((***************/////(/(                 \r\n"
@@ -157,7 +157,7 @@ public class BaseDatos {
 			+ "     (#((&       /****/.                   #/////       \r\n"
 			+ "                                           /****/       \r\n"
 			+ " Tan rígida que puede usarse como arma, en las antiguas leyendas\r\n"
-			+ "comparan su rígidez con la mítica espada Excalibur. Quizás el\r\n"
+			+ " comparan su rígidez con la mítica espada Excalibur. Quizás el\r\n"
 			+ " peor trono pero sin duda la mejor arma. "
 			};
 	

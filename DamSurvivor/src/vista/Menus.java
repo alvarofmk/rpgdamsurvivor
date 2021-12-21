@@ -428,7 +428,8 @@ public class Menus {
 	}
 	
 	public void pintarMenu5() {
-		System.out.println("Pelea con Rafa");
+		System.out.println("     Rafa está explicando cómo hacer una página web de Dragon Ball, pero le interrumpes\r\n"
+				+ "     al entrar en clase y te quiere mandar boletines extra como castigo. Prepárate para pelear");
 	}
 	
 	public void pintarMenuDecisiones5() {
