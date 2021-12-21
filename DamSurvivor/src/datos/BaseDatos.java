@@ -31,7 +31,7 @@ public class BaseDatos {
 			"Bastón de Don Bosco", "Monitor microscópico", "Silla rígida"};
 	private int [] armaATK = {5,10,20,30};
 	private int [] armaDEF = {5,10,15,20};
-	private int [] armaDAM = {10,20,50,80};
+	private int [] armaDAM = {10,20,40,80};
 	private String [] armaDescripcion = {
 			"\t\t                             "
 			+ "\t\t.-*##%+.\r\n"

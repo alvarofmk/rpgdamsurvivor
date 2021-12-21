@@ -545,7 +545,8 @@ public class Menus {
 		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", a.getNombre());
 	}
 	
-	public void enemigoDerrotado () {
+	public void enemigoDerrotado (String s) {
+		System.out.println(s + "\n");
 		System.out.println("\t\tEnhorabuena, has vencido, escoge tu recompensa:");
 		System.out.println("\t\t - 1. Aumentar ataque");
 		System.out.println("\t\t - 2. Aumentar defensa");

@@ -262,7 +262,7 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [5]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-					menus.enemigoDerrotado();
+					menus.enemigoDerrotado(dataAscis.getAscisEscenas() [22]);
 					eleccion=Leer.datoInt();
 					crudJugador.derrotarJefe(eleccion);
 					menus.pintarMenuDecisiones5();
@@ -361,7 +361,7 @@ public class Principal {
 					}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 						escenas.pintar(dataAscis.getAscisEscenas() [7]);
 						menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-						menus.enemigoDerrotado();
+						menus.enemigoDerrotado(dataAscis.getAscisEscenas() [22]);
 						eleccion=Leer.datoInt();
 						crudJugador.derrotarJefe(eleccion);
 						menus.pintarMenu7();
@@ -510,7 +510,7 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [10]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-					menus.enemigoDerrotado();
+					menus.enemigoDerrotado(dataAscis.getAscisEscenas() [22]);
 					eleccion=Leer.datoInt();
 					crudJugador.derrotarJefe(eleccion);
 					menus.pintarMenuDecisiones11();
