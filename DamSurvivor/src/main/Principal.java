@@ -236,6 +236,10 @@ public class Principal {
 								menus.turnoPerdido();
 							}
 							break;
+						case 4:
+							menus.menuStats(j1);
+							Leer.dato();
+							break;
 						default:
 							menus.turnoPerdido();
 					}
@@ -335,6 +339,10 @@ public class Principal {
 								menus.turnoPerdido();
 							}
 							break;
+						case 4:
+							menus.menuStats(j1);
+							Leer.dato();
+							break;
 						default:
 							menus.turnoPerdido();
 					}
@@ -428,6 +436,7 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu10();
+				Leer.dato();
 				posicion = 13;
 			}
 			if (posicion == 11) {
@@ -484,6 +493,10 @@ public class Principal {
 								menus.turnoPerdido();
 							}
 							break;
+						case 4:
+							menus.menuStats(j1);
+							Leer.dato();
+							break;
 						default:
 							menus.turnoPerdido();
 					}
@@ -532,12 +545,14 @@ public class Principal {
 						break;
 					}
 				}
-		}
+			}
+			
 			if (posicion == 12) {
 				crudJugador.obtenerObjeto(4, data);
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu12();
+				Leer.dato();
 				posicion = 15;
 			}	
 			if (posicion == 13) {
@@ -551,14 +566,24 @@ public class Principal {
 				}else {
 					posicion = 15;
 				}
+				Leer.dato();
 			}
 			if (posicion == 141) {
 				menus.pintarMenu141();
 				escenas.pintar(dataAscis.getAscisEscenas()[6]);
 				crudJugador.obtenerObjeto(1, data);
 				menus.obtencionObjeto(data.getItems() [1]);
+				Leer.dato();
 				posicion = 15;
 			}
+<<<<<<< HEAD
+=======
+			if (posicion == 142) {
+				menus.pintarMenu142();
+				Leer.dato();
+				posicion = 15;
+			}
+>>>>>>> 904e5b9325b4ca4ba4303f28ceab69fe5697003f
 			if (posicion == 15) {
 				menus.pintarMenu15();
 				crudJugador.obtenerObjeto(3, data);
@@ -590,6 +615,7 @@ public class Principal {
 				crudJugador.obtenerArma(3, data);
 				escenas.pintar(data.getArmaDescripcion() [3]);
 				menus.obtencionArma(data.getWeapons() [3]);
+				Leer.dato();
 				posicion = 18;
 			}
 			
@@ -646,6 +672,10 @@ public class Principal {
 							}else {
 								menus.turnoPerdido();
 							}
+							break;
+						case 4:
+							menus.menuStats(j1);
+							Leer.dato();
 							break;
 						default:
 							menus.turnoPerdido();

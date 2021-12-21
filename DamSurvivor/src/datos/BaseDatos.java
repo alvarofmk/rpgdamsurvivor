@@ -27,7 +27,7 @@ public class BaseDatos {
 			"Aumenta en 5 tus puntos de ataque y defensa.\r\n"
 			+ "\t\tDisminuye en 5 tus puntos de salud"};
 	private Arma [] weapons = new Arma [4];
-	private String [] armaNombre = {"Bolígrafo permanente inexistente", 
+	private String [] armaNombre = {"Bolígrafo inexistente", 
 			"Bastón de Don Bosco", "Monitor microscópico", "Silla rígida"};
 	private int [] armaATK = {5,10,20,30};
 	private int [] armaDEF = {5,10,15,20};
