@@ -83,7 +83,7 @@ public class BaseDatosAscis {
 						+ "\t\t     +@#: +@#:                                              \r\n"
 						+ "\t\t   +@#: +@#:                                                \r\n"
 						+ "\t\t +@#: +@#:                                                  \r\n"
-						+ "\t\t%@: +@#:                          "
+						+ "\t\t%@: +@#:                          \r\n"
 						+ "\t\t=%%%*."
 				
 				,"\t\t                 .::::..                \r\n"
