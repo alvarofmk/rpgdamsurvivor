@@ -419,7 +419,9 @@ public class Menus {
 				+ "     pero aparece alguien que vé que te estás saltando las clases.. Es Miguel y se acerca a preguntarte que te pasó.\r\n"
 				+ "     Tu disimulas como puedes pero aunque creas que saliste victorioso tu conciencia no te deja en paz y eso te drena\r\n"
 				+ "     algo de vida.");
+		System.out.println("");
 		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida");
+		System.out.println("");
 		System.out.println("     Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria");
 	}
 	
