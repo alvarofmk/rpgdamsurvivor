@@ -174,26 +174,26 @@ public class BaseDatos {
 			"Miguel va a llamar tu atención con la palabra 'Señores!'", 
 			"Miguel te va a pedir dinero para una campaña de salvar a las iguanas"}
 		, {"Ángel va a comenzar a acariciar a su gato", 
-			"Ángel ha descubierto que estás copiando código y te va a mandar deberes", 
+			"Ángel ha descubierto que estás copiando código y te va a mandar\r\n\t deberes", 
 			"Ángel va a ejercer la violencia física contra ti"}
-		, {"Luismi ha visto que estabas ocioso y va a mandar tarea de entornos de desarrollo para mañana", 
-			"Luismi se acaba de acordar de Úbeda y se va a poner a divagar sobre carreteras de Jaén", 
+		, {"Luismi ha visto que estabas ocioso y va a mandar tarea de entornos\r\n\t para mañana", 
+			"Luismi se acaba de acordar de Úbeda y se pone a divagar sobre\r\n\t carreteras de Jaén", 
 			"Luismi va a empezar a programar en Java y no vas a entender nada"}};
-	private String [] fraseAtaqueFallido = {"Rafa bloquea tu ataque con una etiqueta div que ocupa toda la página."
-			,"Miguel cambia de tema de conversación y tu ataque le da a un compañero."
-			,"Angel te dice que es el peor día de su vida, te sientes mal y no le pegas."
-			,"E̷̬͓̓̈́R̷̢̜͕͓͊͒͗̾A̴͇͎͆S̵̫̹̓͗̄͘Ȩ̴̪̍̉̉͑ ̵͎̃͝a̷̯̱͔͙̓̒́ţ̵͘ȁ̸̝͖̬q̸̭͕̥͓̃ù̶͙̘͜e̸̛͍̒̿ ̷͕͖̎͂̇F̸̳͎̓̅̐̄R̵͚̫̬͗͊͛Ŏ̷̧͓̮͕̐̇M̴̢̜̂̀̂ ̸͕̂̀̾j̸̗͓̤̒u̴̻͙̹̰͑́͊̕g̶̥̀̿a̶̰̥͇͆͑d̶̝̱͒̏͋o̴̠̖͉͑r̴̛͈̲̩̈̆͆"
+	private String [] fraseAtaqueFallido = {"Rafa te bloquea con una etiqueta div que ocupa toda la página."
+			,"Miguel cambia de tema de conversación le das a un compañero."
+			,"Angel te dice que es el peor día de su vida, te sientes mal y\r\n\t no le pegas."
+			,"Luismi explica tanto sobre SQL que te olvidas de que estabas\r\n\t atacando."
 	};
 	private String [] fraseAtaqueAcertado = {"A Rafa no parece importarle y sigue corrigiendo."
-			,"Miguel se da cuenta de que no vas a participar en la campaña euro y le duele"
-			,"Angel le ha echado un vistazo al código de este juego y ahora le duele la cabeza"
-			,"P̸̟͚͉͓͋̽̋̂R̴̺̘͈̀̾̋͜Ȅ̸̝̩̠̖̇̓͘P̸̢͕̞̞̃̊̄Ã̴̙̳̲̳͗̆̕R̵̞̋͆E̸̖͛ ̸̺̬̗͓͋͘v̷̼͍͗̎̎̅e̸͍̬̽̈́͠n̴̡̰̺͚͒̀͠g̶̘̈́́͝͝ė̸͚ạ̶̝͗́̒̄͜n̸͔̲̮͛̒c̷͉̥͈̈́̍͜e̷̩͑ ̶͉̲̽̈́̈́̏T̴̽͜͠Ó̶̡͓̙̃W̴̢͚̅͊͘Å̷̰͛̊͑R̵̘̣̒͆̂D̸̙͕͑̌͐S̶̡̮͔͖̚ ̶̝͙̱̐̍̋͝j̴̮̠͆ͅư̷͖̱̲̫̓̀g̴̦̥͊å̵̺̘̾̆d̸̘̪͛͑́̈ǫ̷͈̾̑̈́r̸̩̺̪̯̅̍̐̚"
+			,"Miguel se da cuenta de que no vas a participar en la campaña\r\n\t euro y le duele"
+			,"Angel le ha echado un vistazo al código de este juego y ahora\r\n\t le duele la cabeza"
+			,"Luismi se da cuenta de que llevas 2 meses intentando instalar\r\n\t git y se ofusca mucho"
 	};
 	
-	private String [] fraseEnemigoDerrotado = {"Me has vencido, pero jamás sabrás hacer en condiciones una web de Dragon Ball", 
+	private String [] fraseEnemigoDerrotado = {"Me has vencido, pero jamás sabrás hacer en condiciones una\r\n\t web de Dragon Ball", 
 			"Me has vencido, pero si hubiera usado una máquina de Turing...",
 			"Me has vencido, te has ganado copiar código hasta en los métodos", 
-			"Me has vencido, pero que sepas que saltará una tareita a las 14:30 para mañana"
+			"Me has vencido, pero que sepas que saltará una tareita a las\r\n\t 14:30 para mañana"
 	};
 	private String [] fraseAuxiliar = {"Tu ataque acierta","Prepárate para defenderte", "Introduce tu nombre"};
 			
