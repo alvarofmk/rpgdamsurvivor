@@ -576,14 +576,6 @@ public class Principal {
 				Leer.dato();
 				posicion = 15;
 			}
-<<<<<<< HEAD
-=======
-			if (posicion == 142) {
-				menus.pintarMenu142();
-				Leer.dato();
-				posicion = 15;
-			}
->>>>>>> 904e5b9325b4ca4ba4303f28ceab69fe5697003f
 			if (posicion == 15) {
 				menus.pintarMenu15();
 				crudJugador.obtenerObjeto(3, data);
