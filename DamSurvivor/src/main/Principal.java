@@ -170,11 +170,17 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas() [4]);
 				menus.pintarMenu4();
 				crudJugador.bajarHP(j1);
-				escenas.pintar(data.getArmaDescripcion() [2]);
-				menus.obtencionArma(data.getWeapons() [2]);
-				crudJugador.obtenerArma(2, data);
-				menus.pintarMenuDecisiones4();
-				posicion = 7;
+				if (j1.getPtsHP() <= 0) {
+					menus.gameOver();
+					Leer.dato();
+					posicion = 0;
+				}else {
+					escenas.pintar(data.getArmaDescripcion() [2]);
+					menus.obtencionArma(data.getWeapons() [2]);
+					crudJugador.obtenerArma(2, data);
+					menus.pintarMenuDecisiones4();
+					posicion = 7;
+				}
 			}
 
 			if (posicion == 5) {
@@ -539,7 +545,13 @@ public class Principal {
 				menus.pintarMenu13();
 				escenas.pintar(dataAscis.getAscisEscenas() [21]);
 				crudJugador.bajarHP(j1);
-				posicion = 15;
+				if (j1.getPtsHP() <= 0) {
+					menus.gameOver();
+					Leer.dato();
+					posicion = 0;
+				}else {
+					posicion = 15;
+				}
 			}
 			if (posicion == 141) {
 				menus.pintarMenu141();
@@ -555,7 +567,7 @@ public class Principal {
 			if (posicion == 15) {
 				menus.pintarMenu15();
 				crudJugador.obtenerObjeto(3, data);
-				//FALTA ASCII DE 25000 BOLETINES BBDD
+				escenas.pintar(dataAscis.getAscisEscenas()[23]);
 				menus.obtencionObjeto(data.getItems() [3]);
 				menus.pintarMenuDecisiones15();
 				menu=Leer.datoInt();
@@ -573,17 +585,20 @@ public class Principal {
 			}
 			if (posicion == 16) {
 				menus.pintarMenu16();
-				escenas.pintar(dataAscis.getAscisEscenas() [14]);
+				escenas.pintar(dataAscis.getAscisEscenas() [13]);
+				menus.gameOver();
+				Leer.dato();
 				posicion = 0;
 			}
+			
 			if (posicion == 17) {
 				menus.pintarMenu17();
 				crudJugador.obtenerArma(3, data);
 				escenas.pintar(data.getArmaDescripcion() [3]);
 				menus.obtencionArma(data.getWeapons() [3]);
-				
 				posicion = 18;
 			}
+			
 			if (posicion == 18) {
 				enemigo = 3;
 				menus.pintarMenu18();
@@ -669,9 +684,17 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [17]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-					menus.end();
-					menus.creditos();
-					posicion = 0;
+					crudJugador.bajarHP(j1);
+					if (j1.getPtsHP() <= 0) {
+						menus.gameOver();
+						Leer.dato();
+						posicion = 0;
+					}else {
+						menus.end();
+						menus.creditos();
+						posicion = 0;
+					}
+				
 				}
 				
 		}				
