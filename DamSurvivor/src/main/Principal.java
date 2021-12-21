@@ -489,7 +489,7 @@ public class Principal {
 						posicion = 13;
 						break;
 					case 2:
-						posicion = 14;
+						posicion = 141;
 						break;
 					default:
 						menus.invalid();
@@ -499,7 +499,7 @@ public class Principal {
 		}
 			if (posicion == 12) {
 				menus.pintarMenu12();
-				posicion = 14;
+				posicion = 142;
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
@@ -507,10 +507,13 @@ public class Principal {
 				crudJugador.bajarHP(j1);
 				posicion = 15;
 			}
-			if (posicion == 14) {
-				
-				menus.pintarMenu14B();
+			if (posicion == 141) {
+				menus.pintarMenu141();
+				escenas.pintar(dataAscis.getAscisEscenas()[6]);
 				posicion = 15;
+			}
+			if (posicion == 142) {
+				menus.pintarMenu142();
 			}
 			if (posicion == 15) {
 				menus.pintarMenu15();

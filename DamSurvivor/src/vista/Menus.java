@@ -480,11 +480,11 @@ public class Menus {
 	public void pintarMenu13() {
 		System.out.println("¿ A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
 	}
-	public void pintarMenu14A() {
+	public void pintarMenu141() {
 		System.out.println("Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
 	}
 	
-	public void pintarMenu14B() {
+	public void pintarMenu142() {
 		System.out.println("¿ Qué esperabas encontrar aquí ?");
 		System.out.println("No hay nada para ti. Continúa tu camino");
 	}
