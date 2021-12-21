@@ -27,7 +27,8 @@ public class Menus {
 				+ "              /\\____) || (___) || ) \\ \\__  \\   /  ___) (___  \\   /  | (___) || ) \\ \\__\r\n"
 				+ "              \\_______)(_______)|/   \\__/   \\_/   \\_______/   \\_/   (_______)|/   \\__/\r\n"
 				+ "                                                                                      \r\n"
-				+ "                                    Pulsa intro para continuar.\n");
+				+ "                                    Pulsa intro para continuar. \n");
+		
 	}
 	
 	public void menuPrincipal () {
@@ -154,17 +155,46 @@ public class Menus {
 	public void menuEnemigo (Enemigo boss, int enemigo, String [] s) {
 		if (enemigo == 0) {
 			System.out.println(s [5]);
-			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}else if (enemigo == 1) {
 			System.out.println(s [7]);
-			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}else if (enemigo == 2) {
 			System.out.println(s [10]);
-			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}else if (enemigo == 3) {
 			System.out.println(s [17]);
-			System.out.println("\t\t\t  -  HP: " + boss.getHp());
 		}
+	}
+	
+	public String vidaEnemigo (Enemigo boss) {
+		String frase;
+		frase="HP: " + boss.getHp();
+		return frase;
+	}
+	
+	public void box1 (String frase1) {
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
+		System.out.println("        -"+frase1);
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
+	}
+	
+	public void box2 (String frase1, String frase2) {
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
+		System.out.println("        -"+frase1);
+		System.out.println("        -"+frase2);
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
+	}
+	
+	public void box3 (String frase1, String frase2, String frase3) {
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
+		System.out.println("        -"+frase1);
+		System.out.println("        -"+frase2);
+		System.out.println("        -"+frase3);
+		System.out.println("      _______________________________________________________________________");
+		System.out.println("");
 	}
 	
 	public void dado (double tirada) {
@@ -194,45 +224,45 @@ public class Menus {
 				+ "                               ::::.-+==-:.                            \r\n"
 				+ "                                                            ");
 		if(tirada <= 0.05) {
-			System.out.println("\t\t\t  -  Has sacado un 1 \n");
+			System.out.println("\t\t\t  -  Has sacado un 1");
 		}else if(tirada <= 0.10) {
-			System.out.println("\t\t\t  -  Has sacado un 2 \n");
+			System.out.println("\t\t\t  -  Has sacado un 2");
 		}else if(tirada <= 0.15) {
-			System.out.println("\t\t\t  -  Has sacado un 3 \n");
+			System.out.println("\t\t\t  -  Has sacado un 3");
 		}else if(tirada <= 0.20) {
-			System.out.println("\t\t\t  -  Has sacado un 4 \n");
+			System.out.println("\t\t\t  -  Has sacado un 4");
 		}else if(tirada <= 0.25) {
-			System.out.println("\t\t\t  -  Has sacado un 5 \n");
+			System.out.println("\t\t\t  -  Has sacado un 5");
 		}else if(tirada <= 0.30) {
-			System.out.println("\t\t\t  -  Has sacado un 6 \n");
+			System.out.println("\t\t\t  -  Has sacado un 6");
 		}else if(tirada <= 0.35) {
-			System.out.println("\t\t\t  -  Has sacado un 7 \n");
+			System.out.println("\t\t\t  -  Has sacado un 7");
 		}else if(tirada <= 0.40) {
-			System.out.println("\t\t\t  -  Has sacado un 8 \n");
+			System.out.println("\t\t\t  -  Has sacado un 8");
 		}else if(tirada <= 0.45) {
-			System.out.println("\t\t\t  -  Has sacado un 9 \n");
+			System.out.println("\t\t\t  -  Has sacado un 9");
 		}else if(tirada <= 0.50) {
-			System.out.println("\t\t\t  -  Has sacado un 10 \n");
+			System.out.println("\t\t\t  -  Has sacado un 10");
 		}else if(tirada <= 0.55) {
-			System.out.println("\t\t\t  -  Has sacado un 11 \n");
+			System.out.println("\t\t\t  -  Has sacado un 11");
 		}else if(tirada <= 0.60) {
-			System.out.println("\t\t\t  -  Has sacado un 12 \n");
+			System.out.println("\t\t\t  -  Has sacado un 12");
 		}else if(tirada <= 0.65) {
-			System.out.println("\t\t\t  -  Has sacado un 13 \n");
+			System.out.println("\t\t\t  -  Has sacado un 13");
 		}else if(tirada <= 0.70) {
-			System.out.println("\t\t\t  -  Has sacado un 14 \n");
+			System.out.println("\t\t\t  -  Has sacado un 14");
 		}else if(tirada <= 0.75) {
-			System.out.println("\t\t\t  -  Has sacado un 15 \n");
+			System.out.println("\t\t\t  -  Has sacado un 15");
 		}else if(tirada <= 0.80) {
-			System.out.println("\t\t\t  -  Has sacado un 16 \n");
+			System.out.println("\t\t\t  -  Has sacado un 16");
 		}else if(tirada <= 0.85) {
-			System.out.println("\t\t\t  -  Has sacado un 17 \n");
+			System.out.println("\t\t\t  -  Has sacado un 17");
 		}else if(tirada <= 0.90) {
-			System.out.println("\t\t\t  -  Has sacado un 18 \n");
+			System.out.println("\t\t\t  -  Has sacado un 18");
 		}else if(tirada <= 0.95) {
-			System.out.println("\t\t\t  -  Has sacado un 19 \n");
+			System.out.println("\t\t\t  -  Has sacado un 19");
 		}else if(tirada <= 1) {
-			System.out.println("\t\t\t  -  Has sacado un 20 \n");
+			System.out.println("\t\t\t  -  Has sacado un 20");
 		}
 	}
 	
@@ -252,21 +282,31 @@ public class Menus {
 	}
 	
 	public void lanzaDados () {
-		System.out.println("\t\t\t  -  Lanza el dado\n");
+		System.out.println("\t\t\t  -  Lanza el dado");
 	}
 	
-	public void ataqueAcertado (int dmg, Enemigo boss) {
-		System.out.println("\t\t\t  -  Tu ataque acierta");
-		System.out.println("\t\t\t  -  "+boss.getNombre()+" recibe "+dmg+" de daño\n");
+	public String ataqueAcertado (int dmg, Enemigo boss) {
+		String frase;
+		frase=boss.getNombre()+" recibe "+dmg+" de daño";
+		return frase;
 	}
 	
-	public void ataqueEnemigoAcertado (int dmg, Jugador j1, Enemigo boss) {
-		System.out.println("\t\t\t  -  " + boss.getNombre() + " acierta su ataque!\n");
-		System.out.println("\t\t\t  -  " + "Recibes " + dmg + " de daño\n");
+	public String ataqueEnemigoAcertado (Enemigo boss) {
+		String frase;
+		frase=boss.getNombre() + " acierta su ataque!";
+		return frase;
 	}
 	
-	public void ataqueEnemigoFallado (Enemigo boss) {
-		System.out.println("\t\t\t  -  " + boss.getNombre() + " falla su ataque!");
+	public String danioRecibido (int dmg) {
+		String frase;
+		frase="Recibes " + dmg + " de daño";
+		return frase;
+	}
+	
+	public String ataqueEnemigoFallado (Enemigo boss) {
+		String frase;
+		frase=boss.getNombre() + " falla su ataque!";
+		return frase;
 	}
 	
 	public void imprimirString (String frase) {
@@ -482,14 +522,14 @@ public class Menus {
 	
 	public void obtencionObjeto (Objeto o) {
 		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", o.getNombre());
+		System.out.printf("\t\t%s\n\n", o.getDescripcion());
 	}
 	
 	public void obtencionArma (Arma a) {
 		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", a.getNombre());
 	}
 	
-	public void enemigoDerrotado (int num, String [] s) {
-		System.out.println("\t\t-  " + s [num] +"\n");
+	public void enemigoDerrotado () {
 		System.out.println("\t\tEnhorabuena, has vencido, escoge tu recompensa:");
 		System.out.println("\t\t - 1. Aumentar ataque");
 		System.out.println("\t\t - 2. Aumentar defensa");
