@@ -15,7 +15,7 @@ public class BaseDatos {
 			"Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
 	private int [] objetoATK = {0,15,10,-5,5};
 	private int [] objetoDEF = {0,15,0,5,5};
-	private int [] objetoHP = {25,0,-10,0,-5};
+	private int [] objetoHP = {25,999,-10,0,-5};
 	private int [] objetoHpMax = {0,20,0,0,0};
 	private String [] objetoDescripcion = {"Aumenta en 25 tus puntos de salud",
 			"Aumenta en 15 tus puntos de ataque y defensa.\r\n"

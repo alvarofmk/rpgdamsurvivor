@@ -401,6 +401,8 @@ public class Menus {
 				+ "pero aparece alguien que vé que te estás saltando las clases.. Es Miguel y se acerca a preguntarte que te pasó.\r\n"
 				+ "Tu disimulas como puedes pero aunque creas que saliste victorioso tu conciencia no te deja en paz y eso te drena\r\n"
 				+ "algo de vida.");
+		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida");
+		System.out.println("Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria");
 	}
 	
 	public void pintarMenuDecisiones4() {
@@ -412,7 +414,7 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones5() {
-		System.out.println("1.- Y sin descanso ahora viene la segunda parte, pelea con Miguel");
+		System.out.println("Y sin descanso ahora viene la segunda parte, pelea con Miguel");
 	}
 	
 	public void pintarMenu6() {
@@ -506,10 +508,8 @@ public class Menus {
 		System.out.println("YOU... SHALL.. NOT PASS!!!!");
 	}
 	public void pintarMenu17() {
-		System.out.println("Pero que se han dejado en la pizarra !!??? No puede ser te fijas bien y ves..\r\n"
-				+ "Los patrones de plantilla de formato para fecha y hora!\r\n"
-				+ "Además de algunos ejemplos de cuando y como usar el JOIN\r\n"
-				+ "Esta si que sera un arma definitiva.... bla bla bla");
+		System.out.println("Acordándote de todo lo aprendido en Base de datos, todos los join, las subconsultas escalares\r\n"
+				+ "y las claves primarias, coges una silla de clase para ir más preparado para el examen");
 	}
 	public void pintarMenu18() {
 		System.out.println("Peleas con el TITÁN");

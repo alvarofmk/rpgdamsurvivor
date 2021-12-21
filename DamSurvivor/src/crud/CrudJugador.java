@@ -164,4 +164,5 @@ public class CrudJugador {
 		j1.setPtsHP(hp);
 	}
 	
+	
 }

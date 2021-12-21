@@ -166,9 +166,12 @@ public class Principal {
 			}
 			
 			if (posicion == 4) {
-				escenas.pintar(dataAscis.getAscisEscenas()[18]);
+				escenas.pintar(dataAscis.getAscisEscenas() [4]);
 				menus.pintarMenu4();
 				crudJugador.bajarHP(j1);
+				escenas.pintar(data.getArmaDescripcion() [2]);
+				menus.obtencionArma(data.getWeapons() [2]);
+				crudJugador.obtenerArma(2, data);
 				menus.pintarMenuDecisiones4();
 				posicion = 7; // Hay que seguir haciendo principal
 			}
@@ -253,6 +256,7 @@ public class Principal {
 					menus.enemigoDerrotado();
 					eleccion=Leer.datoInt();
 					crudJugador.derrotarJefe(eleccion);
+					menus.pintarMenuDecisiones5();
 					posicion = 7;
 				}
 			}
@@ -510,13 +514,19 @@ public class Principal {
 			if (posicion == 141) {
 				menus.pintarMenu141();
 				escenas.pintar(dataAscis.getAscisEscenas()[6]);
+				crudJugador.obtenerObjeto(1, data);
+				menus.obtencionObjeto(data.getItems() [1]);
 				posicion = 15;
 			}
 			if (posicion == 142) {
 				menus.pintarMenu142();
+				posicion = 15;
 			}
 			if (posicion == 15) {
 				menus.pintarMenu15();
+				crudJugador.obtenerObjeto(3, data);
+				//FALTA ASCII DE 25000 BOLETINES BBDD
+				menus.obtencionObjeto(data.getItems() [3]);
 				menus.pintarMenuDecisiones15();
 				menu=Leer.datoInt();
 				switch (menu) {
@@ -538,6 +548,10 @@ public class Principal {
 			}
 			if (posicion == 17) {
 				menus.pintarMenu17();
+				crudJugador.obtenerArma(3, data);
+				escenas.pintar(data.getArmaDescripcion() [3]);
+				menus.obtencionArma(data.getWeapons() [3]);
+				
 				posicion = 18;
 			}
 			if (posicion == 18) {
@@ -619,6 +633,7 @@ public class Principal {
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
 					menus.end();
 					menus.creditos();
+					posicion = 0;
 				}
 				
 		}				
