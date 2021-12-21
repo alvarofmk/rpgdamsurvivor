@@ -45,16 +45,16 @@ public class CrudJugador {
 	public void derrotarJefe (int atributo) {
 		switch(atributo) {
 			case 1:
-				j1.setPtsATK(j1.getPtsATK()+2);
+				j1.setPtsATK(j1.getPtsATK()+5);
 				break;
 			case 2:
-				j1.setPtsDEF(j1.getPtsDEF()+2);
+				j1.setPtsDEF(j1.getPtsDEF()+5);
 				break;
 			case 3:
-				j1.setPtsMaxHP(j1.getPtsMaxHP()+5);
+				j1.setPtsMaxHP(j1.getPtsMaxHP()+15);
 				break;
 			case 4:
-				j1.setPtsHP(j1.getPtsHP()+10);
+				j1.setPtsHP(j1.getPtsHP()+25);
 				break;
 		}
 		checkVidaMax();

@@ -69,7 +69,7 @@ public class Menus {
 						+ "          *@@@@@@@@#     \t1. Atacar\r\n"
 						+ "         :@@@@@@@@@@:    \t2. Usar objeto\r\n"
 						+ "          %@@@@@@@@%     \t3. Cambiar arma\r\n"
-						+ "           +@@@@@@*.     \t\r\n"
+						+ "           +@@@@@@*.     \t4. Consultar estadísticas\r\n"
 						+ "             :--:        \t\r\n"
 						+ "         =#@@@@@@@@#=    \t\r\n"
 						+ "       -@@@@@@@@@@@@@@=  \t\r\n"
@@ -89,6 +89,24 @@ public class Menus {
 						+ "          %@@@@@@@@%     \t3. Ataque fuerte\r\n"
 						+ "           +@@@@@@*.     \t\r\n"
 						+ "             :--:        \t\r\n"
+						+ "         =#@@@@@@@@#=    \t\r\n"
+						+ "       -@@@@@@@@@@@@@@=  \t\r\n"
+						+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
+						+ "      __________________ \t\r\n"
+						+ "                    \t\r\n"
+						+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
+						+ "     __________________________________________________________________________");
+	}
+	
+	public void menuStats (Jugador j1) {
+		System.out.println("     _________________________________________________________________________\r\n"
+						+ "\t\r\n"
+						+ "           -*%@@%*-      \t\r\n"
+						+ "          *@@@@@@@@#     \tHP \t\t - "+j1.getPtsHP()+"\r\n"
+						+ "         :@@@@@@@@@@:    \tHP maxima \t - "+j1.getPtsMaxHP()+"\r\n"
+						+ "          %@@@@@@@@%     \tAtaque \t\t - "+j1.getPtsATK()+"\r\n"
+						+ "           +@@@@@@*.     \tDefensa \t - "+j1.getPtsDEF()+"\r\n"
+						+ "             :--:        \tArma actual \t - "+j1.getArmaActiva().getNombre()+"\r\n"
 						+ "         =#@@@@@@@@#=    \t\r\n"
 						+ "       -@@@@@@@@@@@@@@=  \t\r\n"
 						+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
@@ -467,7 +485,7 @@ public class Menus {
 	}
 	
 	public void pintarMenu9() {
-		System.out.println("     En la biblioteca te ofrecen hacer un curso Udemy express. Increíble, justo lo que querías. Esto aumentará tus stats");
+		System.out.println("     En la biblioteca te ofrecen hacer un curso Udemy express. Increíble, justo lo que querías. Esto aumentará tus stats\n");
 	}
 	
 	public void pintarMenuDecisiones9() {
