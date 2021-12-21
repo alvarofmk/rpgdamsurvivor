@@ -156,7 +156,6 @@ public class Principal {
 							posicion = 5;
 							break;
 						case 2:
-							// Esta posicion no funciona. Algo está mal.
 							posicion = 6;
 							break;
 						default:
@@ -173,7 +172,7 @@ public class Principal {
 				menus.obtencionArma(data.getWeapons() [2]);
 				crudJugador.obtenerArma(2, data);
 				menus.pintarMenuDecisiones4();
-				posicion = 7; // Hay que seguir haciendo principal
+				posicion = 7;
 			}
 
 			if (posicion == 5) {
@@ -185,16 +184,24 @@ public class Principal {
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
+							menus.menuAtaque(j1);
+							do {
+								eleccion=Leer.datoInt();
+							}while (eleccion>3 || eleccion<1);
 							menus.lanzaDados();
 							Leer.dato();
-							roll = dados.tirarDados();
+							roll = dados.tirarDados(eleccion);
 							menus.dado(roll);
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva(), eleccion);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
-								menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								if(data.getEnemigos()[enemigo].getHp()>0) {
+									menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								}else {
+									menus.box2(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]));
+								}
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -276,16 +283,24 @@ public class Principal {
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
+							menus.menuAtaque(j1);
+							do {
+								eleccion=Leer.datoInt();
+							}while (eleccion>3 || eleccion<1);
 							menus.lanzaDados();
 							Leer.dato();
-							roll = dados.tirarDados();
+							roll = dados.tirarDados(eleccion);
 							menus.dado(roll);
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva(), eleccion);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
-								menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								if(data.getEnemigos()[enemigo].getHp()>0) {
+									menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								}else {
+									menus.box2(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]));
+								}
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -415,16 +430,24 @@ public class Principal {
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
+							menus.menuAtaque(j1);
+							do {
+								eleccion=Leer.datoInt();
+							}while (eleccion>3 || eleccion<1);
 							menus.lanzaDados();
 							Leer.dato();
-							roll = dados.tirarDados();
+							roll = dados.tirarDados(eleccion);
 							menus.dado(roll);
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva(), eleccion);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
-								menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								if(data.getEnemigos()[enemigo].getHp()>0) {
+									menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								}else {
+									menus.box2(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]));
+								}
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
@@ -563,16 +586,24 @@ public class Principal {
 					menu = Leer.datoInt();
 					switch (menu) {
 						case 1:
+							menus.menuAtaque(j1);
+							do {
+								eleccion=Leer.datoInt();
+							}while (eleccion>3 || eleccion<1);
 							menus.lanzaDados();
 							Leer.dato();
-							roll = dados.tirarDados();
+							roll = dados.tirarDados(eleccion);
 							menus.dado(roll);
 							hit = combate.acertarGolpe(controlJug.atacar(j1, roll),
 									controlEne.defender(data.getEnemigos()[enemigo], dados.tirarDados()));
 							if (hit) {
-								dmg = controlArma.damageRandomizado(j1.getArmaActiva());
+								dmg = controlArma.damageRandomizado(j1.getArmaActiva(), eleccion);
 								crudEnemigo.herirEnemigo(data.getEnemigos()[enemigo], dmg);
-								menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								if(data.getEnemigos()[enemigo].getHp()>0) {
+									menus.box3(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]), data.getFraseAtaqueAcertado()[enemigo]);
+								}else {
+									menus.box2(data.getFraseAuxiliar()[0], menus.ataqueAcertado(dmg, data.getEnemigos()[enemigo]));
+								}
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}

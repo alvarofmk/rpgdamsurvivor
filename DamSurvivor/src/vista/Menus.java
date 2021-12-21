@@ -80,6 +80,24 @@ public class Menus {
 						+ "     __________________________________________________________________________");
 	}
 	
+	public void menuAtaque (Jugador j1) {
+		System.out.println("     _________________________________________________________________________\r\n"
+						+ "\t\r\n"
+						+ "           -*%@@%*-      \t\r\n"
+						+ "          *@@@@@@@@#     \t1. Ataque rápido\r\n"
+						+ "         :@@@@@@@@@@:    \t2. Ataque normal\r\n"
+						+ "          %@@@@@@@@%     \t3. Ataque fuerte\r\n"
+						+ "           +@@@@@@*.     \t\r\n"
+						+ "             :--:        \t\r\n"
+						+ "         =#@@@@@@@@#=    \t\r\n"
+						+ "       -@@@@@@@@@@@@@@=  \t\r\n"
+						+ "      -@@@@@@@@@@@@@@@@- \t\r\n"
+						+ "      __________________ \t\r\n"
+						+ "                    \t\r\n"
+						+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
+						+ "     __________________________________________________________________________");
+	}
+	
 	public void menuArmas (Jugador j1) {
 		System.out.println("     _________________________________________________________________________\r\n"
 				+ "\t\r\n"
@@ -366,7 +384,7 @@ public class Menus {
 				+ "en tu medio de transporte y te das cuenta que el atasco de hoy es mayor de lo normal. De ahí\r\n"
 				+ "piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio miras la hora \r\n"
 				+ "y tienes que tomar una decision importante... estás llegando tarde. ¿ Qué harás ?");
-		System.out.println("1.- Te vas a tomarte un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
+		System.out.println("1.- Te vas a tomar un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
 				+ "	otras veces. ");
 		System.out.println("2.- No te importan las normas, ni la hora, eres muy ninja y te cuelas por la iglesia ");
 	}
@@ -535,6 +553,3 @@ public class Menus {
 	
 	
 }
-
-
-//Crear pintarCombateRafa Angel, Luismi, Miguel.
