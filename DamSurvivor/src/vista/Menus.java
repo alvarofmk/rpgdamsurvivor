@@ -63,7 +63,7 @@ public class Menus {
 	}
 	
 	public void menuCombate (Jugador j1) {
-		System.out.println("     _____________________________________________________________________\r\n"
+		System.out.println("     _________________________________________________________________________\r\n"
 						+ "\t\r\n"
 						+ "           -*%@@%*-      \t\r\n"
 						+ "          *@@@@@@@@#     \t1. Atacar\r\n"
@@ -77,11 +77,11 @@ public class Menus {
 						+ "      __________________ \t\r\n"
 						+ "                    \t\r\n"
 						+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
-						+ "     ______________________________________________________________________");
+						+ "     __________________________________________________________________________");
 	}
 	
 	public void menuArmas (Jugador j1) {
-		System.out.println("     _____________________________________________________________________\r\n"
+		System.out.println("     _________________________________________________________________________\r\n"
 				+ "\t\r\n"
 				+ "           -*%@@%*-      \t");
 		if(j1.getArmas()[0]!=null) {
@@ -111,11 +111,11 @@ public class Menus {
 				+ "      __________________ \t\r\n"
 				+ "                    \t\r\n"
 				+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
-				+ "     ______________________________________________________________________");
+				+ "     __________________________________________________________________________");
 	}
 	
 	public void menuObjetos (Jugador j1) {
-		System.out.println("     _____________________________________________________________________\r\n"
+		System.out.println("     _________________________________________________________________________\r\n"
 				+ "\t\r\n"
 				+ "           -*%@@%*-      \t");
 		if(j1.getInventario()[0]!=null) {
@@ -149,7 +149,7 @@ public class Menus {
 				+ "      __________________ \t\r\n"
 				+ "                    \t\r\n"
 				+ "         HP: "+j1.getPtsHP()+ " / "+j1.getPtsMaxHP()+"\t\r\n"
-				+ "     ______________________________________________________________________");
+				+ "     __________________________________________________________________________");
 	}
 	
 	public void menuEnemigo (Enemigo boss, int enemigo, String [] s) {
@@ -267,7 +267,7 @@ public class Menus {
 	}
 	
 	public void lanzaDados () {
-		System.out.println("\t\t\t  -  Lanza el dado");
+		System.out.println("\t\t\t  -  Pulsa intro para lanzar el dado");
 	}
 	
 	public String ataqueAcertado (int dmg, Enemigo boss) {
@@ -321,6 +321,17 @@ public class Menus {
 				+ "             (_______)|/     \\||/     \\|(_______/  (_______)   \\_/   (_______/|/   \\__/\r\n"
 				+ "\r\n"
 				+ "                         -  Pulsa intro para volver al menú principal  -");
+	}
+	
+	public void end () {
+		System.out.println("             _________          _______    _______  _        ______  \r\n"
+				+ "             \\__   __/|\\     /|(  ____ \\  (  ____ \\( (    /|(  __  \\ \r\n"
+				+ "                ) (   | )   ( || (    \\/  | (    \\/|  \\  ( || (  \\  )\r\n"
+				+ "                | |   | (___) || (__      | (__    |   \\ | || |   ) |\r\n"
+				+ "                | |   |  ___  ||  __)     |  __)   | (\\ \\) || |   | |\r\n"
+				+ "                | |   | (   ) || (        | (      | | \\   || |   ) |\r\n"
+				+ "                | |   | )   ( || (____/\\  | (____/\\| )  \\  || (__/  )\r\n"
+				+ "                )_(   |/     \\|(_______/  (_______/|/    )_)(______/ ");
 	}
 	
 	public void pintarMenuNombre () {
@@ -465,11 +476,11 @@ public class Menus {
 	public void pintarMenu13() {
 		System.out.println("¿ A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
 	}
-	public void pintarMenu14A() {
+	public void pintarMenu141() {
 		System.out.println("Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
 	}
 	
-	public void pintarMenu14B() {
+	public void pintarMenu142() {
 		System.out.println("¿ Qué esperabas encontrar aquí ?");
 		System.out.println("No hay nada para ti. Continúa tu camino");
 	}

@@ -57,7 +57,7 @@ public class Principal {
 					switch (menu) {
 						case 1:
 							posicion = 1;
-							menus.pintarMenuNombre();
+							menus.box1(data.getFraseAuxiliar()[2]);
 							// reiniciando valores
 							nombreJ = Leer.dato();
 							j1 = new Jugador(nombreJ);
@@ -489,7 +489,7 @@ public class Principal {
 						posicion = 13;
 						break;
 					case 2:
-						posicion = 14;
+						posicion = 141;
 						break;
 					default:
 						menus.invalid();
@@ -499,7 +499,7 @@ public class Principal {
 		}
 			if (posicion == 12) {
 				menus.pintarMenu12();
-				posicion = 14;
+				posicion = 142;
 			}	
 			if (posicion == 13) {
 				menus.pintarMenu13();
@@ -507,9 +507,13 @@ public class Principal {
 				crudJugador.bajarHP(j1);
 				posicion = 15;
 			}
-			if (posicion == 14) {
-				menus.pintarMenu14B();
+			if (posicion == 141) {
+				menus.pintarMenu141();
+				escenas.pintar(dataAscis.getAscisEscenas()[6]);
 				posicion = 15;
+			}
+			if (posicion == 142) {
+				menus.pintarMenu142();
 			}
 			if (posicion == 15) {
 				menus.pintarMenu15();
@@ -613,8 +617,7 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [17]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-					//cambiar por vista
-					System.out.println("THE END");
+					menus.end();
 					menus.creditos();
 				}
 				
