@@ -317,15 +317,15 @@ public class Menus {
 	}
 	
 	public void cambiarArma (Arma armaEquipada) {
-		System.out.println("\t\t\t  -  Ahora estás equipado con " +armaEquipada.getNombre());
+		System.out.println("\t\t  -  Ahora estás equipado con " +armaEquipada.getNombre()+ "\n");
 	}
 	
 	public void objetoUsado (Objeto item) {
-		System.out.println("\t\t\t  -  Has usado " +item.getNombre());
+		System.out.println("\t\t\t  -  Has usado " +item.getNombre()+ "\n");
 	}
 	
 	public void turnoPerdido () {
-		System.out.println("\t\t\t  -  Te equivocas al programar y pierdes tu turno");
+		System.out.println("\t\t  -  Te equivocas al programar y pierdes tu turno\n");
 	}
 	
 	public void gameOver () {
@@ -358,21 +358,21 @@ public class Menus {
 	}
 	
 	public void pintarMenu0(String s) {
-		System.out.println("Buenas " + s + "! Cuéntame un poco más sobre ti..");
-		System.out.println("Si estuvieses llegando tarde a clases... Qué harías ?");
-		System.out.println("1.- Me enfado con el portero, pienso como eliminarlo sigilosamente y colarme por la iglesia.");
-		System.out.println("2.- Que no me deja entrar ? No pasa nada, tumbo la puerta mientras grito: Por la Horda!");
-		System.out.println("3.- No pasa nada, me voy a la cafetería a meditar en mi siguiente estrategia.");
+		System.out.println("     Buenas " + s + "! Cuéntame un poco más sobre ti..");
+		System.out.println("     Si estuvieses llegando tarde a clases... Qué harías ?");
+		System.out.println("     1.- Me enfado con el portero, pienso como eliminarlo sigilosamente y colarme por la iglesia.");
+		System.out.println("     2.- Que no me deja entrar ? No pasa nada, tumbo la puerta mientras grito: Por la Horda!");
+		System.out.println("     3.- No pasa nada, me voy a la cafetería a meditar en mi siguiente estrategia.");
 	}
 	
 	public void pintarMenuClases (int num) {
 		if (num == 1) {
-			System.out.println("Enhorabuena! Eres un/a Asesino/a. Seguro que pusheas en git y los demás ni se enteran.\n\n");
+			System.out.println("     Enhorabuena! Eres un/a Asesino/a. Seguro que pusheas en git y los demás ni se enteran.\n\n");
 		} else if (num == 2){
-			System.out.println("Enhorabuena! Eres un/a Guerrero/a, una bestia parda, "
+			System.out.println("     Enhorabuena! Eres un/a Guerrero/a, una bestia parda, "
 					+ "haces subconsultas con una calculadora casio, un/a auténtico/a animal.\n\n");
 		}else if (num == 3) {
-			System.out.println("Enhorabuena! Eres un/a Hechicero/a, usas tu intelecto para hacer proezas como domotizar"
+			System.out.println("     Enhorabuena! Eres un/a Hechicero/a, usas tu intelecto para hacer proezas como domotizar"
 					+ " tu casa con unas placas arduino.\n\n");
 		}else {
 			
@@ -380,51 +380,53 @@ public class Menus {
 	}
 	
 	public void pintarMenu1 () {
-		System.out.println("Te levantas.. es jodidamente temprano, hace frío y pones rumbo a la escuela. Te montas\r\n"
-				+ "en tu medio de transporte y te das cuenta que el atasco de hoy es mayor de lo normal. De ahí\r\n"
-				+ "piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio miras la hora \r\n"
-				+ "y tienes que tomar una decision importante... estás llegando tarde. ¿ Qué harás ?");
-		System.out.println("1.- Te vas a tomar un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
-				+ "	otras veces. ");
-		System.out.println("2.- No te importan las normas, ni la hora, eres muy ninja y te cuelas por la iglesia ");
+		System.out.println("     Te levantas.. es jodidamente temprano, hace frío y pones rumbo a la escuela. Te montas\r\n"
+				+ "     en tu medio de transporte y te das cuenta que el atasco de hoy es mayor de lo normal. De ahí\r\n"
+				+ "     piensas: mierda, no voy a llegar.. Cuando al fin te encuentras cerca del colegio miras la hora \r\n"
+				+ "     y tienes que tomar una decision importante... estás llegando tarde. ¿ Qué harás ?");
+		System.out.println("     1.- Te vas a tomar un café. Sabes que aunque sean las 8:00 ya te han dejado fuera a esa hora\r\n"
+				+ "	    otras veces. ");
+		System.out.println("     2.- No te importan las normas, ni la hora, eres muy ninja y te cuelas por la iglesia ");
 	}
 	
 	public void pintarMenu2() {
-		System.out.println("Está bien no pasa nada, a veces ocurren accidentes que no podemos controlar (como el atasco de la mañana)\r\n"
-				+ "asi que te diriges tranquilamente a la cafetería de Carlos. Llegas te pides un café calentito y mientras te \r\n"
-				+ "pone la estufa y te estas tomando el café piensas respecto al horario..\r\n");
+		System.out.println("     Está bien no pasa nada, a veces ocurren accidentes que no podemos controlar (como el atasco de la mañana)\r\n"
+				+ "     asi que te diriges tranquilamente a la cafetería de Carlos. Llegas te pides un café calentito y mientras te \r\n"
+				+ "     pone la estufa y te estas tomando el café piensas respecto al horario..\r\n");
 	}
 	
 	public void pintarMenuDecision2 () {
-		System.out.println("Ahora que no entraste a los buenos dias, ¿ Vas a la segunda clase ? ¿ O no ? Es con el mismo profesor que primera hora, \r\n"
-				+ "sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
-		System.out.println("1.- Así que.. ¿  decides saltarte las clases ? Vaya golfo/a.");
-		System.out.println("2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
+		System.out.println("     Ahora que no entraste a los buenos dias, ¿ Vas a la segunda clase ? ¿ O no ? Es con el mismo profesor que primera hora, \r\n"
+				+ "     sabrá que no entraste y cualquier cosa que le digas sonará a excusa tonta...");
+		System.out.println("     1.- Así que.. ¿  decides saltarte las clases ? Vaya golfo/a.");
+		System.out.println("     2.- Vas a intentar ir a clase de Rafa y que te deje hacer el exámen.");
 	}
 	
 	public void pintarMenu3() {
-		System.out.println("Demostrando tus habilidades de ninja, vistiendo todo de negro, teniendo conocimientos sobre armas y las sombras\r\n"
-				+ "de la mañana te cuelas por la iglesia, nadie te ve y encuentras el bastón de Don Bosco. Un bastón ancestral que fue \r\n"
-				+ "pasado de generación en generación por todos los salesianos.");
+		System.out.println("     Demostrando tus habilidades de ninja, vistiendo todo de negro, teniendo conocimientos sobre armas y las sombras\r\n"
+				+ "     de la mañana te cuelas por la iglesia, nadie te ve y encuentras el bastón de Don Bosco. Un bastón ancestral que fue \r\n"
+				+ "     pasado de generación en generación por todos los salesianos.");
 	}
 	
 	public void pintarMenuDecisiones3() {
-		System.out.println("¿ Qué opción tomarías ?");
-		System.out.println("1.- Vas directo a clase y le dices que fuiste al servicio antes");
-		System.out.println("2.- Decides buscar a un sacerdote y ofrecer tu ayuda solidaria.");
+		System.out.println("     ¿ Qué opción tomarías ?");
+		System.out.println("     1.- Vas directo a clase y le dices que fuiste al servicio antes");
+		System.out.println("     2.- Decides buscar a un sacerdote y ofrecer tu ayuda solidaria.");
 	}
 	
 	public void pintarMenu4() {
-		System.out.println("Te pasas la hora mirando el estúpido móvil y no has hecho nada productivo, te dirijes a entrar a la siguiente hora\r\n"
-				+ "pero aparece alguien que vé que te estás saltando las clases.. Es Miguel y se acerca a preguntarte que te pasó.\r\n"
-				+ "Tu disimulas como puedes pero aunque creas que saliste victorioso tu conciencia no te deja en paz y eso te drena\r\n"
-				+ "algo de vida.");
+		System.out.println("     Te pasas la hora mirando el estúpido móvil y no has hecho nada productivo, te dirijes a entrar a la siguiente hora\r\n"
+				+ "     pero aparece alguien que vé que te estás saltando las clases.. Es Miguel y se acerca a preguntarte que te pasó.\r\n"
+				+ "     Tu disimulas como puedes pero aunque creas que saliste victorioso tu conciencia no te deja en paz y eso te drena\r\n"
+				+ "     algo de vida.");
+		System.out.println("");
 		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida");
-		System.out.println("Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria");
+		System.out.println("");
+		System.out.println("     Peeeero, sin que se de cuenta Miguel, consigues llevarte un monitor del aula de ordenadores de primaria");
 	}
 	
 	public void pintarMenuDecisiones4() {
-		System.out.println("- Atento, ahora sí o sí te enfrentarás a Miguel");
+		System.out.println("     - Atento, ahora sí o sí te enfrentarás a Miguel");
 	}
 	
 	public void pintarMenu5() {
@@ -433,105 +435,104 @@ public class Menus {
 	}
 	
 	public void pintarMenuDecisiones5() {
-		System.out.println("Y sin descanso ahora viene la segunda parte, pelea con Miguel");
+		System.out.println("     Y sin descanso ahora viene la segunda parte, pelea con Miguel");
 	}
 	
 	public void pintarMenu6() {
-		System.out.println("Con el fin de espabilarte y no dar la primera hora.. puesto que eres delegado de solidaridad ofreces tu ayuda y\r\n"
-				+ "te pasas toda la hora cargando juguetes, comida para donar, repartiendo panfletos por las clases...Gracias a que ayudaste a \r\n"
-				+ "cargar todos los regalos de reyes y la comida, te sube el ataque (un poco)");
+		System.out.println("     Con el fin de espabilarte y no dar la primera hora.. puesto que eres delegado de solidaridad ofreces tu ayuda y\r\n"
+				+ "     te pasas toda la hora cargando juguetes, comida para donar, repartiendo panfletos por las clases...Gracias a que ayudaste a \r\n"
+				+ "     cargar todos los regalos de reyes y la comida, te sube el ataque (un poco)");
 	}
 	
 	public void pintarMenuDecisiones6() {
-		System.out.println("1.- Te vendrá bien esa ayuda extra para enfrentarte con Miguel");
+		System.out.println("     1.- Te vendrá bien esa ayuda extra para enfrentarte con Miguel");
 	}
 	
 	public void pintarMenu7() {
-		System.out.println("Después de la pelea hay recreo. ¿ Te vas a la cafetería con tus compañeros ? ¿ o te vas a la biblioteca a estudiar ?");
+		System.out.println("     Después de la pelea hay recreo. ¿ Te vas a la cafetería con tus compañeros ? ¿ o te vas a la biblioteca a estudiar ?");
 	}
 	
 	public void pintarMenuDecisiones7() {
-		System.out.println("1.- Soy un tio sociable, me voy con la gente a ver cual es el topic del dia");
-		System.out.println("2.- Nah yo paso, en la biblioteca se está calentito y puedo aumentar mis recursos.");
+		System.out.println("     1.- Soy un tio sociable, me voy con la gente a ver cual es el topic del dia");
+		System.out.println("     2.- Nah yo paso, en la biblioteca se está calentito y puedo aumentar mis recursos.");
 	}
 	
 	public void pintarMenu8() {
-		System.out.println("La cafetería está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comertela.");
+		System.out.println("     La cafetería está llena, tu café llegó el primero, pero la tostada... parece que no te va a dar tiempo a comertela.");
 	}
 	
 	public void pintarMenuDecisiones8() {
-		System.out.println("¿ Qué decides ?");
-		System.out.println("1.- Te vas a la biblioteca porque ya sabes lo que van a dar y quieres avanzar con un videotutorial que envió Angel.");
-		System.out.println("2.- Decides ir a clase porque tienes muchas faltas acumuladas");
+		System.out.println("     ¿ Qué decides ?");
+		System.out.println("     1.- Te vas a la biblioteca porque ya sabes lo que van a dar y quieres avanzar con un videotutorial que envió Angel.");
+		System.out.println("     2.- Decides ir a clase porque tienes muchas faltas acumuladas");
 	}
 	
 	public void pintarMenu9() {
-		System.out.println("En la biblioteca te ofrecen hacer un curso Udemy express. Increíble, justo lo que querías. Esto aumentará tus stats");
+		System.out.println("     En la biblioteca te ofrecen hacer un curso Udemy express. Increíble, justo lo que querías. Esto aumentará tus stats");
 	}
 	
 	public void pintarMenuDecisiones9() {
-		System.out.println("¿ Qué deberías hacer ahora ?");
-		System.out.println("1.- Estudiar en la biblioteca lo que Ángel tiene que explicar");
-		System.out.println("2.- Explicárselo tú a Ángel");
+		System.out.println("     ¿ Qué deberías hacer ahora ?");
+		System.out.println("     1.- Estudiar en la biblioteca lo que Ángel tiene que explicar");
+		System.out.println("     2.- Explicárselo tú a Ángel");
 	}
 	
 	public void pintarMenu10() {
-		System.out.println("El video tutorial es un tostón y pasas de él. Te pones música para pasar el rato pero te pillan y te sacan fuera.\r\n"
+		System.out.println("     El video tutorial es un tostón y pasas de él. Te pones música para pasar el rato pero te pillan y te sacan fuera.\r\n"
 				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lloviendo. Esto \r\n"
 				+ "     hará que se te corte el cuerpo y pierdas vida por ello.");
 	}
 
 	public void pintarMenu11() {
-		System.out.println("Pelea con Ángel, suerte.");
+		System.out.println("     Pelea con Ángel, suerte.");
 	}
 	
 	public void pintarMenuDecisiones11() {
-		System.out.println("Y ahora que has vencido a Ángel, ¿ Qué harías ?");
-		System.out.println("1.-¿ Te sales a fuera para relajarte a fumarte un cigarrito ? ");
-		System.out.println("2.-¿ Te vas a la iglesia a meditar y prepararte para el siguiente exámen.");
+		System.out.println("     Y ahora que has vencido a Ángel, ¿ Qué harías ?");
+		System.out.println("     1.-¿ Te sales a fuera para relajarte a fumarte un cigarrito ? ");
+		System.out.println("     2.-¿ Te vas a la iglesia a meditar y prepararte para el siguiente exámen.");
 	}
 	public void pintarMenu12() {
-		System.out.println("Este videotutorial era la polla, salía el Ángel vestido de mátrix explicándonos la orientación a objetos con Java.\r\n"
+		System.out.println("     Este videotutorial era la polla, salía el Ángel vestido de mátrix explicándonos la orientación a objetos con Java.\r\n"
 				+ "     Así si que te está quedando todo claro. Con esto apruebas fijo.");
 	}
 	public void pintarMenu13() {
-		System.out.println("¿ A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
+		System.out.println("     ¿A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
 	}
 	public void pintarMenu141() {
-		System.out.println("Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
+		System.out.println("     Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
 	}
 	
 	public void pintarMenu142() {
-		System.out.println("¿ Qué esperabas encontrar aquí ?");
-		System.out.println("No hay nada para ti. Continúa tu camino");
+		System.out.println("     ¿ Qué esperabas encontrar aquí ?");
+		System.out.println("     No hay nada para ti. Continúa tu camino");
 	}
 	public void pintarMenu15() {
-		System.out.println("No sabes ni cómo pero aquí estás, has pasado por muchas cosas para llegar a este punto, parece que fue ayer\r\n"
-				+ "cuando te acostabas a las tantas y te despertabas sin tarea, pero de repente te dá por mirar el móvil para ver la hora\r\n"
-				+ "y.... te encuentras con 25000 Boletines de BBDD para mañana.. Crees que es una putada, pero puedes con ello, gracias a \r\n"
-				+ "todo lo que hiciste anteriormente...");
-		System.out.println("..");
-		System.out.println("..");
-		System.out.println("Pasa la noche y al dia siguiente te das cuenta de que eres un Titán de BBDD, ya no tienes miedo de enfrentarte a Luismi.\r\n"
-				+ "Suben tus stats por la sabiduría adquirida en BBDD.");
+		System.out.println("     No sabes ni cómo pero aquí estás, has pasado por muchas cosas para llegar a este punto, parece que fue ayer\r\n"
+				+ "     cuando te acostabas a las tantas y te despertabas sin tarea, pero de repente te dá por mirar el móvil para ver la hora\r\n"
+				+ "     y.... te encuentras con 25000 Boletines de BBDD para mañana.. Crees que es una putada, pero puedes con ello, gracias a \r\n"
+				+ "     todo lo que hiciste anteriormente...");
+		System.out.println();
+		System.out.println("     Pasa la noche y al dia siguiente te das cuenta de que eres un Titán de BBDD, ya no tienes miedo de enfrentarte a Luismi.\r\n"
+				+ "     Suben tus stats por la sabiduría adquirida en BBDD.");
 	}
 	
 	public void pintarMenuDecisiones15() {
-		System.out.println("¿ Ahora como te sientes ? Preparado ?");
-		System.out.println("1.-Si crees que puedes aumentar tus stats un poco más, te saltas primera para ir directo al examen con \r\n"
-				+ "	todo estudiado al 100%");
-		System.out.println("2.-Si crees que eres tan titán como piensas vas directo a clase.");
+		System.out.println("     ¿ Ahora como te sientes ? Preparado ?");
+		System.out.println("     1.-Si crees que puedes aumentar tus stats un poco más, te saltas primera para ir directo al examen con \r\n"
+				+ "     todo estudiado al 100%");
+		System.out.println("     2.-Si crees que eres tan titán como piensas vas directo a clase.");
 	}
 	public void pintarMenu16() {
-		System.out.println("NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el exámen final.");
-		System.out.println("YOU... SHALL.. NOT PASS!!!!");
+		System.out.println("     NOOOOOooooooo!! Cómo pudiste !? Los profesores te vieron entrar tarde y ahora no te dejan hacer el exámen final.");
+		System.out.println("     YOU... SHALL.. NOT PASS!!!!");
 	}
 	public void pintarMenu17() {
-		System.out.println("Acordándote de todo lo aprendido en Base de datos, todos los join, las subconsultas escalares\r\n"
-				+ "y las claves primarias, coges una silla de clase para ir más preparado para el examen");
+		System.out.println("     Acordándote de todo lo aprendido en Base de datos, todos los join, las subconsultas escalares\r\n"
+				+ "     y las claves primarias, coges una silla de clase para ir más preparado para el examen");
 	}
 	public void pintarMenu18() {
-		System.out.println("Peleas con el TITÁN");
+		System.out.println("     Peleas con el TITÁN");
 
 	}
 	
