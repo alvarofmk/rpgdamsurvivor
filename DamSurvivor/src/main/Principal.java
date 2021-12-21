@@ -57,7 +57,7 @@ public class Principal {
 					switch (menu) {
 						case 1:
 							posicion = 1;
-							menus.pintarMenuNombre();
+							menus.box1(data.getFraseAuxiliar()[2]);
 							// reiniciando valores
 							nombreJ = Leer.dato();
 							j1 = new Jugador(nombreJ);
@@ -617,8 +617,7 @@ public class Principal {
 				}else if (data.getEnemigos()[enemigo].getHp() <= 0) {
 					escenas.pintar(dataAscis.getAscisEscenas() [17]);
 					menus.box1(data.getFraseEnemigoDerrotado()[enemigo]);
-					//cambiar por vista
-					System.out.println("THE END");
+					menus.end();
 					menus.creditos();
 				}
 				
