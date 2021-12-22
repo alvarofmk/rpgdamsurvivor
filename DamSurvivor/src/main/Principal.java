@@ -19,10 +19,24 @@ import crud.CrudEnemigo;
 import crud.CrudObjeto;
 import controller.Dados;
 
+/*El combate lo hicieron entre Durbán y Álvaro. Durban el turno del enemigo y Álvaro el turno del jugador.
+ * ControllerArma, ControllerEnemigo, ControllerJugador y Dados lo hizo Durbán.
+ * CrudArma y modelo arma Nico con ayuda de Álvaro.
+ * CrudEnemigo y Modelo enemigo Durbán y Luismi.
+ * CrudJugador y modelo jugador Durbán.
+ * CrudObjeto y modelo objeto hecho por Álvaro. 
+ * BaseDatos entre todos
+ * BaseDatosAsci hecho por Nico
+ * Principal combate entre Durban y Álvaro. Estructura básica Álvaro. Luismi implementación de
+ * todas las posiciones que hay. Nico implementación de los ascis.
+ * Menus hecho por Luismi, Durbán y Álvaro.
+ * Todos hemos colaborado en muchas clases.
+ * */
+
 public class Principal {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 		boolean hit;
 		double roll = 0.0;
 		int menu = 0, eleccion = 0, enemigo = 0, posicion = 0, dmg = 0, rollEnemigo = 0;
