@@ -84,9 +84,9 @@ public class Menus {
 		System.out.println("     _________________________________________________________________________\r\n"
 						+ "\t\r\n"
 						+ "           -*%@@%*-      \t\r\n"
-						+ "          *@@@@@@@@#     \t1. Ataque rápido\r\n"
-						+ "         :@@@@@@@@@@:    \t2. Ataque normal\r\n"
-						+ "          %@@@@@@@@%     \t3. Ataque fuerte\r\n"
+						+ "          *@@@@@@@@#     \t1. Ataque rápido (Mayor precisión)\r\n"
+						+ "         :@@@@@@@@@@:    \t2. Ataque normal (Balanceado)\r\n"
+						+ "          %@@@@@@@@%     \t3. Ataque fuerte (Mayor daño)\r\n"
 						+ "           +@@@@@@*.     \t\r\n"
 						+ "             :--:        \t\r\n"
 						+ "         =#@@@@@@@@#=    \t\r\n"
@@ -558,12 +558,14 @@ public class Menus {
 	}
 	
 	public void obtencionObjeto (Objeto o) {
-		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", o.getNombre());
+		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido el objeto %s!\n\n", o.getNombre());
 		System.out.printf("\t\t%s\n\n", o.getDescripcion());
+		System.out.println("\t\tRecuerda utilizarlo en combate\n\n");
 	}
 	
 	public void obtencionArma (Arma a) {
-		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido %s!\n\n", a.getNombre());
+		System.out.printf("\n\t\t\tEnhorabuena!\n\t\t\tHas obtenido el arma %s!\n\n", a.getNombre());
+		System.out.println("\t\tNo olvides equipártela en combate\n\n");
 	}
 	
 	public void enemigoDerrotado (String s) {
@@ -577,6 +579,10 @@ public class Menus {
 		
 	public void menuSalir () {
 		System.out.println("     Gracias por jugar a DAM Survivor v0.0.2.45.1.1021");
+	}
+	
+	public void pulsaTecla () {
+		System.out.println("\t\t  -  Pulsa cualquier tecla para continuar");
 	}
 	
 	
