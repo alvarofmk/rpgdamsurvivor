@@ -13,25 +13,26 @@ public class BaseDatos {
 	private Objeto [] items = new Objeto [5];
 	private String [] objetoNombre = {"Cafelito","Bendición de Don Bosco",
 			"Curso de Udemy","25.000 boletines de BBDD","VideoTutorial de POJO"};
-	private int [] objetoATK = {0,15,10,-5,5};
-	private int [] objetoDEF = {0,15,0,5,5};
-	private int [] objetoHP = {25,999,-10,0,-5};
-	private int [] objetoHpMax = {0,20,0,0,0};
-	private String [] objetoDescripcion = {"Aumenta en 25 tus puntos de salud",
+	private int [] objetoATK = {0,25,15,-5,15};
+	private int [] objetoDEF = {0,25,15,15,-5};
+	private int [] objetoHP = {35,999,-10,0,0};
+	private int [] objetoHpMax = {0,30,0,0,0};
+	private String [] objetoDescripcion = {"Aumenta en 35 tus puntos de salud",
+			"Aumenta en 25 tus puntos de ataque y defensa.\r\n"
+			+ "\t\tAumenta en 30 puntos tu salud máxima\r\n"
+			+ "\t\tRecupera tus puntos de vida al máximo",
 			"Aumenta en 15 tus puntos de ataque y defensa.\r\n"
-			+ "\t\tAumenta en 20 puntos tu salud máxima",
-			"Aumenta en 10 tus puntos de ataque y defensa.\r\n"
 			+ "\t\tDisminuye en 10 tus puntos de salud",
-			"Aumenta en 5 tus puntos de defensa.\r\n"
+			"Aumenta en 15 tus puntos de defensa.\r\n"
 			+ "\t\tDisminuye en 5 tus puntos de ataque",
-			"Aumenta en 5 tus puntos de ataque y defensa.\r\n"
-			+ "\t\tDisminuye en 5 tus puntos de salud"};
+			"Aumenta en 15 tus puntos de ataque.\r\n"
+			+ "\t\tDisminuye en 5 tus puntos de defensa"};
 	private Arma [] weapons = new Arma [4];
 	private String [] armaNombre = {"Bolígrafo inexistente", 
 			"Bastón de Don Bosco", "Monitor microscópico", "Silla rígida"};
 	private int [] armaATK = {5,10,20,30};
-	private int [] armaDEF = {5,10,15,20};
-	private int [] armaDAM = {10,20,40,80};
+	private int [] armaDEF = {5,20,10,20};
+	private int [] armaDAM = {10,20,30,70};
 	private String [] armaDescripcion = {
 			"\t\t                             "
 			+ "\t\t.-*##%+.\r\n"
@@ -165,9 +166,9 @@ public class BaseDatos {
 	
 	private Enemigo [] enemigos = new Enemigo [4];
 	private String [] nombreEnemigos = {"Rafa", "Miguel", "Ángel", "Luismi"};
-	private int [] atkEnemigos = {25, 35, 45, 60};
-	private int [] defEnemigos = {20, 35, 50, 90};
-	private int [] hpEnemigos = {25, 45, 70, 120};
+	private int [] atkEnemigos = {25, 45, 60, 80};
+	private int [] defEnemigos = {20, 55, 70, 105};
+	private int [] hpEnemigos = {25, 55, 80, 150};
 	private int [] [] ataquesEnemigos = {{0, 0, 30}, {15, 25, 35}, {20, 35, 50}, {45, 70, 90}};
 
 	private String [] [] fraseAtaqueEnemigo = {{"Rafa se va a poner a explicar CSS"

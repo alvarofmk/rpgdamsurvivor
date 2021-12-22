@@ -368,7 +368,10 @@ public class Menus {
 				+ "                | |   |  ___  ||  __)     |  __)   | (\\ \\) || |   | |\r\n"
 				+ "                | |   | (   ) || (        | (      | | \\   || |   ) |\r\n"
 				+ "                | |   | )   ( || (____/\\  | (____/\\| )  \\  || (__/  )\r\n"
-				+ "                )_(   |/     \\|(_______/  (_______/|/    )_)(______/ ");
+				+ "                )_(   |/     \\|(_______/  (_______/|/    )_)(______/ \r\n"
+				+ "\r\n"
+				+ "                    - Tu viaje en DAM ha terminado. Ayesa ha llamado\r\n"
+				+ "                    - para ofrecerte un contrato de prácticas. Suerte");
 	}
 	
 	public void pintarMenuNombre () {
@@ -499,8 +502,7 @@ public class Menus {
 	
 	public void pintarMenu10() {
 		System.out.println("     El video tutorial es un tostón y pasas de él. Te pones música para pasar el rato pero te pillan y te sacan fuera.\r\n"
-				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lloviendo. Esto \r\n"
-				+ "     hará que se te corte el cuerpo y pierdas vida por ello.");
+				+ "     Ahora tienes que esperar en la calle hasta que puedas volver a entrar en la siguiente hora pero está lloviendo.\n");		
 	}
 
 	public void pintarMenu11() {
@@ -517,7 +519,8 @@ public class Menus {
 				+ "     Así si que te está quedando todo claro. Con esto apruebas fijo.");
 	}
 	public void pintarMenu13() {
-		System.out.println("     ¿A quién se le ocurre salir a fumar cuando está lloviendo ? Así es normal que te resfries. Pierdes vida por ello.");
+		System.out.println("     Con la que está cayendo, te mojas hasta los calcetines, y notas como te empiezas a resfriar.\n\n");
+		System.out.println("\t\t  -  Oh no, has perdido 10 puntos de vida.\n");
 	}
 	public void pintarMenu141() {
 		System.out.println("     Enhorabuena, en la iglesia están repartiendo la bendición de Don Bosco");
@@ -570,6 +573,10 @@ public class Menus {
 		System.out.println("\t\t - 2. Aumentar defensa");
 		System.out.println("\t\t - 3. Aumentar HP máxima");
 		System.out.println("\t\t - 4. Cura");
+	}
+		
+	public void menuSalir () {
+		System.out.println("     Gracias por jugar a DAM Survivor v0.0.2.45.1.1021");
 	}
 	
 	

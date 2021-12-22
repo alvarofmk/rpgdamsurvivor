@@ -19,23 +19,23 @@ public class CrudJugador {
 	// Métodos
 	
 	public void crearGuerrero () {
-		j1.setPtsATK(45);
-		j1.setPtsDEF(45);
-		j1.setPtsHP(80);
-		j1.setPtsMaxHP(80);
+		j1.setPtsATK(55);
+		j1.setPtsDEF(55);
+		j1.setPtsHP(100);
+		j1.setPtsMaxHP(100);
 	}
 	public void crearAsesino () {
-		j1.setPtsATK(75);
-		j1.setPtsDEF(25);
-		j1.setPtsHP(50);
-		j1.setPtsMaxHP(50);
+		j1.setPtsATK(45);
+		j1.setPtsDEF(75);
+		j1.setPtsHP(60);
+		j1.setPtsMaxHP(60);
 	}
 	
 	public void crearHechicero () {
-		j1.setPtsATK(60);
-		j1.setPtsDEF(20);
-		j1.setPtsHP(40);
-		j1.setPtsMaxHP(40);
+		j1.setPtsATK(85);
+		j1.setPtsDEF(80);
+		j1.setPtsHP(30);
+		j1.setPtsMaxHP(30);
 	}
 	
 	public void consultarStats () {

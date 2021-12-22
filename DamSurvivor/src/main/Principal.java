@@ -221,6 +221,11 @@ public class Principal {
 							if(crudJugador.comprobarObjeto(eleccion)) {
 								menus.objetoUsado(j1.getInventario()[eleccion-1]);
 								crudJugador.aplicarObjeto(eleccion);
+								if (j1.getPtsHP() <= 0) {
+									menus.gameOver(dataAscis.getAscisEscenas() [13]);
+									Leer.dato ();
+									posicion = 0;
+								}
 							}else {
 								menus.turnoPerdido();
 							}
@@ -244,7 +249,7 @@ public class Principal {
 							menus.turnoPerdido();
 					}
 					// turno enemigo
-					if (data.getEnemigos()[enemigo].getHp() > 0) {
+					if (data.getEnemigos()[enemigo].getHp() > 0 && j1.getPtsHP() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
 						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
@@ -324,6 +329,11 @@ public class Principal {
 							if(crudJugador.comprobarObjeto(eleccion)) {
 								menus.objetoUsado(j1.getInventario()[eleccion-1]);
 								crudJugador.aplicarObjeto(eleccion);
+								if (j1.getPtsHP() <= 0) {
+									menus.gameOver(dataAscis.getAscisEscenas() [13]);
+									Leer.dato ();
+									posicion = 0;
+								}
 							}else {
 								menus.turnoPerdido();
 							}
@@ -347,7 +357,7 @@ public class Principal {
 							menus.turnoPerdido();
 					}
 					// turno enemigo
-					if (data.getEnemigos()[enemigo].getHp() > 0) {
+					if (data.getEnemigos()[enemigo].getHp() > 0 && j1.getPtsHP() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
 						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
@@ -435,9 +445,11 @@ public class Principal {
 				crudJugador.obtenerObjeto(4, data);
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
+				Leer.dato();
 				menus.pintarMenu10();
 				Leer.dato();
 				posicion = 13;
+				
 			}
 			if (posicion == 11) {
 				menus.pintarMenu11();
@@ -478,6 +490,11 @@ public class Principal {
 							if(crudJugador.comprobarObjeto(eleccion)) {
 								menus.objetoUsado(j1.getInventario()[eleccion-1]);
 								crudJugador.aplicarObjeto(eleccion);
+								if (j1.getPtsHP() <= 0) {
+									menus.gameOver(dataAscis.getAscisEscenas() [13]);
+									Leer.dato ();
+									posicion = 0;
+								}
 							}else {
 								menus.turnoPerdido();
 							}
@@ -501,7 +518,7 @@ public class Principal {
 							menus.turnoPerdido();
 					}
 					// turno enemigo
-					if (data.getEnemigos()[enemigo].getHp() > 0) {
+					if (data.getEnemigos()[enemigo].getHp() > 0 && j1.getPtsHP() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
 						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
@@ -650,6 +667,11 @@ public class Principal {
 							if(crudJugador.comprobarObjeto(eleccion)) {
 								menus.objetoUsado(j1.getInventario()[eleccion-1]);
 								crudJugador.aplicarObjeto(eleccion);
+								if (j1.getPtsHP() <= 0) {
+									menus.gameOver(dataAscis.getAscisEscenas() [13]);
+									Leer.dato ();
+									posicion = 0;
+								}
 							}else {
 								menus.turnoPerdido();
 							}
@@ -673,7 +695,7 @@ public class Principal {
 							menus.turnoPerdido();
 					}
 					// turno enemigo
-					if (data.getEnemigos()[enemigo].getHp() > 0) {
+					if (data.getEnemigos()[enemigo].getHp() > 0 && j1.getPtsHP() > 0) {
 						roll = dados.tirarDados();
 						rollEnemigo = controlEne.tirarDadosATK();
 						menus.menuEnemigo(data.getEnemigos() [enemigo], enemigo, dataAscis.getAscisEscenas());
@@ -708,7 +730,9 @@ public class Principal {
 						posicion = 0;
 					}else {
 						menus.end();
+						
 						menus.creditos();
+						Leer.dato ();
 						posicion = 0;
 					}
 				
@@ -716,7 +740,7 @@ public class Principal {
 				
 		}				
 		} while (posicion != 99);
-
+		menus.menuSalir();
 	}
 }
 	
