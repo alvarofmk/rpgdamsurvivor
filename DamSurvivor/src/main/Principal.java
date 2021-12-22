@@ -177,6 +177,7 @@ public class Principal {
 					menus.obtencionArma(data.getWeapons() [2]);
 					crudJugador.obtenerArma(2, data);
 					menus.pintarMenuDecisiones4();
+					menus.pulsaTecla();
 					Leer.dato();
 					posicion = 7;
 				}
@@ -212,6 +213,7 @@ public class Principal {
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
+							menus.pulsaTecla();
 							Leer.dato();
 							break;
 						case 2:
@@ -265,6 +267,7 @@ public class Principal {
 						} else {
 							menus.box1(menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]));
 						}
+						menus.pulsaTecla();
 						Leer.dato();
 					}
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
@@ -288,6 +291,7 @@ public class Principal {
 				crudJugador.subirAtaque(j1);
 				escenas.pintar(dataAscis.getAscisEscenas()[12]);
 				menus.pintarMenuDecisiones6();
+				menus.pulsaTecla();
 				Leer.dato();
 				posicion = 7; // 
 			}
@@ -320,6 +324,7 @@ public class Principal {
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
+							menus.pulsaTecla();
 							Leer.dato();
 							break;
 						case 2:
@@ -373,6 +378,7 @@ public class Principal {
 						} else {
 							menus.box1(menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]));
 						}
+						menus.pulsaTecla();
 						Leer.dato();
 					}
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
@@ -445,8 +451,10 @@ public class Principal {
 				crudJugador.obtenerObjeto(4, data);
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
+				menus.pulsaTecla();
 				Leer.dato();
 				menus.pintarMenu10();
+				menus.pulsaTecla();
 				Leer.dato();
 				posicion = 13;
 				
@@ -481,6 +489,7 @@ public class Principal {
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
+							menus.pulsaTecla();
 							Leer.dato();
 							break;
 						case 2:
@@ -534,6 +543,7 @@ public class Principal {
 						} else {
 							menus.box1(menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]));
 						}
+						menus.pulsaTecla();
 						Leer.dato();
 					}
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
@@ -569,6 +579,7 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas() [20]);
 				menus.obtencionObjeto(data.getItems() [4]);
 				menus.pintarMenu12();
+				menus.pulsaTecla();
 				Leer.dato();
 				posicion = 15;
 			}	
@@ -583,6 +594,7 @@ public class Principal {
 				}else {
 					posicion = 15;
 				}
+				menus.pulsaTecla();
 				Leer.dato();
 			}
 			if (posicion == 141) {
@@ -590,6 +602,7 @@ public class Principal {
 				escenas.pintar(dataAscis.getAscisEscenas()[6]);
 				crudJugador.obtenerObjeto(1, data);
 				menus.obtencionObjeto(data.getItems() [1]);
+				menus.pulsaTecla();
 				Leer.dato();
 				posicion = 15;
 			}
@@ -624,6 +637,7 @@ public class Principal {
 				crudJugador.obtenerArma(3, data);
 				escenas.pintar(data.getArmaDescripcion() [3]);
 				menus.obtencionArma(data.getWeapons() [3]);
+				menus.pulsaTecla();
 				Leer.dato();
 				posicion = 18;
 			}
@@ -658,6 +672,7 @@ public class Principal {
 							} else {
 								menus.box1(data.getFraseAtaqueFallido()[enemigo]);
 							}
+							menus.pulsaTecla();
 							Leer.dato();
 							break;
 						case 2:
@@ -711,6 +726,7 @@ public class Principal {
 						} else {
 							menus.box1(menus.ataqueEnemigoFallado(data.getEnemigos() [enemigo]));
 						}
+						menus.pulsaTecla();
 						Leer.dato();
 					}
 				} while ((data.getEnemigos()[enemigo]).getHp() > 0 && j1.getPtsHP() > 0);
